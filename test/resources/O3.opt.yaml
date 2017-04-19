@@ -1,0 +1,51 @@
+--- !Analysis
+Pass:            inline
+Name:            CanBeInlined
+DebugLoc:        { File: test.cc, Line: 8, Column: 5 }
+Function:        _Z10computesumPii
+Args:            
+  - Callee:          _Z10accumulateiPi
+    DebugLoc:        { File: test.cc, Line: 1, Column: 0 }
+  - String:          ' can be inlined into '
+  - Caller:          _Z10computesumPii
+    DebugLoc:        { File: test.cc, Line: 5, Column: 0 }
+  - String:          ' with cost='
+  - Cost:            '-35'
+  - String:          ' (threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: test.cc, Line: 8, Column: 5 }
+Function:        _Z10computesumPii
+Args:            
+  - Callee:          _Z10accumulateiPi
+    DebugLoc:        { File: test.cc, Line: 1, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Z10computesumPii
+    DebugLoc:        { File: test.cc, Line: 5, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: test.cc, Line: 7, Column: 20 }
+Function:        _Z10computesumPii
+Args:            
+  - String:          'hosting '
+  - Inst:            zext
+    DebugLoc:        { File: test.cc, Line: 7, Column: 20 }
+...
+--- !Passed
+Pass:            loop-vectorize
+Name:            Vectorized
+DebugLoc:        { File: test.cc, Line: 7, Column: 3 }
+Function:        _Z10computesumPii
+Args:            
+  - String:          'vectorized loop (vectorization width: '
+  - VectorizationFactor: '4'
+  - String:          ', interleaved count: '
+  - InterleaveCount: '2'
+  - String:          ')'
+...
