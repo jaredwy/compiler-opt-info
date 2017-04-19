@@ -17,5 +17,10 @@
     "ramda": "^0.23.0",
     "yamljs": "^0.2.9"
   },
-  "version": "0.0.1"
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaredwy/compiler-opt-info.git"
+  },
+  "license" : "MIT" 
 }
