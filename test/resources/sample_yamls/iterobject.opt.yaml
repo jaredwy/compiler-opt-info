@@ -1,0 +1,2653 @@
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 81, 
+                   Column: 12 }
+Function:        _PyThreadState_GET
+Hotness:         23469
+Args:
+  - Callee:          _PyRuntimeState_GetThreadState
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 58, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 113, 
+                   Column: 29 }
+Function:        _PyInterpreterState_GET
+Hotness:         23469
+Args:
+  - Callee:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 88, 
+                   Column: 34 }
+Function:        _PyObject_GC_TRACK
+Hotness:         23469
+Args:
+  - Callee:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyObject_GC_TRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 19, Column: 10 }
+Function:        PySeqIter_New
+Hotness:         20675
+Args:
+  - Callee:          PySequence_Check
+    DebugLoc:        { File: './Include/abstract.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PySeqIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 20, Column: 9 }
+Function:        PySeqIter_New
+Hotness:         1
+Args:
+  - Callee:          _PyErr_BadInternalCall
+  - String:          ' will not be inlined into '
+  - Caller:          PySeqIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 23, Column: 10 }
+Function:        PySeqIter_New
+Hotness:         20674
+Args:
+  - Callee:          _PyObject_GC_New
+  - String:          ' will not be inlined into '
+  - Caller:          PySeqIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 16, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 27, Column: 5 }
+Function:        PySeqIter_New
+Hotness:         20673
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySeqIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 16, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 29, Column: 5 }
+Function:        PySeqIter_New
+Hotness:         20673
+Args:
+  - Callee:          _PyObject_GC_TRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySeqIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 16, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PySeqIter_New
+Hotness:         20673
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 23, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 92, 
+                   Column: 5 }
+Function:        PySeqIter_New
+Hotness:         20673
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 23, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 124, 
+                   Column: 18 }
+Function:        _PyObject_GC_UNTRACK
+Hotness:         23469
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 119, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 122, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+Function:        _Py_DECREF
+Hotness:         2500
+Args:
+  - Callee:          _Py_Dealloc
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 570, Column: 9 }
+Function:        _Py_XDECREF
+Hotness:         207
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 38, Column: 5 }
+Function:        iter_dealloc
+Hotness:         20675
+Args:
+  - Callee:          PyObject_GC_Del
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 35, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 36, Column: 5 }
+Function:        iter_dealloc
+Hotness:         20675
+Args:
+  - Callee:          _PyObject_GC_UNTRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 113, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          iter_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 35, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 37, Column: 5 }
+Function:        iter_dealloc
+Hotness:         20675
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          iter_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 35, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 124, 
+                   Column: 18 }
+Function:        iter_dealloc
+Hotness:         20675
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 119, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 122, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 61, Column: 9 }
+Function:        iter_iternext
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 50, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 66, Column: 14 }
+Function:        iter_iternext
+Hotness:         198290
+Args:
+  - Callee:          PySequence_GetItem
+    DebugLoc:        { File: './Include/abstract.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 50, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 71, Column: 9 }
+Function:        iter_iternext
+Hotness:         20472
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 50, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 72, Column: 9 }
+Function:        iter_iternext
+Hotness:         3
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 50, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 74, Column: 9 }
+Function:        iter_iternext
+Hotness:         20469
+Args:
+  - Callee:          PyErr_Clear
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 50, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 76, Column: 9 }
+Function:        iter_iternext
+Hotness:         20469
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          iter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 50, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 68, Column: 21 }
+Function:        iter_iternext
+Hotness:         177818
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 60, Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 66, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 71, Column: 32 }
+Function:        iter_iternext
+Hotness:         20472
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 66, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 72, Column: 32 }
+Function:        iter_iternext
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 71, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        iter_iternext
+Hotness:         20469
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 74, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 184, Column: 10 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - Callee:          _PyObject_GC_New
+  - String:          ' will not be inlined into '
+  - Caller:          PyCallIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 182, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 187, Column: 5 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCallIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 182, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 191, Column: 5 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - Callee:          _PyObject_GC_TRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCallIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 182, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 189, Column: 5 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCallIter_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 182, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 184, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 92, 
+                   Column: 5 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 184, Column: 10 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 200, Column: 5 }
+Function:        calliter_dealloc
+Hotness:         2794
+Args:
+  - Callee:          PyObject_GC_Del
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          calliter_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 197, Column: 5 }
+Function:        calliter_dealloc
+Hotness:         2794
+Args:
+  - Callee:          _PyObject_GC_UNTRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 113, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 196, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 199, Column: 5 }
+Function:        calliter_dealloc
+Hotness:         2794
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 196, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 198, Column: 5 }
+Function:        calliter_dealloc
+Hotness:         2794
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 196, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 124, 
+                   Column: 18 }
+Function:        calliter_dealloc
+Hotness:         2794
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 119, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 122, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 199, Column: 5 }
+Function:        calliter_dealloc
+Hotness:         2794
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 207, Column: 5 }
+Function:        calliter_traverse
+Hotness:         7
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 206, Column: 5 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 70, Column: 10 }
+Function:        PyVectorcall_Function
+Hotness:         4160
+Args:
+  - Callee:          PyType_HasFeature
+    DebugLoc:        { File: './Include/object.h', Line: 726, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyVectorcall_Function
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 63, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 112, Column: 16 }
+Function:        _PyObject_VectorcallTstate
+Hotness:         130
+Args:
+  - Callee:          _PyObject_MakeTpCall
+  - String:          ' will not be inlined into '
+  - Caller:          _PyObject_VectorcallTstate
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 102, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 115, Column: 12 }
+Function:        _PyObject_VectorcallTstate
+Hotness:         4030
+Args:
+  - Callee:          _Py_CheckFunctionResult
+  - String:          ' will not be inlined into '
+  - Caller:          _PyObject_VectorcallTstate
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 102, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 109, Column: 12 }
+Function:        _PyObject_VectorcallTstate
+Hotness:         4160
+Args:
+  - Callee:          PyVectorcall_Function
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 63, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyObject_VectorcallTstate
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 102, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15000'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 167, Column: 29 }
+Function:        _PyObject_CallNoArg
+Hotness:         4160
+Args:
+  - Callee:          PyThreadState_Get
+    DebugLoc:        { File: './Include/pystate.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyObject_CallNoArg
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 166, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 168, Column: 12 }
+Function:        _PyObject_CallNoArg
+Hotness:         4160
+Args:
+  - Callee:          _PyObject_VectorcallTstate
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 102, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyObject_CallNoArg
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 166, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14865'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 69, Column: 10 }
+Function:        _PyObject_CallNoArg
+Hotness:         4160
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 167, 
+                       Column: 29 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 70, Column: 10 }
+Function:        _PyObject_CallNoArg
+Hotness:         4160
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 167, 
+                       Column: 29 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 74, Column: 18 }
+Function:        _PyObject_CallNoArg
+Hotness:         4030
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 167, 
+                       Column: 29 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 14 }
+Function:        calliter_iternext
+Hotness:         4016
+Args:
+  - Callee:          PyObject_RichCompareBool
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 235, Column: 14 }
+Function:        calliter_iternext
+Hotness:         128
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 236, Column: 9 }
+Function:        calliter_iternext
+Hotness:         128
+Args:
+  - Callee:          PyErr_Clear
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 220, Column: 14 }
+Function:        calliter_iternext
+Hotness:         4160
+Args:
+  - Callee:          _PyObject_CallNoArg
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 166, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14830'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 229, Column: 9 }
+Function:        calliter_iternext
+Hotness:         2656
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 231, Column: 13 }
+Function:        calliter_iternext
+Hotness:         2656
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 232, Column: 13 }
+Function:        calliter_iternext
+Hotness:         2656
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 237, Column: 9 }
+Function:        calliter_iternext
+Hotness:         128
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 238, Column: 9 }
+Function:        calliter_iternext
+Hotness:         127
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          calliter_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 69, Column: 10 }
+Function:        calliter_iternext
+Hotness:         4160
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 167, 
+                       Column: 29 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 70, Column: 10 }
+Function:        calliter_iternext
+Hotness:         4160
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 167, 
+                       Column: 29 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/cpython/abstract.h', Line: 74, Column: 18 }
+Function:        calliter_iternext
+Hotness:         4030
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 167, 
+                       Column: 29 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 43 }
+Function:        calliter_iternext
+Hotness:         4030
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 115, 
+                       Column: 12 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 43 }
+Function:        calliter_iternext
+Hotness:         4030
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 112, 
+                       Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        calliter_iternext
+Hotness:         2664
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 231, Column: 13 }
+Function:        calliter_iternext
+Hotness:         2663
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 216, Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 231, Column: 13 }
+Function:        calliter_iternext
+Hotness:         2663
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 216, Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 232, Column: 13 }
+Function:        calliter_iternext
+Hotness:         2663
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 43 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 232, Column: 13 }
+Function:        calliter_iternext
+Hotness:         2663
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 43 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 232, Column: 13 }
+Function:        calliter_iternext
+Hotness:         2663
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 224, Column: 43 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 235, Column: 37 }
+Function:        calliter_iternext
+Hotness:         129
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 115, 
+                       Column: 12 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 235, Column: 37 }
+Function:        calliter_iternext
+Hotness:         129
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/cpython/abstract.h', Line: 112, 
+                       Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 237, Column: 9 }
+Function:        calliter_iternext
+Hotness:         129
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 216, Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 236, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        calliter_iternext
+Hotness:         127
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 236, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 238, Column: 9 }
+Function:        calliter_iternext
+Hotness:         129
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 238, Column: 9 }
+Function:        calliter_iternext
+Hotness:         129
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 236, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 305, Column: 5 }
+Function:        anextawaitable_dealloc
+Hotness:         0
+Args:
+  - Callee:          PyObject_GC_Del
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          anextawaitable_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 301, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 302, Column: 5 }
+Function:        anextawaitable_dealloc
+Hotness:         0
+Args:
+  - Callee:          _PyObject_GC_UNTRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 113, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          anextawaitable_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 301, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 304, Column: 5 }
+Function:        anextawaitable_dealloc
+Hotness:         0
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          anextawaitable_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 301, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 303, Column: 5 }
+Function:        anextawaitable_dealloc
+Hotness:         0
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          anextawaitable_dealloc
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 301, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14965'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 124, 
+                   Column: 18 }
+Function:        anextawaitable_dealloc
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 119, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 122, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 304, Column: 5 }
+Function:        anextawaitable_dealloc
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 312, Column: 5 }
+Function:        anextawaitable_traverse
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 311, Column: 5 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 340, Column: 27 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - Callee:          _PyCoro_GetAwaitableIter
+  - String:          ' will not be inlined into '
+  - Caller:          anextawaitable_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 357, Column: 13 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          anextawaitable_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 368, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          anextawaitable_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 369, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - Callee:          _PyGen_SetStopIterationValue
+  - String:          ' will not be inlined into '
+  - Caller:          anextawaitable_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 0, Column: 0 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          anextawaitable_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 359, Column: 13 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          anextawaitable_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 364, Column: 5 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          anextawaitable_iternext
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 344, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 340, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 350, Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 356, Column: 13 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 356, Column: 13 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 350, Column: 35 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 363, Column: 26 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 363, Column: 26 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 363, Column: 46 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object* (%struct._object*)*'
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 363, Column: 46 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 363, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 368, Column: 32 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 368, Column: 32 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 363, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 369, Column: 43 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 368, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 357, Column: 29 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 357, Column: 29 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 350, Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 357, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 344, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 340, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 350, Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 356, Column: 13 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 356, Column: 13 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 350, Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 363, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 368, Column: 32 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 368, Column: 32 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 363, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 369, Column: 43 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 368, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 357, Column: 29 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 357, Column: 29 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 350, Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 357, Column: 13 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 416, Column: 35 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - Callee:          _PyObject_GC_New
+  - String:          ' will not be inlined into '
+  - Caller:          PyAnextAwaitable_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 415, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 421, Column: 5 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyAnextAwaitable_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 415, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 425, Column: 5 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - Callee:          _PyObject_GC_TRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyAnextAwaitable_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 415, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14980'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 423, Column: 5 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyAnextAwaitable_New
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 415, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 416, Column: 35 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 92, 
+                   Column: 5 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 416, Column: 35 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 585, Column: 5 }
+Function:        _Py_NewRef
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 87, Column: 13 }
+Function:        iter_len
+Hotness:         201
+Args:
+  - Callee:          _PyObject_HasLen
+  - String:          ' will not be inlined into '
+  - Caller:          iter_len
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 83, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 88, Column: 23 }
+Function:        iter_len
+Hotness:         200
+Args:
+  - Callee:          PySequence_Size
+    DebugLoc:        { File: './Include/abstract.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_len
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 83, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 97, Column: 20 }
+Function:        iter_len
+Hotness:         198
+Args:
+  - Callee:          PyLong_FromSsize_t
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_len
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 83, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 99, Column: 12 }
+Function:        iter_len
+Hotness:         2
+Args:
+  - Callee:          PyLong_FromLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_len
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 83, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 93, Column: 13 }
+Function:        iter_len
+Hotness:         1
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          iter_len
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 83, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 88, Column: 43 }
+Function:        iter_len
+Hotness:         200
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 86, Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 87, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 95, Column: 29 }
+Function:        iter_len
+Hotness:         199
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 88, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        iter_len
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 87, Column: 13 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 0, Column: 0 }
+Function:        iter_reduce
+Hotness:         0
+Args:
+  - Callee:          _PyEval_GetBuiltinId
+  - String:          ' will not be inlined into '
+  - Caller:          iter_reduce
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 106, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 108, Column: 16 }
+Function:        iter_reduce
+Hotness:         0
+Args:
+  - Callee:          Py_BuildValue
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_reduce
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 106, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 111, Column: 16 }
+Function:        iter_reduce
+Hotness:         0
+Args:
+  - Callee:          Py_BuildValue
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_reduce
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 106, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 109, Column: 34 }
+Function:        iter_reduce
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 107, Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 109, Column: 46 }
+Function:        iter_reduce
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 119, Column: 24 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - Callee:          PyLong_AsSsize_t
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_setstate
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 118, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 120, Column: 24 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          iter_setstate
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 118, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 127, Column: 5 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          iter_setstate
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 118, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 122, Column: 13 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 120, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 122, Column: 13 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 119, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 119, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 120, Column: 24 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 247, Column: 39 }
+Function:        calliter_reduce
+Hotness:         0
+Args:
+  - Callee:          _PyEval_GetBuiltinId
+  - String:          ' will not be inlined into '
+  - Caller:          calliter_reduce
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 245, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 247, Column: 16 }
+Function:        calliter_reduce
+Hotness:         0
+Args:
+  - Callee:          Py_BuildValue
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          calliter_reduce
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 245, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 250, Column: 39 }
+Function:        calliter_reduce
+Hotness:         0
+Args:
+  - Callee:          _PyEval_GetBuiltinId
+  - String:          ' will not be inlined into '
+  - Caller:          calliter_reduce
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 245, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 250, Column: 16 }
+Function:        calliter_reduce
+Hotness:         0
+Args:
+  - Callee:          Py_BuildValue
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          calliter_reduce
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 245, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 248, Column: 34 }
+Function:        calliter_reduce
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 246, Column: 13 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 247, Column: 39 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 248, Column: 51 }
+Function:        calliter_reduce
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 246, Column: 40 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/iterobject.c', Line: 247, Column: 39 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 16, Column: 0 }
+Function:        PySeqIter_New
+Hotness:         20675
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 16, Column: 0 }
+Function:        PySeqIter_New
+Hotness:         20675
+Args:
+  - NumInstructions: '33'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 35, Column: 0 }
+Function:        iter_dealloc
+Hotness:         20675
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 35, Column: 0 }
+Function:        iter_dealloc
+Hotness:         20675
+Args:
+  - NumInstructions: '24'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 43, Column: 0 }
+Function:        iter_traverse
+Hotness:         19
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 43, Column: 0 }
+Function:        iter_traverse
+Hotness:         19
+Args:
+  - NumInstructions: '14'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 50, Column: 0 }
+Function:        iter_iternext
+Hotness:         198297
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 50, Column: 0 }
+Function:        iter_iternext
+Hotness:         198297
+Args:
+  - NumInstructions: '45'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 182, Column: 0 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 182, Column: 0 }
+Function:        PyCallIter_New
+Hotness:         2794
+Args:
+  - NumInstructions: '30'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 196, Column: 0 }
+Function:        calliter_dealloc
+Hotness:         2794
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 196, Column: 0 }
+Function:        calliter_dealloc
+Hotness:         2794
+Args:
+  - NumInstructions: '31'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 205, Column: 0 }
+Function:        calliter_traverse
+Hotness:         18
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 205, Column: 0 }
+Function:        calliter_traverse
+Hotness:         18
+Args:
+  - NumInstructions: '29'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+Function:        calliter_iternext
+Hotness:         4160
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 213, Column: 0 }
+Function:        calliter_iternext
+Hotness:         4160
+Args:
+  - NumInstructions: '89'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 301, Column: 0 }
+Function:        anextawaitable_dealloc
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 301, Column: 0 }
+Function:        anextawaitable_dealloc
+Hotness:         0
+Args:
+  - NumInstructions: '29'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 310, Column: 0 }
+Function:        anextawaitable_traverse
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 310, Column: 0 }
+Function:        anextawaitable_traverse
+Hotness:         0
+Args:
+  - NumInstructions: '25'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 318, Column: 0 }
+Function:        anextawaitable_iternext
+Hotness:         0
+Args:
+  - NumInstructions: '60'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 415, Column: 0 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 415, Column: 0 }
+Function:        PyAnextAwaitable_New
+Hotness:         0
+Args:
+  - NumInstructions: '30'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 83, Column: 0 }
+Function:        iter_len
+Hotness:         202
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 83, Column: 0 }
+Function:        iter_len
+Hotness:         202
+Args:
+  - NumInstructions: '26'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 106, Column: 0 }
+Function:        iter_reduce
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 106, Column: 0 }
+Function:        iter_reduce
+Hotness:         0
+Args:
+  - NumInstructions: '25'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 118, Column: 0 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 118, Column: 0 }
+Function:        iter_setstate
+Hotness:         0
+Args:
+  - NumInstructions: '26'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 245, Column: 0 }
+Function:        calliter_reduce
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/iterobject.c', Line: 245, Column: 0 }
+Function:        calliter_reduce
+Hotness:         0
+Args:
+  - NumInstructions: '22'
+  - String:          ' instructions in function'
+...

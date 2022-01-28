@@ -1,0 +1,15 @@
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: '/opt/compiler-explorer/gcc-snapshot/lib/gcc/x86_64-linux-gnu/11.0.0/../../../../include/c++/11.0.0/istream', 
+                   Line: 608, Column: 7 }
+Function:        _ZNSiC2Ev
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (...)**'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: '/opt/compiler-explorer/gcc-snapshot/lib/gcc/x86_64-linux-gnu/11.0.0/../../../../include/c++/11.0.0/istream', 
+                       Line: 608, Column: 7 }
+...

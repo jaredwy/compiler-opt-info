@@ -1,0 +1,2534 @@
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pyhash.c', Line: 150, Column: 19 }
+Function:        _Py_HashPointer
+Hotness:         4665428
+Args:
+  - Callee:          _Py_HashPointerRaw
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 139, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_HashPointer
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 149, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pyhash.c', Line: 105, Column: 9 }
+Function:        _Py_HashDouble
+Hotness:         68533
+Args:
+  - Callee:          frexp
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_HashDouble
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 93, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pyhash.c', Line: 102, Column: 20 }
+Function:        _Py_HashDouble
+Hotness:         78
+Args:
+  - Callee:          _Py_HashPointer
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 149, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_HashDouble
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 93, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-10'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/pyhash.c', Line: 119, Column: 11 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            PromoteLoopAccessesToScalar
+DebugLoc:        { File: 'Python/pyhash.c', Line: 119, Column: 11 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          Moving accesses to memory location out of the loop
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pyhash.c', Line: 119, Column: 11 }
+Function:        _Py_HashDouble
+Hotness:         40224
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 105, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pyhash.c', Line: 128, Column: 9 }
+Function:        _Py_HashDouble
+Hotness:         68533
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 105, Column: 9 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/pyhash.c', Line: 128, Column: 9 }
+Function:        _Py_HashDouble
+Hotness:         68533
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pyhash.c', Line: 128, Column: 9 }
+Function:        _Py_HashDouble
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 105, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pyhash.c', Line: 119, Column: 11 }
+Function:        _Py_HashDouble
+Hotness:         40224
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 105, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pyhash.c', Line: 389, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 389, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pyhash.c', Line: 389, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 389, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pyhash.c', Line: 426, Column: 12 }
+Function:        _Py_KeyedHash
+Hotness:         0
+Args:
+  - Callee:          siphash24
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 375, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _Py_KeyedHash
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 425, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '815'
+  - String:          ', threshold='
+  - Threshold:       '812'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pyhash.c', Line: 433, Column: 23 }
+Function:        pysiphash
+Hotness:         4177137
+Args:
+  - Callee:          siphash24
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 375, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          pysiphash
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 432, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '815'
+  - String:          ', threshold='
+  - Threshold:       '812'
+  - String:          ')'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/pyhash.c', Line: 116, Column: 5 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/pyhash.c', Line: 116, Column: 5 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/pyhash.c', Line: 116, Column: 5 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 143, Column: 12 }
+Function:        _Py_HashDouble
+Hotness:         78
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 129, Column: 19 }
+Function:        _Py_HashDouble
+Hotness:         68533
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 129, Column: 13 }
+Function:        _Py_HashDouble
+Hotness:         68533
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 117, Column: 24 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 117, Column: 17 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 117, Column: 24 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 117, Column: 17 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            Peeled
+DebugLoc:        { File: 'Python/pyhash.c', Line: 116, Column: 5 }
+Function:        _Py_HashDouble
+Hotness:         97394
+Args:
+  - String:          ' peeled loop by '
+  - PeelCount:       '1'
+  - String:          ' iterations'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 143, Column: 12 }
+Function:        _Py_HashPointer
+Hotness:         4665428
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 143, Column: 12 }
+Function:        _Py_HashPointer
+Hotness:         4665428
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 143, Column: 12 }
+Function:        _Py_HashPointerRaw
+Hotness:         8863897
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/pyhash.c', Line: 387, Column: 5 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/pyhash.c', Line: 387, Column: 5 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 398, Column: 7 }
+Function:        siphash24
+Hotness:         4177137
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 398, Column: 7 }
+Function:        siphash24
+Hotness:         2736745
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 398, Column: 7 }
+Function:        siphash24
+Hotness:         1656451
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 398, Column: 7 }
+Function:        siphash24
+Hotness:         1440392
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 0, Column: 0 }
+Function:        siphash24
+Hotness:         4177137
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 393, Column: 12 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 393, Column: 12 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 393, Column: 12 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 393, Column: 12 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pyhash.c', Line: 394, Column: 9 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            Peeled
+DebugLoc:        { File: 'Python/pyhash.c', Line: 387, Column: 5 }
+Function:        siphash24
+Hotness:         3024823
+Args:
+  - String:          ' peeled loop by '
+  - PeelCount:       '1'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pyhash.c', Line: 389, Column: 9 }
+Function:        siphash24
+Hotness:         720196
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/pyhash.c', Line: 389, Column: 9 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 93, Column: 0 }
+Function:        _Py_HashDouble
+Hotness:         68785
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 93, Column: 0 }
+Function:        _Py_HashDouble
+Hotness:         68785
+Args:
+  - NumInstructions: '148'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 149, Column: 0 }
+Function:        _Py_HashPointer
+Hotness:         4665428
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 149, Column: 0 }
+Function:        _Py_HashPointer
+Hotness:         4665428
+Args:
+  - NumInstructions: '7'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 139, Column: 0 }
+Function:        _Py_HashPointerRaw
+Hotness:         8863897
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 139, Column: 0 }
+Function:        _Py_HashPointerRaw
+Hotness:         8863897
+Args:
+  - NumInstructions: '3'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 159, Column: 0 }
+Function:        _Py_HashBytes
+Hotness:         4177411
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 159, Column: 0 }
+Function:        _Py_HashBytes
+Hotness:         4177411
+Args:
+  - NumInstructions: '12'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 207, Column: 0 }
+Function:        _PyHash_Fini
+Hotness:         119
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 207, Column: 0 }
+Function:        _PyHash_Fini
+Hotness:         119
+Args:
+  - NumInstructions: '1'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 222, Column: 0 }
+Function:        PyHash_GetFuncDef
+Hotness:         269
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 222, Column: 0 }
+Function:        PyHash_GetFuncDef
+Hotness:         269
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 425, Column: 0 }
+Function:        _Py_KeyedHash
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 425, Column: 0 }
+Function:        _Py_KeyedHash
+Hotness:         0
+Args:
+  - NumInstructions: '4'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 375, Column: 0 }
+Function:        siphash24
+Hotness:         4177137
+Args:
+  - NumStackBytes:   '32'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 375, Column: 0 }
+Function:        siphash24
+Hotness:         4177137
+Args:
+  - NumInstructions: '233'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pyhash.c', Line: 432, Column: 0 }
+Function:        pysiphash
+Hotness:         4177137
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pyhash.c', Line: 432, Column: 0 }
+Function:        pysiphash
+Hotness:         4177137
+Args:
+  - NumInstructions: '5'
+  - String:          ' instructions in function'
+...

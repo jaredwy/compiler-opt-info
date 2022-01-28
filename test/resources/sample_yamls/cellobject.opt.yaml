@@ -1,0 +1,1198 @@
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 561, Column: 9 }
+Function:        _Py_XINCREF
+Hotness:         613362
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_XINCREF
+    DebugLoc:        { File: './Include/object.h', Line: 559, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 81, 
+                   Column: 12 }
+Function:        _PyThreadState_GET
+Hotness:         918299
+Args:
+  - Callee:          _PyRuntimeState_GetThreadState
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 58, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 113, 
+                   Column: 29 }
+Function:        _PyInterpreterState_GET
+Hotness:         918299
+Args:
+  - Callee:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 88, 
+                   Column: 34 }
+Function:        _PyObject_GC_TRACK
+Hotness:         918299
+Args:
+  - Callee:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyObject_GC_TRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 11, Column: 26 }
+Function:        PyCell_New
+Hotness:         918299
+Args:
+  - Callee:          _PyObject_GC_New
+  - String:          ' will not be inlined into '
+  - Caller:          PyCell_New
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 15, Column: 5 }
+Function:        PyCell_New
+Hotness:         918299
+Args:
+  - Callee:          _Py_XINCREF
+    DebugLoc:        { File: './Include/object.h', Line: 559, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCell_New
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 8, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 17, Column: 5 }
+Function:        PyCell_New
+Hotness:         918299
+Args:
+  - Callee:          _PyObject_GC_TRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCell_New
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 8, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14980'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PyCell_New
+Hotness:         612199
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 11, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 92, 
+                   Column: 5 }
+Function:        PyCell_New
+Hotness:         918299
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 11, Column: 26 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 56, Column: 9 }
+Function:        PyCell_Get
+Hotness:         0
+Args:
+  - Callee:          _PyErr_BadInternalCall
+  - String:          ' will not be inlined into '
+  - Caller:          PyCell_Get
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 54, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 55, Column: 10 }
+Function:        PyCell_Get
+Hotness:         0
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCell_Get
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 54, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 59, Column: 5 }
+Function:        PyCell_Get
+Hotness:         0
+Args:
+  - Callee:          _Py_XINCREF
+    DebugLoc:        { File: './Include/object.h', Line: 559, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCell_Get
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 54, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+Function:        _Py_DECREF
+Hotness:         58129
+Args:
+  - Callee:          _Py_Dealloc
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 570, Column: 9 }
+Function:        _Py_XDECREF
+Hotness:         735922
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 68, Column: 9 }
+Function:        PyCell_Set
+Hotness:         1
+Args:
+  - Callee:          _PyErr_BadInternalCall
+  - String:          ' will not be inlined into '
+  - Caller:          PyCell_Set
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 65, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 67, Column: 10 }
+Function:        PyCell_Set
+Hotness:         1744
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCell_Set
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 65, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 74, Column: 5 }
+Function:        PyCell_Set
+Hotness:         1743
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCell_Set
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 65, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 72, Column: 5 }
+Function:        PyCell_Set
+Hotness:         1743
+Args:
+  - Callee:          _Py_XINCREF
+    DebugLoc:        { File: './Include/object.h', Line: 559, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCell_Set
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 65, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCell_Set
+Hotness:         1321
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 124, 
+                   Column: 18 }
+Function:        _PyObject_GC_UNTRACK
+Hotness:         918158
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 119, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 122, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 83, Column: 5 }
+Function:        cell_dealloc
+Hotness:         918158
+Args:
+  - Callee:          PyObject_GC_Del
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          cell_dealloc
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 80, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 81, Column: 5 }
+Function:        cell_dealloc
+Hotness:         918158
+Args:
+  - Callee:          _PyObject_GC_UNTRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 113, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_dealloc
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 80, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 82, Column: 5 }
+Function:        cell_dealloc
+Hotness:         918158
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_dealloc
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 80, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 124, 
+                   Column: 18 }
+Function:        cell_dealloc
+Hotness:         918158
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 119, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 122, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 110, Column: 16 }
+Function:        cell_repr
+Hotness:         0
+Args:
+  - Callee:          PyUnicode_FromFormat
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          cell_repr
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 108, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 112, Column: 12 }
+Function:        cell_repr
+Hotness:         0
+Args:
+  - Callee:          PyUnicode_FromFormat
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          cell_repr
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 108, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 127, Column: 5 }
+Function:        cell_clear
+Hotness:         6770
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_clear
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 126, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 585, Column: 5 }
+Function:        _Py_NewRef
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 101, Column: 16 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          PyObject_RichCompare
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 93, Column: 10 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 94, Column: 9 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 93, Column: 30 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_richcompare
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 39, Column: 10 }
+Function:        cell_new
+Hotness:         0
+Args:
+  - Callee:          _PyArg_NoKeywords
+  - String:          ' will not be inlined into '
+  - Caller:          cell_new
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 35, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 43, Column: 10 }
+Function:        cell_new
+Hotness:         0
+Args:
+  - Callee:          PyArg_UnpackTuple
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          cell_new
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 35, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 46, Column: 20 }
+Function:        cell_new
+Hotness:         0
+Args:
+  - Callee:          PyCell_New
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 8, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_new
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 35, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '95'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 46, Column: 31 }
+Function:        cell_new
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 37, Column: 15 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 43, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        cell_new
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 11, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 92, 
+                   Column: 5 }
+Function:        cell_new
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 11, Column: 26 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 136, Column: 9 }
+Function:        cell_get_contents
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          cell_get_contents
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 133, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 139, Column: 5 }
+Function:        cell_get_contents
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_get_contents
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 133, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 146, Column: 5 }
+Function:        cell_set_contents
+Hotness:         0
+Args:
+  - Callee:          _Py_XINCREF
+    DebugLoc:        { File: './Include/object.h', Line: 559, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_set_contents
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 145, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15010'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 147, Column: 5 }
+Function:        cell_set_contents
+Hotness:         0
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          cell_set_contents
+    DebugLoc:        { File: 'Objects/cellobject.c', Line: 145, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14965'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 103, Column: 5 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 100, Column: 11 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 8, Column: 0 }
+Function:        PyCell_New
+Hotness:         918299
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 8, Column: 0 }
+Function:        PyCell_New
+Hotness:         918299
+Args:
+  - NumInstructions: '25'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 54, Column: 0 }
+Function:        PyCell_Get
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 54, Column: 0 }
+Function:        PyCell_Get
+Hotness:         0
+Args:
+  - NumInstructions: '15'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 65, Column: 0 }
+Function:        PyCell_Set
+Hotness:         1744
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 65, Column: 0 }
+Function:        PyCell_Set
+Hotness:         1744
+Args:
+  - NumInstructions: '29'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 80, Column: 0 }
+Function:        cell_dealloc
+Hotness:         918158
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 80, Column: 0 }
+Function:        cell_dealloc
+Hotness:         918158
+Args:
+  - NumInstructions: '24'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 108, Column: 0 }
+Function:        cell_repr
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 108, Column: 0 }
+Function:        cell_repr
+Hotness:         0
+Args:
+  - NumInstructions: '12'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 119, Column: 0 }
+Function:        cell_traverse
+Hotness:         1557285
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 119, Column: 0 }
+Function:        cell_traverse
+Hotness:         1557285
+Args:
+  - NumInstructions: '14'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 126, Column: 0 }
+Function:        cell_clear
+Hotness:         7737
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 126, Column: 0 }
+Function:        cell_clear
+Hotness:         7737
+Args:
+  - NumInstructions: '15'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 88, Column: 0 }
+Function:        cell_richcompare
+Hotness:         0
+Args:
+  - NumInstructions: '47'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 35, Column: 0 }
+Function:        cell_new
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 35, Column: 0 }
+Function:        cell_new
+Hotness:         0
+Args:
+  - NumInstructions: '53'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 133, Column: 0 }
+Function:        cell_get_contents
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 133, Column: 0 }
+Function:        cell_get_contents
+Hotness:         0
+Args:
+  - NumInstructions: '12'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 145, Column: 0 }
+Function:        cell_set_contents
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/cellobject.c', Line: 145, Column: 0 }
+Function:        cell_set_contents
+Hotness:         0
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...

@@ -1,0 +1,1192 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 49, Column: 9 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          __errno_location
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 50, Column: 9 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          clearerr
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 51, Column: 19 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          fgets
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 83, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          feof
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 84, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          clearerr
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 90, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          PyEval_RestoreThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 91, Column: 21 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          PyErr_CheckSignals
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 92, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          PyEval_SaveThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 102, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - Callee:          _PyOS_InterruptOccurred
+  - String:          ' will not be inlined into '
+  - Caller:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 49, Column: 9 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 45, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 45, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i32 ()*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 92, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 55, Column: 19 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 49, Column: 15 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 51, Column: 19 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 45, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 292, Column: 5 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          fflush
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 294, Column: 9 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          fputs
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 296, Column: 5 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          fflush
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 303, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyMem_RawFree
+    DebugLoc:        { File: './Include/cpython/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 304, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyEval_RestoreThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 305, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 306, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyEval_SaveThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 309, Column: 22 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyMem_RawRealloc
+    DebugLoc:        { File: './Include/cpython/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 311, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyMem_RawFree
+    DebugLoc:        { File: './Include/cpython/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 312, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyEval_RestoreThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 313, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 314, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyEval_SaveThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 321, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyMem_RawFree
+    DebugLoc:        { File: './Include/cpython/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 328, Column: 14 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          strlen
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 331, Column: 18 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyMem_RawRealloc
+    DebugLoc:        { File: './Include/cpython/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 333, Column: 9 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyMem_RawFree
+    DebugLoc:        { File: './Include/cpython/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 334, Column: 9 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyEval_RestoreThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 335, Column: 9 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 336, Column: 9 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          PyEval_SaveThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 318, Column: 19 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - Callee:          my_fgets
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '80'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 329, Column: 14 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 329, Column: 14 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 318, Column: 43 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 318, Column: 43 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 294, Column: 17 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 292, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 296, Column: 12 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 294, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 296, Column: 12 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 292, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 305, Column: 29 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 304, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 294, Column: 17 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 292, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 296, Column: 12 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 294, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 296, Column: 12 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 292, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 305, Column: 29 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 304, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 329, Column: 14 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 329, Column: 14 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 318, Column: 43 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 318, Column: 43 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 81, 
+                   Column: 12 }
+Function:        _PyThreadState_GET
+Hotness:         0
+Args:
+  - Callee:          _PyRuntimeState_GetThreadState
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 58, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 361, Column: 9 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 372, Column: 30 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyThread_allocate_lock
+    DebugLoc:        { File: './Include/pythread.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 374, Column: 13 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 380, Column: 5 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyEval_SaveThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 381, Column: 5 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyThread_acquire_lock
+    DebugLoc:        { File: './Include/pythread.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 388, Column: 18 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          fileno
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 388, Column: 10 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          isatty
+    DebugLoc:        { File: '/usr/include/unistd.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 388, Column: 50 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          fileno
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 388, Column: 42 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          isatty
+    DebugLoc:        { File: '/usr/include/unistd.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 393, Column: 5 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyEval_RestoreThread
+    DebugLoc:        { File: './Include/ceval.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 395, Column: 5 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyThread_release_lock
+    DebugLoc:        { File: './Include/pythread.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 402, Column: 11 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          strlen
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 403, Column: 11 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyMem_Malloc
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 408, Column: 9 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 410, Column: 5 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyMem_RawFree
+    DebugLoc:        { File: './Include/cpython/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 359, Column: 29 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 389, Column: 14 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 389, Column: 14 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - Callee:          PyOS_StdioReadline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          PyOS_Readline
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 381, Column: 27 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 371, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 391, Column: 16 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8* (%struct._IO_FILE*, %struct._IO_FILE*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 367, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 388, Column: 42 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 395, Column: 27 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 393, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 374, Column: 29 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 372, Column: 30 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 300, Column: 5 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 300, Column: 5 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            LoopContainsSwitch
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 319, Column: 13 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop contains a switch statement
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 299, Column: 7 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 300, Column: 5 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 300, Column: 5 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          loop not vectorized
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 329, Column: 14 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 329, Column: 14 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 318, Column: 43 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Parser/myreadline.c', Line: 318, Column: 43 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 44, Column: 5 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 44, Column: 5 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 47, Column: 9 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeLibcall
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 46, Column: 19 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          call instruction cannot be vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 44, Column: 5 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 44, Column: 5 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 45, Column: 13 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReload
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 300, Column: 5 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - String:          generated in loop
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 242, Column: 0 }
+Function:        PyOS_StdioReadline
+Hotness:         0
+Args:
+  - NumInstructions: '88'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 31, Column: 0 }
+Function:        my_fgets
+Hotness:         0
+Args:
+  - NumInstructions: '59'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Parser/myreadline.c', Line: 355, Column: 0 }
+Function:        PyOS_Readline
+Hotness:         0
+Args:
+  - NumInstructions: '88'
+  - String:          ' instructions in function'
+...

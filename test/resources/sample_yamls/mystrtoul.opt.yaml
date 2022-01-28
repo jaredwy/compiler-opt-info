@@ -1,0 +1,755 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 253, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         2
+Args:
+  - Callee:          __errno_location
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_strtoul
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 96, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 253, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         115
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+Function:        PyOS_strtoul
+Hotness:         1069
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+Function:        PyOS_strtoul
+Hotness:         1069
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+Function:        PyOS_strtoul
+Hotness:         1069
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 223, Column: 26 }
+Function:        PyOS_strtoul
+Hotness:         126
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 223, Column: 26 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 223, Column: 26 }
+Function:        PyOS_strtoul
+Hotness:         126
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 223, Column: 26 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressCondExecuted
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 223, Column: 26 }
+Function:        PyOS_strtoul
+Hotness:         126
+Args:
+  - String:          failed to hoist load with loop-invariant address because load is conditionally executed
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+Function:        PyOS_strtoul
+Hotness:         27679
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+Function:        PyOS_strtoul
+Hotness:         27679
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 20 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 20 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+Function:        PyOS_strtoul
+Hotness:         27679
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 205, Column: 12 }
+Function:        PyOS_strtoul
+Hotness:         157785
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 36 }
+Function:        PyOS_strtoul
+Hotness:         112197
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 205, Column: 12 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 35 }
+Function:        PyOS_strtoul
+Hotness:         1069
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+Function:        PyOS_strtoul
+Hotness:         1069
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+Function:        PyOS_strtoul
+Hotness:         1069
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressCondExecuted
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 223, Column: 26 }
+Function:        PyOS_strtoul
+Hotness:         126
+Args:
+  - String:          failed to hoist load with loop-invariant address because load is conditionally executed
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+Function:        PyOS_strtoul
+Hotness:         27679
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 20 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 20 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 287, Column: 9 }
+Function:        PyOS_strtol
+Hotness:         124
+Args:
+  - Callee:          __errno_location
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_strtol
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 264, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 276, Column: 15 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - Callee:          PyOS_strtoul
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 96, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          PyOS_strtol
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 264, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '625'
+  - String:          ', threshold='
+  - Threshold:       '625'
+  - String:          ')'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 287, Column: 9 }
+Function:        PyOS_strtol
+Hotness:         124
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 20 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 20 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 20 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 139, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         19
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 139, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         19
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         1
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         1
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 205, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         45588
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 205, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         45588
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         213637
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         213637
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         213637
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         213637
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 5 }
+Function:        PyOS_strtoul
+Hotness:         213637
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 9 }
+Function:        PyOS_strtoul
+Hotness:         955
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 9 }
+Function:        PyOS_strtoul
+Hotness:         955
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 229, Column: 34 }
+Function:        PyOS_strtoul
+Hotness:         42
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 229, Column: 34 }
+Function:        PyOS_strtoul
+Hotness:         42
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        PyOS_strtoul
+Hotness:         213637
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+Function:        PyOS_strtoul
+Hotness:         955
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+Function:        PyOS_strtoul
+Hotness:         955
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+Function:        PyOS_strtoul
+Hotness:         955
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 249, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+Function:        PyOS_strtoul
+Hotness:         213522
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 212, Column: 17 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressCondExecuted
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 223, Column: 26 }
+Function:        PyOS_strtoul
+Hotness:         126
+Args:
+  - String:          failed to hoist load with loop-invariant address because load is conditionally executed
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+Function:        PyOS_strtoul
+Hotness:         1
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+Function:        PyOS_strtoul
+Hotness:         1
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 141, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 20 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 102, Column: 20 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 5 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 5 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 5 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 5 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 5 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - String:          loop not vectorized
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 20 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/mystrtoul.c', Line: 269, Column: 20 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 96, Column: 0 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 96, Column: 0 }
+Function:        PyOS_strtoul
+Hotness:         139881
+Args:
+  - NumInstructions: '189'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 264, Column: 0 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/mystrtoul.c', Line: 264, Column: 0 }
+Function:        PyOS_strtol
+Hotness:         82545
+Args:
+  - NumInstructions: '51'
+  - String:          ' instructions in function'
+...

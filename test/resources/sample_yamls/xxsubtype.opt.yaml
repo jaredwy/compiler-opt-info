@@ -1,0 +1,1127 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 313, Column: 12 }
+Function:        PyInit_xxsubtype
+Hotness:         0
+Args:
+  - Callee:          PyModuleDef_Init
+    DebugLoc:        { File: './Include/moduleobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyInit_xxsubtype
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 312, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+Function:        _Py_DECREF
+Hotness:         0
+Args:
+  - Callee:          _Py_Dealloc
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 242, Column: 10 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - Callee:          PyArg_ParseTuple
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spam_bench
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 237, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 244, Column: 10 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - Callee:          clock
+    DebugLoc:        { File: '/usr/include/time.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spam_bench
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 237, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 15 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - Callee:          PyObject_GetAttr
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spam_bench
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 237, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 251, Column: 10 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - Callee:          clock
+    DebugLoc:        { File: '/usr/include/time.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spam_bench
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 237, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 252, Column: 12 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - Callee:          PyFloat_FromDouble
+    DebugLoc:        { File: './Include/floatobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spam_bench
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 237, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 249, Column: 9 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          spam_bench
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 237, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 32 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 37 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 12 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 12 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 239, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 244, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 32 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 32 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 32 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 244, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 37 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 37 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 37 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 244, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 12 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 239, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 12 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 239, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 15 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 32 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 37 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 12 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 268, Column: 9 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - Callee:          PyType_Ready
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          xxsubtype_exec
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 272, Column: 9 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - Callee:          PyType_Ready
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          xxsubtype_exec
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 275, Column: 9 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - Callee:          PyType_Ready
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          xxsubtype_exec
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 277, Column: 9 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - Callee:          PyType_Ready
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          xxsubtype_exec
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 281, Column: 9 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - Callee:          PyModule_AddObject
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          xxsubtype_exec
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 286, Column: 9 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - Callee:          PyModule_AddObject
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          xxsubtype_exec
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 280, Column: 5 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          xxsubtype_exec
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 285, Column: 5 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          xxsubtype_exec
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 277, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 281, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 154, Column: 10 }
+Function:        spamdict_getstate
+Hotness:         0
+Args:
+  - Callee:          PyArg_ParseTuple
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spamdict_getstate
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 153, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 156, Column: 12 }
+Function:        spamdict_getstate
+Hotness:         0
+Args:
+  - Callee:          PyLong_FromLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spamdict_getstate
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 153, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 156, Column: 34 }
+Function:        spamdict_getstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 154, Column: 10 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 164, Column: 10 }
+Function:        spamdict_setstate
+Hotness:         0
+Args:
+  - Callee:          PyArg_ParseTuple
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spamdict_setstate
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 161, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 167, Column: 5 }
+Function:        spamdict_setstate
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          spamdict_setstate
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 161, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 166, Column: 19 }
+Function:        spamdict_setstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 164, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        spamdict_setstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 164, Column: 10 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 29, Column: 10 }
+Function:        spamlist_getstate
+Hotness:         0
+Args:
+  - Callee:          PyArg_ParseTuple
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spamlist_getstate
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 28, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 31, Column: 12 }
+Function:        spamlist_getstate
+Hotness:         0
+Args:
+  - Callee:          PyLong_FromLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spamlist_getstate
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 28, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 31, Column: 34 }
+Function:        spamlist_getstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 29, Column: 10 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 39, Column: 10 }
+Function:        spamlist_setstate
+Hotness:         0
+Args:
+  - Callee:          PyArg_ParseTuple
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spamlist_setstate
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 42, Column: 5 }
+Function:        spamlist_setstate
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          spamlist_setstate
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 36, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 41, Column: 19 }
+Function:        spamlist_setstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 39, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        spamlist_setstate
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 39, Column: 10 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 49, Column: 24 }
+Function:        spamlist_specialmeth
+Hotness:         0
+Args:
+  - Callee:          PyTuple_New
+    DebugLoc:        { File: './Include/tupleobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spamlist_specialmeth
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 48, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 56, Column: 9 }
+Function:        spamlist_specialmeth
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          spamlist_specialmeth
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 48, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 60, Column: 9 }
+Function:        spamlist_specialmeth
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          spamlist_specialmeth
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 48, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 58, Column: 9 }
+Function:        spamlist_specialmeth
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          spamlist_specialmeth
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 48, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        spamlist_specialmeth
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        spamlist_specialmeth
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 94, Column: 12 }
+Function:        spamlist_state_get
+Hotness:         0
+Args:
+  - Callee:          PyLong_FromLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          spamlist_state_get
+    DebugLoc:        { File: './Modules/xxsubtype.c', Line: 93, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 5 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 5 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 5 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeLibcall
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 15 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          call instruction cannot be vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 5 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 5 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          loop not vectorized
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 32 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 246, Column: 37 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 245, Column: 12 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 312, Column: 0 }
+Function:        PyInit_xxsubtype
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 312, Column: 0 }
+Function:        PyInit_xxsubtype
+Hotness:         0
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 237, Column: 0 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 237, Column: 0 }
+Function:        spam_bench
+Hotness:         0
+Args:
+  - NumInstructions: '41'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 262, Column: 0 }
+Function:        xxsubtype_exec
+Hotness:         0
+Args:
+  - NumInstructions: '42'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 181, Column: 0 }
+Function:        spamdict_init
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 181, Column: 0 }
+Function:        spamdict_init
+Hotness:         0
+Args:
+  - NumInstructions: '11'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 153, Column: 0 }
+Function:        spamdict_getstate
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 153, Column: 0 }
+Function:        spamdict_getstate
+Hotness:         0
+Args:
+  - NumInstructions: '15'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 161, Column: 0 }
+Function:        spamdict_setstate
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 161, Column: 0 }
+Function:        spamdict_setstate
+Hotness:         0
+Args:
+  - NumInstructions: '22'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 84, Column: 0 }
+Function:        spamlist_init
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 84, Column: 0 }
+Function:        spamlist_init
+Hotness:         0
+Args:
+  - NumInstructions: '11'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 28, Column: 0 }
+Function:        spamlist_getstate
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 28, Column: 0 }
+Function:        spamlist_getstate
+Hotness:         0
+Args:
+  - NumInstructions: '15'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 36, Column: 0 }
+Function:        spamlist_setstate
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 36, Column: 0 }
+Function:        spamlist_setstate
+Hotness:         0
+Args:
+  - NumInstructions: '22'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 48, Column: 0 }
+Function:        spamlist_specialmeth
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 48, Column: 0 }
+Function:        spamlist_specialmeth
+Hotness:         0
+Args:
+  - NumInstructions: '25'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 93, Column: 0 }
+Function:        spamlist_state_get
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/xxsubtype.c', Line: 93, Column: 0 }
+Function:        spamlist_state_get
+Hotness:         0
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...

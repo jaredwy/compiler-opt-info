@@ -1,0 +1,503 @@
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 81, 
+                   Column: 12 }
+Function:        _PyThreadState_GET
+Hotness:         122
+Args:
+  - Callee:          _PyRuntimeState_GetThreadState
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 58, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 113, 
+                   Column: 29 }
+Function:        _PyInterpreterState_GET
+Hotness:         122
+Args:
+  - Callee:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+Function:        _Py_DECREF
+Hotness:         0
+Args:
+  - Callee:          _Py_Dealloc
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 63, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         122
+Args:
+  - Callee:          strchr
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 65, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         1
+Args:
+  - Callee:          PyOS_snprintf
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 69, Column: 5 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         122
+Args:
+  - Callee:          PyOS_snprintf
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 74, Column: 23 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         1
+Args:
+  - Callee:          fileno
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 74, Column: 13 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         1
+Args:
+  - Callee:          _Py_fstat
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 80, Column: 14 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         122
+Args:
+  - Callee:          dlopen
+    DebugLoc:        { File: '/usr/include/dlfcn.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 86, Column: 29 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         1
+Args:
+  - Callee:          dlerror
+    DebugLoc:        { File: '/usr/include/dlfcn.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 89, Column: 20 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         1
+Args:
+  - Callee:          PyUnicode_DecodeLocale
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 92, Column: 20 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         1
+Args:
+  - Callee:          PyUnicode_FromString
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 97, Column: 16 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - Callee:          PyUnicode_DecodeFSDefault
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 103, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetImportError
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 109, Column: 22 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         121
+Args:
+  - Callee:          dlsym
+    DebugLoc:        { File: '/usr/include/dlfcn.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 78, Column: 19 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         122
+Args:
+  - Callee:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 106, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 94, Column: 13 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 99, Column: 13 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 100, Column: 13 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 104, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 105, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_FindSharedFuncptr
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 103, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 97, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/dynload_shlib.c', Line: 92, Column: 20 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         122
+Args:
+  - NumStackBytes:   '728'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Python/dynload_shlib.c', Line: 56, Column: 0 }
+Function:        _PyImport_FindSharedFuncptr
+Hotness:         122
+Args:
+  - NumInstructions: '107'
+  - String:          ' instructions in function'
+...

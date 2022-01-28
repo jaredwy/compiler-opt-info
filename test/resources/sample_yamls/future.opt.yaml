@@ -1,0 +1,2022 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+Function:        future_check_features
+Hotness:         3
+Args:
+  - Callee:          PyUnicode_AsUTF8
+    DebugLoc:        { File: './Include/cpython/unicodeobject.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 21, Column: 13 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 23, Column: 20 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 25, Column: 20 }
+Function:        future_check_features
+Hotness:         1
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 27, Column: 20 }
+Function:        future_check_features
+Hotness:         1
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 29, Column: 20 }
+Function:        future_check_features
+Hotness:         1
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 31, Column: 20 }
+Function:        future_check_features
+Hotness:         1
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 33, Column: 20 }
+Function:        future_check_features
+Hotness:         1
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 35, Column: 20 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 37, Column: 20 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 39, Column: 20 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 41, Column: 20 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 42, Column: 13 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 44, Column: 13 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - Callee:          PyErr_SyntaxLocationObject
+    DebugLoc:        { File: './Include/cpython/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 47, Column: 13 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 49, Column: 13 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - Callee:          PyErr_SyntaxLocationObject
+    DebugLoc:        { File: './Include/cpython/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 17 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 17 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 54 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 54 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 17, Column: 35 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 17, Column: 35 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         4
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         5
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         4
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         4
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 17 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 17 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 17 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 17 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 54 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 54 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 17, Column: 35 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 17, Column: 35 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         1
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 49, Column: 53 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 47, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 49, Column: 64 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 47, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 44, Column: 53 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 42, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 44, Column: 64 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 42, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 49, Column: 53 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 47, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 49, Column: 64 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 47, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 44, Column: 53 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 42, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 44, Column: 64 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 42, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 49, Column: 53 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 47, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 49, Column: 64 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 47, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 44, Column: 53 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 42, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 44, Column: 64 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 42, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 54 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 54 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 17, Column: 35 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 17, Column: 35 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         4
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 76, Column: 9 }
+Function:        future_parse
+Hotness:         3441
+Args:
+  - Callee:          _PyAST_GetDocString
+  - String:          ' will not be inlined into '
+  - Caller:          future_parse
+    DebugLoc:        { File: 'Python/future.c', Line: 58, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+Function:        future_parse
+Hotness:         83
+Args:
+  - Callee:          _PyUnicode_EqualToASCIIString
+  - String:          ' will not be inlined into '
+  - Caller:          future_parse
+    DebugLoc:        { File: 'Python/future.c', Line: 58, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+Function:        future_parse
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          future_parse
+    DebugLoc:        { File: 'Python/future.c', Line: 58, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 21 }
+Function:        future_parse
+Hotness:         1
+Args:
+  - Callee:          PyErr_SyntaxLocationObject
+    DebugLoc:        { File: './Include/cpython/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          future_parse
+    DebugLoc:        { File: 'Python/future.c', Line: 58, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/future.c', Line: 102, Column: 22 }
+Function:        future_parse
+Hotness:         3
+Args:
+  - Callee:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          future_parse
+    DebugLoc:        { File: 'Python/future.c', Line: 58, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 21 }
+Function:        future_parse
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 21 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+Function:        future_parse
+Hotness:         77
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+Function:        future_parse
+Hotness:         3975
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 82, Column: 24 }
+Function:        future_parse
+Hotness:         958
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 82, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+Function:        future_parse
+Hotness:         4399
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7414
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7415
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 21 }
+Function:        future_parse
+Hotness:         2
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7415
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 76, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7415
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7415
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 31 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/future.c', Line: 84, Column: 24 }
+Function:        future_parse
+Hotness:         3975
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 36 }
+Function:        future_parse
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 102, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 37 }
+Function:        future_parse
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 61 }
+Function:        future_parse
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 72 }
+Function:        future_parse
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7415
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 76, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7415
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7415
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 36 }
+Function:        future_parse
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 102, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 37 }
+Function:        future_parse
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 61 }
+Function:        future_parse
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 72 }
+Function:        future_parse
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+Function:        future_parse
+Hotness:         77
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+Function:        future_parse
+Hotness:         3440
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+Function:        future_parse
+Hotness:         3975
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 82, Column: 24 }
+Function:        future_parse
+Hotness:         958
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 82, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+Function:        future_parse
+Hotness:         4399
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7414
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        future_parse
+Hotness:         7415
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 123, Column: 30 }
+Function:        _PyFuture_FromAST
+Hotness:         7347
+Args:
+  - Callee:          PyObject_Malloc
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyFuture_FromAST
+    DebugLoc:        { File: 'Python/future.c', Line: 120, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 125, Column: 9 }
+Function:        _PyFuture_FromAST
+Hotness:         1
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyFuture_FromAST
+    DebugLoc:        { File: 'Python/future.c', Line: 120, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/future.c', Line: 132, Column: 9 }
+Function:        _PyFuture_FromAST
+Hotness:         1
+Args:
+  - Callee:          PyObject_Free
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyFuture_FromAST
+    DebugLoc:        { File: 'Python/future.c', Line: 120, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/future.c', Line: 131, Column: 10 }
+Function:        _PyFuture_FromAST
+Hotness:         7346
+Args:
+  - Callee:          future_parse
+    DebugLoc:        { File: 'Python/future.c', Line: 58, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyFuture_FromAST
+    DebugLoc:        { File: 'Python/future.c', Line: 120, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14630'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/future.c', Line: 102, Column: 22 }
+Function:        _PyFuture_FromAST
+Hotness:         3
+Args:
+  - Callee:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyFuture_FromAST
+    DebugLoc:        { File: 'Python/future.c', Line: 120, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/future.c', Line: 102, Column: 22 }
+Function:        _PyFuture_FromAST
+Hotness:         3
+Args:
+  - Callee:          future_check_features
+    DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyFuture_FromAST
+    DebugLoc:        { File: 'Python/future.c', Line: 120, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+Function:        _PyFuture_FromAST
+Hotness:         77
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         3975
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+Function:        _PyFuture_FromAST
+Hotness:         4398
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7413
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 61, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7346
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 123, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+Function:        _PyFuture_FromAST
+Hotness:         3450
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/future.c', Line: 129, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 76, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 36 }
+Function:        _PyFuture_FromAST
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 102, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 37 }
+Function:        _PyFuture_FromAST
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 61 }
+Function:        _PyFuture_FromAST
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 72 }
+Function:        _PyFuture_FromAST
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 61, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7346
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 123, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+Function:        _PyFuture_FromAST
+Hotness:         3450
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/future.c', Line: 129, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 76, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.asdl_stmt_seq*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 64, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 104, Column: 36 }
+Function:        _PyFuture_FromAST
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 102, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 37 }
+Function:        _PyFuture_FromAST
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 95, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 61 }
+Function:        _PyFuture_FromAST
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/future.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/future.c', Line: 99, Column: 72 }
+Function:        _PyFuture_FromAST
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/future.c', Line: 97, Column: 21 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+Function:        _PyFuture_FromAST
+Hotness:         77
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         3975
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+Function:        _PyFuture_FromAST
+Hotness:         4398
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7413
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 5 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 5 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: 'Python/future.c', Line: 94, Column: 17 }
+Function:        _PyFuture_FromAST
+Hotness:         76
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/future.c', Line: 59, Column: 12 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 5 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 5 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/future.c', Line: 82, Column: 13 }
+Function:        _PyFuture_FromAST
+Hotness:         4398
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/future.c', Line: 59, Column: 12 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+Function:        _PyFuture_FromAST
+Hotness:         77
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 93, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         3975
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 92, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+Function:        _PyFuture_FromAST
+Hotness:         4398
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 80, Column: 30 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7413
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 16 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 5 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 5 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: 'Python/future.c', Line: 23, Column: 20 }
+Function:        future_check_features
+Hotness:         1
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeLibcall
+DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 31 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'loop not vectorized: '
+  - String:          call instruction cannot be vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 5 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 5 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          loop not vectorized
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 54 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 18, Column: 54 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/future.c', Line: 17, Column: 35 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/future.c', Line: 17, Column: 35 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 40, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 36, Column: 29 }
+Function:        future_check_features
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/future.c', Line: 16, Column: 21 }
+Function:        future_check_features
+Hotness:         2
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            regalloc
+Name:            LoopSpillReload
+DebugLoc:        { File: 'Python/future.c', Line: 79, Column: 5 }
+Function:        _PyFuture_FromAST
+Hotness:         7414
+Args:
+  - NumSpills:       '1'
+  - String:          ' spills '
+  - NumReloads:      '1'
+  - String:          ' reloads '
+  - NumFoldedReloads: '1'
+  - String:          ' folded reloads '
+  - String:          generated in loop
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/future.c', Line: 120, Column: 0 }
+Function:        _PyFuture_FromAST
+Hotness:         7347
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/future.c', Line: 120, Column: 0 }
+Function:        _PyFuture_FromAST
+Hotness:         7347
+Args:
+  - NumInstructions: '95'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+Function:        future_check_features
+Hotness:         3
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/future.c', Line: 10, Column: 0 }
+Function:        future_check_features
+Hotness:         3
+Args:
+  - NumInstructions: '121'
+  - String:          ' instructions in function'
+...

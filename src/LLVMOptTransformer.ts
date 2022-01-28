@@ -1,7 +1,6 @@
-
 const YAML = require("yamljs");
 import { Transform } from "stream";
-import {DisplayOptInfo} from "../src/OptInformation";
+import { DisplayOptInfo } from "../src/OptInformation";
 
 const R = require("ramda");
 const optTypeMatcher = /---\s(.*)\n/;
@@ -9,10 +8,17 @@ const docStart = "---";
 const docEnd = "...";
 const IsDocumentStart = (x: string) => x.substring(0, 3) === docStart;
 const FindDocumentEnd = (x: string) => {
-    const index = x.indexOf(docEnd);
-    return { found: index > -1, endpos: index + docEnd.length }
-};
+    let index = x.indexOf(docEnd);
 
+    // in case the three dots are inside brackets
+    let dupX = x;
+    while (dupX[index - 1] === "(" && dupX[index + docEnd.length] === ")") {
+        dupX = x.substring(index + docEnd.length, dupX.length);
+        index = index + dupX.indexOf(docEnd) + docEnd.length;
+    }
+
+    return { found: index > -1, endpos: index + docEnd.length };
+};
 
 export class LLVMOptTransformer extends Transform {
     _buffer: string;
@@ -38,14 +44,14 @@ export class LLVMOptTransformer extends Transform {
                 const [head, tail] = R.splitAt(endpos, this._buffer);
                 const optTypeMatch = head.match(optTypeMatcher);
                 let opt = YAML.parse(head);
-                if(!optTypeMatch) {
+                if (!optTypeMatch) {
                     console.warn("missing optimization type");
                 } else {
-                    opt.optType = optTypeMatch[1].replace("!","");   
+                    opt.optType = optTypeMatch[1].replace("!", "");
                 }
                 opt.displayString = DisplayOptInfo(opt);
-                this.push(opt as LLVMOptInfo); 
-                this._buffer = tail.replace(/^\n/, '');
+                this.push(opt as LLVMOptInfo);
+                this._buffer = tail.replace(/^\n/, "");
             } else {
                 break;
             }

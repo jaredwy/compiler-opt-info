@@ -1,0 +1,1993 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+Function:        _Py_DECREF
+Hotness:         255
+Args:
+  - Callee:          _Py_Dealloc
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 570, Column: 9 }
+Function:        _Py_XDECREF
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 44, Column: 16 }
+Function:        get_encoded_name
+Hotness:         122
+Args:
+  - Callee:          PyUnicode_GetLength
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 45, Column: 15 }
+Function:        get_encoded_name
+Hotness:         122
+Args:
+  - Callee:          PyUnicode_FindChar
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 49, Column: 15 }
+Function:        get_encoded_name
+Hotness:         1
+Args:
+  - Callee:          PyUnicode_Substring
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 59, Column: 15 }
+Function:        get_encoded_name
+Hotness:         121
+Args:
+  - Callee:          PyUnicode_AsEncodedString
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 63, Column: 13 }
+Function:        get_encoded_name
+Hotness:         1
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 64, Column: 13 }
+Function:        get_encoded_name
+Hotness:         1
+Args:
+  - Callee:          PyErr_Clear
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 65, Column: 23 }
+Function:        get_encoded_name
+Hotness:         1
+Args:
+  - Callee:          PyUnicode_AsEncodedString
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 76, Column: 15 }
+Function:        get_encoded_name
+Hotness:         120
+Args:
+  - Callee:          _PyObject_CallMethodId
+  - String:          ' will not be inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 55, Column: 9 }
+Function:        get_encoded_name
+Hotness:         120
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 85, Column: 5 }
+Function:        get_encoded_name
+Hotness:         2
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 80, Column: 5 }
+Function:        get_encoded_name
+Hotness:         119
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 81, Column: 5 }
+Function:        get_encoded_name
+Hotness:         119
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 84, Column: 5 }
+Function:        get_encoded_name
+Hotness:         2
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        get_encoded_name
+Hotness:         120
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 45, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 63, Column: 36 }
+Function:        get_encoded_name
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 59, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        get_encoded_name
+Hotness:         119
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 76, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        get_encoded_name
+Hotness:         119
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        get_encoded_name
+Hotness:         119
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        get_encoded_name
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 63, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        get_encoded_name
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 76, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        get_encoded_name
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 65, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        get_encoded_name
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        get_encoded_name
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 250, Column: 36 }
+Function:        _PyObject_TypeCheck
+Hotness:         49
+Args:
+  - Callee:          PyType_IsSubtype
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 250, Column: 12 }
+Function:        _PyObject_TypeCheck
+Hotness:         122
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 102, Column: 20 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         122
+Args:
+  - Callee:          PyObject_GetAttrString
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 107, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 118, Column: 12 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         119
+Args:
+  - Callee:          PyObject_GetAttrString
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 122, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         118
+Args:
+  - Callee:          PySys_Audit
+    DebugLoc:        { File: './Include/cpython/sysmodule.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 131, Column: 17 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         117
+Args:
+  - Callee:          PyUnicode_EncodeFSDefault
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 134, Column: 18 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         116
+Args:
+  - Callee:          _PyImport_FindSharedFuncptr
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 141, Column: 14 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 143, Column: 19 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         0
+Args:
+  - Callee:          PyUnicode_FromFormat
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 149, Column: 13 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetImportError
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 159, Column: 26 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         115
+Args:
+  - Callee:          PyUnicode_AsUTF8
+    DebugLoc:        { File: './Include/cpython/unicodeobject.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 0, Column: 0 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         114
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 169, Column: 13 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         0
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 176, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - Callee:          PyErr_Clear
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 177, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 188, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 198, Column: 16 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         67
+Args:
+  - Callee:          PyModule_FromDefAndSpec2
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 205, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 213, Column: 11 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         43
+Args:
+  - Callee:          PyModule_GetDef
+    DebugLoc:        { File: './Include/moduleobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 215, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 223, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         42
+Args:
+  - Callee:          PyModule_AddObjectRef
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 224, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - Callee:          PyErr_Clear
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 227, Column: 25 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         42
+Args:
+  - Callee:          PyImport_GetModuleDict
+    DebugLoc:        { File: './Include/import.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Python/importdl.c', Line: 228, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         42
+Args:
+  - Callee:          _PyImport_FixupExtensionObject
+  - String:          ' will not be inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 106, Column: 10 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         121
+Args:
+  - Callee:          PyType_HasFeature
+    DebugLoc:        { File: './Include/object.h', Line: 726, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 241, Column: 5 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         11
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 112, Column: 12 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         120
+Args:
+  - Callee:          get_encoded_name
+    DebugLoc:        { File: './Python/importdl.c', Line: 36, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14350'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 137, Column: 5 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         116
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 150, Column: 13 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 184, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         113
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15030'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 194, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         112
+Args:
+  - Callee:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 195, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         68
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 196, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         68
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 197, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         68
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 231, Column: 5 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         42
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 232, Column: 5 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         42
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 233, Column: 5 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         42
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 238, Column: 5 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         11
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 239, Column: 5 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         11
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Python/importdl.c', Line: 240, Column: 5 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         11
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyImport_LoadDynamicModuleWithSpec
+    DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 106, Column: 10 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         121
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 102, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         118
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 45, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 63, Column: 36 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 59, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         117
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 76, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         117
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         117
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         114
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 134, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 158, Column: 18 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         113
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 158, Column: 18 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         113
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 134, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 184, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         111
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         41
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 228, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         41
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         41
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         41
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         41
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 215, Column: 22 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 213, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 206, Column: 13 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 250, Column: 36 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         66
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         66
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 250, Column: 36 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         66
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         66
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         66
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         66
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 188, Column: 22 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 178, Column: 13 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 176, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 170, Column: 17 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 149, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 76, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 65, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 63, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Python/importdl.c', Line: 107, Column: 25 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 102, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 49, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 45, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 143, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 141, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 228, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 169, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 131, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 118, Column: 12 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 215, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 205, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 188, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 177, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 159, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Python/importdl.c', Line: 107, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         8
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: './Python/importdl.c', Line: 0, Column: 0 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         13
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         122
+Args:
+  - NumStackBytes:   '88'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Python/importdl.c', Line: 91, Column: 0 }
+Function:        _PyImport_LoadDynamicModuleWithSpec
+Hotness:         122
+Args:
+  - NumInstructions: '329'
+  - String:          ' instructions in function'
+...

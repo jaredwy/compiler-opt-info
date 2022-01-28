@@ -1,0 +1,5725 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/hashtable.c', Line: 94, Column: 24 }
+Function:        _Py_hashtable_hash_ptr
+Hotness:         4198469
+Args:
+  - Callee:          _Py_HashPointerRaw
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_hashtable_hash_ptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 93, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 144, Column: 17 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         610549
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 144, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 73 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4914142
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 73 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 20 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         5524851
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 20 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 48 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4914142
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 135, Column: 36 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 134, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 136, Column: 36 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 134, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 134, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 48 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (i8*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 48 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (i8*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 134, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         615719
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 135, Column: 36 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 134, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 136, Column: 36 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 134, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 134, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 48 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (i8*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 134, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 48 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (i8*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         615719
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 44 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 144, Column: 17 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         615719
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 144, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 73 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 73 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 20 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         5541474
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 20 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 48 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 282, Column: 23 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - Callee:          round_size
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 108, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          hashtable_rehash
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 281, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15010'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 302, Column: 13 }
+Function:        hashtable_rehash
+Hotness:         411496
+Args:
+  - Callee:          _Py_slist_prepend
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 74, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          hashtable_rehash
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 281, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        hashtable_rehash
+Hotness:         413758
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        hashtable_rehash
+Hotness:         413758
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        hashtable_rehash
+Hotness:         413758
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        hashtable_rehash
+Hotness:         413758
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        hashtable_rehash
+Hotness:         413758
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        hashtable_rehash
+Hotness:         413758
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 62 }
+Function:        hashtable_rehash
+Hotness:         413758
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 62 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        hashtable_rehash
+Hotness:         1553617
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        hashtable_rehash
+Hotness:         1553617
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        hashtable_rehash
+Hotness:         1553617
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        hashtable_rehash
+Hotness:         1553617
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        hashtable_rehash
+Hotness:         326671
+Args:
+  - String:          'hoisting '
+  - Inst:            add
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        hashtable_rehash
+Hotness:         1553617
+Args:
+  - String:          'hoisting '
+  - Inst:            load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 283, Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 15 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 283, Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        hashtable_rehash
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 15 }
+Function:        hashtable_rehash
+Hotness:         1508
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        hashtable_rehash
+Hotness:         407076
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        hashtable_rehash
+Hotness:         407076
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        hashtable_rehash
+Hotness:         407076
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        hashtable_rehash
+Hotness:         407076
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        hashtable_rehash
+Hotness:         407076
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        hashtable_rehash
+Hotness:         407076
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        hashtable_rehash
+Hotness:         1528199
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 193, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         1091049
+Args:
+  - Callee:          _Py_slist_remove
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 83, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_steal
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 175, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 202, Column: 9 }
+Function:        _Py_hashtable_steal
+Hotness:         46
+Args:
+  - Callee:          hashtable_rehash
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 281, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_steal
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 175, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '190'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_steal
+Hotness:         46611
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 190, Column: 17 }
+Function:        _Py_hashtable_steal
+Hotness:         43262
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 190, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 73 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 73 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 20 }
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 177, Column: 36 }
+Function:        _Py_hashtable_steal
+Hotness:         1108075
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 176, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 179, Column: 36 }
+Function:        _Py_hashtable_steal
+Hotness:         1108075
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 176, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         1108075
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 176, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (i8*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (i8*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 176, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 193, Column: 27 }
+Function:        _Py_hashtable_steal
+Hotness:         1053299
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 179, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 195, Column: 17 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 197, Column: 26 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 15 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 200, Column: 20 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 200, Column: 42 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 177, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 42 }
+Function:        _Py_hashtable_steal
+Hotness:         46
+Args:
+  - String:          'load of type '
+  - Type:            'i8* (i64)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        _Py_hashtable_steal
+Hotness:         45
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         45
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 179, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        _Py_hashtable_steal
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 15 }
+Function:        _Py_hashtable_steal
+Hotness:         45
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 15 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         43262
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 177, Column: 36 }
+Function:        _Py_hashtable_steal
+Hotness:         1108075
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 176, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 179, Column: 36 }
+Function:        _Py_hashtable_steal
+Hotness:         1108075
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 176, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         1108075
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 176, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (i8*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'load of type '
+  - Type:            'i32 (i8*, i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 176, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 193, Column: 27 }
+Function:        _Py_hashtable_steal
+Hotness:         1053299
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 179, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 195, Column: 17 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 197, Column: 26 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 15 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 200, Column: 20 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 200, Column: 42 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 177, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 42 }
+Function:        _Py_hashtable_steal
+Hotness:         46
+Args:
+  - String:          'load of type '
+  - Type:            'i8* (i64)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        _Py_hashtable_steal
+Hotness:         45
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         45
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 179, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        _Py_hashtable_steal
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 15 }
+Function:        _Py_hashtable_steal
+Hotness:         45
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 198, Column: 15 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         43262
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 44 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_steal
+Hotness:         46611
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 190, Column: 17 }
+Function:        _Py_hashtable_steal
+Hotness:         43262
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 190, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 73 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 73 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 20 }
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 20 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 234, Column: 13 }
+Function:        _Py_hashtable_set
+Hotness:         1452
+Args:
+  - Callee:          hashtable_rehash
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 281, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_set
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 210, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '190'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 242, Column: 5 }
+Function:        _Py_hashtable_set
+Hotness:         1170582
+Args:
+  - Callee:          _Py_slist_prepend
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 74, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_set
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 210, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_set
+Hotness:         1471275
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 27 }
+Function:        _Py_hashtable_set
+Hotness:         1170583
+Args:
+  - String:          'load of type '
+  - Type:            'i64 (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 222, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 232, Column: 17 }
+Function:        _Py_hashtable_set
+Hotness:         1170583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 233, Column: 42 }
+Function:        _Py_hashtable_set
+Hotness:         1170583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 42 }
+Function:        _Py_hashtable_set
+Hotness:         1436
+Args:
+  - String:          'load of type '
+  - Type:            'i8* (i64)*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 222, Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        _Py_hashtable_set
+Hotness:         1436
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 233, Column: 42 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_set
+Hotness:         1434
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        _Py_hashtable_set
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 15 }
+Function:        _Py_hashtable_set
+Hotness:         1436
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 235, Column: 25 }
+Function:        _Py_hashtable_set
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 32 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 236, Column: 23 }
+Function:        _Py_hashtable_set
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 32 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 241, Column: 27 }
+Function:        _Py_hashtable_set
+Hotness:         1170582
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 21 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 5 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/hashtable.c', Line: 241, Column: 27 }
+Function:        _Py_hashtable_set
+Hotness:         1170582
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/hashtable.c', Line: 241, Column: 43 }
+Function:        _Py_hashtable_set
+Hotness:         1170582
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 241, Column: 43 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 242, Column: 28 }
+Function:        _Py_hashtable_set
+Hotness:         1170582
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 27 }
+Function:        _Py_hashtable_set
+Hotness:         1170583
+Args:
+  - String:          'load of type '
+  - Type:            'i64 (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 222, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 232, Column: 17 }
+Function:        _Py_hashtable_set
+Hotness:         1170583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 233, Column: 42 }
+Function:        _Py_hashtable_set
+Hotness:         1170583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 42 }
+Function:        _Py_hashtable_set
+Hotness:         1436
+Args:
+  - String:          'load of type '
+  - Type:            'i8* (i64)*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 222, Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        _Py_hashtable_set
+Hotness:         1436
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 233, Column: 42 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_set
+Hotness:         1434
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        _Py_hashtable_set
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 15 }
+Function:        _Py_hashtable_set
+Hotness:         1436
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 241, Column: 27 }
+Function:        _Py_hashtable_set
+Hotness:         1436
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 21 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 235, Column: 25 }
+Function:        _Py_hashtable_set
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 32 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 236, Column: 23 }
+Function:        _Py_hashtable_set
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 32 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 242, Column: 28 }
+Function:        _Py_hashtable_set
+Hotness:         1170582
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 228, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_set
+Hotness:         1471275
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 252, Column: 23 }
+Function:        _Py_hashtable_get
+Hotness:         556497
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 250, Column: 36 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 272, Column: 21 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 272, Column: 21 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 51 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 51 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 39 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 265, Column: 34 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 32 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 265, Column: 34 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 265, Column: 34 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 23 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/hashtable.c', Line: 265, Column: 34 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 32 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 265, Column: 34 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 265, Column: 34 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 23 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 272, Column: 21 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 272, Column: 21 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 51 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 51 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 39 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 265, Column: 34 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 156, Column: 27 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - Callee:          _Py_hashtable_hash_ptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 93, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_get_entry_ptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 155, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '0'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 167, Column: 17 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         371413
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 167, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 164, Column: 20 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1139000
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 164, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 157, Column: 36 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 94, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 158, Column: 36 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 94, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 94, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 157, Column: 36 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 94, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 158, Column: 36 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 94, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_hashtable_entry_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 94, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 167, Column: 17 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         396174
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 167, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 164, Column: 20 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1139000
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 164, Column: 20 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 366, Column: 12 }
+Function:        _Py_hashtable_new
+Hotness:         0
+Args:
+  - Callee:          _Py_hashtable_new_full
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 321, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_new
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 365, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-930'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy_entry
+Hotness:         79529
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_destroy_entry
+Hotness:         14460
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy_entry
+Hotness:         79529
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy_entry
+Hotness:         79529
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 9 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 399, Column: 11 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - Callee:          hashtable_rehash
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 281, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_clear
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 386, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14810'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 391, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - Callee:          _Py_hashtable_destroy_entry
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 373, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_clear
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 386, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 394, Column: 9 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - Callee:          _Py_slist_init
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 67, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_clear
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 386, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15030'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         12161
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_clear
+Hotness:         2394
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+Function:        _Py_hashtable_clear
+Hotness:         10903
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 390, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 390, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 68, Column: 11 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 68, Column: 11 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_clear
+Hotness:         10295
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_clear
+Hotness:         10295
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_clear
+Hotness:         10295
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 394, Column: 29 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_clear
+Hotness:         2394
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 394, Column: 29 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/hashtable.c', Line: 394, Column: 29 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+Function:        _Py_hashtable_clear
+Hotness:         45599
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 42 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            'i8* (i64)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        _Py_hashtable_clear
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_clear
+Hotness:         2394
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13298
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 394, Column: 29 }
+Function:        _Py_hashtable_clear
+Hotness:         10295
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+Function:        _Py_hashtable_clear
+Hotness:         10295
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 288, Column: 42 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            'i8* (i64)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 295, Column: 42 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 24 }
+Function:        _Py_hashtable_clear
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 308, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 293, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         12161
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_clear
+Hotness:         2394
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+Function:        _Py_hashtable_clear
+Hotness:         10902
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 390, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 390, Column: 43 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 68, Column: 11 }
+Function:        _Py_hashtable_clear
+Hotness:         45595
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 68, Column: 11 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         45595
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 394, Column: 29 }
+Function:        _Py_hashtable_clear
+Hotness:         10294
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+Function:        _Py_hashtable_clear
+Hotness:         10294
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/hashtable.c', Line: 410, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         64906
+Args:
+  - Callee:          _Py_hashtable_destroy_entry
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 373, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_hashtable_destroy
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 405, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14965'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_destroy
+Hotness:         11683
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+Function:        _Py_hashtable_destroy
+Hotness:         53307
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 409, Column: 49 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 409, Column: 49 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_destroy
+Hotness:         48366
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_destroy
+Hotness:         48366
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_destroy
+Hotness:         48366
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 406, Column: 32 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_destroy
+Hotness:         11683
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 406, Column: 32 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 406, Column: 32 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/hashtable.c', Line: 406, Column: 32 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 415, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         335
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 415, Column: 24 }
+Function:        _Py_hashtable_destroy
+Hotness:         335
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 416, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         335
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 415, Column: 15 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 415, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._Py_slist_t*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_destroy
+Hotness:         11683
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 406, Column: 32 }
+Function:        _Py_hashtable_destroy
+Hotness:         48366
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 406, Column: 32 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 415, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         335
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 415, Column: 24 }
+Function:        _Py_hashtable_destroy
+Hotness:         335
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/hashtable.c', Line: 416, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         335
+Args:
+  - String:          'load of type '
+  - Type:            'void (i8*)*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 415, Column: 15 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 415, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_destroy
+Hotness:         11683
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+Function:        _Py_hashtable_destroy
+Hotness:         53307
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 409, Column: 49 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 409, Column: 49 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 406, Column: 32 }
+Function:        _Py_hashtable_destroy
+Hotness:         48366
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/hashtable.c', Line: 124, Column: 10 }
+Function:        _Py_hashtable_size
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/hashtable.c', Line: 124, Column: 26 }
+Function:        _Py_hashtable_size
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 137, Column: 5 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         5541474
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 137, Column: 5 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         5541474
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 13 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 137, Column: 5 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         5541474
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 137, Column: 5 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         5541474
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 137, Column: 5 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         5541474
+Args:
+  - String:          loop not vectorized
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 144, Column: 17 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         615719
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 144, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 73 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 73 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 20 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         5541474
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 20 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 141, Column: 48 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 181, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 181, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 13 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 181, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 181, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 181, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         375
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/hashtable.c', Line: 113, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         375
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 113, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         375
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/hashtable.c', Line: 200, Column: 9 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/hashtable.c', Line: 200, Column: 9 }
+Function:        _Py_hashtable_steal
+Hotness:         1091054
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            Peeled
+DebugLoc:        { File: 'Python/hashtable.c', Line: 113, Column: 5 }
+Function:        _Py_hashtable_steal
+Hotness:         375
+Args:
+  - String:          ' peeled loop by '
+  - PeelCount:       '7'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_steal
+Hotness:         12416
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_steal
+Hotness:         46611
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 190, Column: 17 }
+Function:        _Py_hashtable_steal
+Hotness:         43262
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 190, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 73 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 73 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 20 }
+Function:        _Py_hashtable_steal
+Hotness:         1134316
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 20 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 186, Column: 48 }
+Function:        _Py_hashtable_steal
+Hotness:         1091055
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 0, Column: 0 }
+Function:        _Py_hashtable_set
+Hotness:         11846
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/hashtable.c', Line: 113, Column: 5 }
+Function:        _Py_hashtable_set
+Hotness:         11846
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 113, Column: 5 }
+Function:        _Py_hashtable_set
+Hotness:         11846
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/hashtable.c', Line: 241, Column: 43 }
+Function:        _Py_hashtable_set
+Hotness:         1170582
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/hashtable.c', Line: 233, Column: 9 }
+Function:        _Py_hashtable_set
+Hotness:         1170583
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/hashtable.c', Line: 233, Column: 9 }
+Function:        _Py_hashtable_set
+Hotness:         1170583
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            Peeled
+DebugLoc:        { File: 'Python/hashtable.c', Line: 113, Column: 5 }
+Function:        _Py_hashtable_set
+Hotness:         11846
+Args:
+  - String:          ' peeled loop by '
+  - PeelCount:       '7'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_set
+Hotness:         391913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_set
+Hotness:         1471275
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 269, Column: 17 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 269, Column: 17 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 269, Column: 17 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 269, Column: 17 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 269, Column: 17 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 272, Column: 21 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 272, Column: 21 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 51 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 51 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 39 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 268, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 266, Column: 40 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 265, Column: 34 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/hashtable.c', Line: 353, Column: 23 }
+Function:        _Py_hashtable_new_full
+Hotness:         333
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Passed
+Pass:            slp-vectorizer
+Name:            StoresVectorized
+DebugLoc:        { File: 'Python/hashtable.c', Line: 337, Column: 18 }
+Function:        _Py_hashtable_new_full
+Hotness:         334
+Args:
+  - String:          'Stores SLP vectorized with cost '
+  - Cost:            '-1'
+  - String:          ' and with tree size '
+  - TreeSize:        '2'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 159, Column: 5 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1139000
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 159, Column: 5 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1139000
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 159, Column: 5 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1139000
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/hashtable.c', Line: 159, Column: 5 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1139000
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 159, Column: 5 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1139000
+Args:
+  - String:          loop not vectorized
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 167, Column: 17 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         396174
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 167, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 164, Column: 20 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1139000
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 164, Column: 20 }
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/hashtable.c', Line: 353, Column: 23 }
+Function:        _Py_hashtable_new
+Hotness:         0
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Passed
+Pass:            slp-vectorizer
+Name:            StoresVectorized
+DebugLoc:        { File: 'Python/hashtable.c', Line: 337, Column: 18 }
+Function:        _Py_hashtable_new
+Hotness:         0
+Args:
+  - String:          'Stores SLP vectorized with cost '
+  - Cost:            '-1'
+  - String:          ' and with tree size '
+  - TreeSize:        '2'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: 'Python/hashtable.c', Line: 376, Column: 5 }
+Function:        _Py_hashtable_clear
+Hotness:         10902
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 389, Column: 9 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/hashtable.c', Line: 389, Column: 9 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 389, Column: 9 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 297, Column: 9 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _Py_hashtable_clear
+Hotness:         45595
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 16 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 75, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 300, Column: 41 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         3239
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 299, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         12161
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 296, Column: 40 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_clear
+Hotness:         2394
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+Function:        _Py_hashtable_clear
+Hotness:         10902
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 390, Column: 43 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 390, Column: 43 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_clear
+Hotness:         13296
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 68, Column: 11 }
+Function:        _Py_hashtable_clear
+Hotness:         45595
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 68, Column: 11 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+Function:        _Py_hashtable_clear
+Hotness:         45595
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 388, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 394, Column: 29 }
+Function:        _Py_hashtable_clear
+Hotness:         10294
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 387, Column: 30 }
+Function:        _Py_hashtable_clear
+Hotness:         10294
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: 'Python/hashtable.c', Line: 376, Column: 5 }
+Function:        _Py_hashtable_destroy
+Hotness:         53307
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/hashtable.c', Line: 408, Column: 9 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantComputeNumberOfIterations
+DebugLoc:        { File: 'Python/hashtable.c', Line: 408, Column: 9 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'loop not vectorized: '
+  - String:          could not determine number of loop iterations
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/hashtable.c', Line: 408, Column: 9 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+Function:        _Py_hashtable_destroy
+Hotness:         11683
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 378, Column: 39 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+Function:        _Py_hashtable_destroy
+Hotness:         53307
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 375, Column: 37 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 409, Column: 49 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 409, Column: 49 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 374, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 377, Column: 13 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 380, Column: 15 }
+Function:        _Py_hashtable_destroy
+Hotness:         65032
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 407, Column: 40 }
+Function:        _Py_hashtable_destroy
+Hotness:         188856
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: 'Python/hashtable.c', Line: 406, Column: 32 }
+Function:        _Py_hashtable_destroy
+Hotness:         48366
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 93, Column: 0 }
+Function:        _Py_hashtable_hash_ptr
+Hotness:         4198469
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 93, Column: 0 }
+Function:        _Py_hashtable_hash_ptr
+Hotness:         4198469
+Args:
+  - NumInstructions: '1'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 100, Column: 0 }
+Function:        _Py_hashtable_compare_direct
+Hotness:         1091055
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 100, Column: 0 }
+Function:        _Py_hashtable_compare_direct
+Hotness:         1091055
+Args:
+  - NumInstructions: '4'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 121, Column: 0 }
+Function:        _Py_hashtable_size
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 121, Column: 0 }
+Function:        _Py_hashtable_size
+Hotness:         0
+Args:
+  - NumInstructions: '6'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 133, Column: 0 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 133, Column: 0 }
+Function:        _Py_hashtable_get_entry_generic
+Hotness:         4925755
+Args:
+  - NumInstructions: '36'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 175, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         1108075
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 175, Column: 0 }
+Function:        _Py_hashtable_steal
+Hotness:         1108075
+Args:
+  - NumInstructions: '165'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 210, Column: 0 }
+Function:        _Py_hashtable_set
+Hotness:         1170584
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 210, Column: 0 }
+Function:        _Py_hashtable_set
+Hotness:         1170584
+Args:
+  - NumInstructions: '153'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 249, Column: 0 }
+Function:        _Py_hashtable_get
+Hotness:         1669492
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 249, Column: 0 }
+Function:        _Py_hashtable_get
+Hotness:         1669492
+Args:
+  - NumInstructions: '10'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 264, Column: 0 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 264, Column: 0 }
+Function:        _Py_hashtable_foreach
+Hotness:         0
+Args:
+  - NumInstructions: '37'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 321, Column: 0 }
+Function:        _Py_hashtable_new_full
+Hotness:         335
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 321, Column: 0 }
+Function:        _Py_hashtable_new_full
+Hotness:         335
+Args:
+  - NumInstructions: '73'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 155, Column: 0 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 155, Column: 0 }
+Function:        _Py_hashtable_get_entry_ptr
+Hotness:         1931347
+Args:
+  - NumInstructions: '30'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 365, Column: 0 }
+Function:        _Py_hashtable_new
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 365, Column: 0 }
+Function:        _Py_hashtable_new
+Hotness:         0
+Args:
+  - NumInstructions: '48'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 386, Column: 0 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 386, Column: 0 }
+Function:        _Py_hashtable_clear
+Hotness:         12
+Args:
+  - NumInstructions: '91'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/hashtable.c', Line: 405, Column: 0 }
+Function:        _Py_hashtable_destroy
+Hotness:         335
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/hashtable.c', Line: 405, Column: 0 }
+Function:        _Py_hashtable_destroy
+Hotness:         335
+Args:
+  - NumInstructions: '51'
+  - String:          ' instructions in function'
+...
