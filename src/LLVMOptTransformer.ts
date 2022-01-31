@@ -3,21 +3,13 @@ import { Transform } from "stream";
 import { DisplayOptInfo } from "../src/OptInformation";
 
 const R = require("ramda");
-const optTypeMatcher = /---\s(.*)\n/;
+const optTypeMatcher = /---\s(.*)\r?\n/;
 const docStart = "---";
-const docEnd = "...";
+const docEndMatcher = /\n\.\.\./;
 const IsDocumentStart = (x: string) => x.substring(0, 3) === docStart;
 const FindDocumentEnd = (x: string) => {
-    let index = x.indexOf(docEnd);
-
-    // in case the three dots are inside brackets
-    let dupX = x;
-    while (dupX[index - 1] === "(" && dupX[index + docEnd.length] === ")") {
-        dupX = x.substring(index + docEnd.length, dupX.length);
-        index = index + dupX.indexOf(docEnd) + docEnd.length;
-    }
-
-    return { found: index > -1, endpos: index + docEnd.length };
+    let index = x.search(docEndMatcher);
+    return { found: index > -1, endpos: index + 4 };//4 is the length of the docEndMatcher
 };
 
 export class LLVMOptTransformer extends Transform {
