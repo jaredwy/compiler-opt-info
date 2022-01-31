@@ -1,0 +1,571 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - Callee:          __ctype_tolower_loc
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_mystrnicmp
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 18, Column: 12 }
+Function:        PyOS_mystrnicmp
+Hotness:         4400
+Args:
+  - Callee:          __ctype_tolower_loc
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_mystrnicmp
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 8, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 18, Column: 12 }
+Function:        PyOS_mystrnicmp
+Hotness:         4400
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+Function:        PyOS_mystrnicmp
+Hotness:         5229
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+Function:        PyOS_mystrnicmp
+Hotness:         5229
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5229
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5229
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - Callee:          __ctype_tolower_loc
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_mystricmp
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 23, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 29, Column: 13 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - Callee:          __ctype_tolower_loc
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_mystricmp
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 23, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 29, Column: 13 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 5 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 5 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVectorizeLibcall
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'loop not vectorized: '
+  - String:          call instruction cannot be vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 5 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 5 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 0, Column: 0 }
+Function:        PyOS_mystrnicmp
+Hotness:         4400
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 18, Column: 12 }
+Function:        PyOS_mystrnicmp
+Hotness:         4400
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 59 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+Function:        PyOS_mystrnicmp
+Hotness:         5200
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 14, Column: 43 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 5 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 5 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 5 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 5 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 5 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 29, Column: 13 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 43 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrcmp.c', Line: 26, Column: 27 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 8, Column: 0 }
+Function:        PyOS_mystrnicmp
+Hotness:         4400
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 8, Column: 0 }
+Function:        PyOS_mystrnicmp
+Hotness:         4400
+Args:
+  - NumInstructions: '52'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 23, Column: 0 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pystrcmp.c', Line: 23, Column: 0 }
+Function:        PyOS_mystricmp
+Hotness:         0
+Args:
+  - NumInstructions: '38'
+  - String:          ' instructions in function'
+...

@@ -1,0 +1,2369 @@
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        case_insensitive_match
+Hotness:         37326
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        case_insensitive_match
+Hotness:         37326
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        case_insensitive_match
+Hotness:         37326
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        case_insensitive_match
+Hotness:         37167
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        case_insensitive_match
+Hotness:         37167
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        case_insensitive_match
+Hotness:         37167
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 47, Column: 18 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         2821
+Args:
+  - Callee:          _Py_dg_infinity
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_parse_inf_or_nan
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 51, Column: 18 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         1844
+Args:
+  - Callee:          _Py_dg_stdnan
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_parse_inf_or_nan
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 43, Column: 9 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         14712
+Args:
+  - Callee:          case_insensitive_match
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 12, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_parse_inf_or_nan
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 49, Column: 14 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         11878
+Args:
+  - Callee:          case_insensitive_match
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 12, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_parse_inf_or_nan
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 45, Column: 13 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         2821
+Args:
+  - Callee:          case_insensitive_match
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 12, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_parse_inf_or_nan
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14985'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         1068
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         1068
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         1068
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         19820
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         19820
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         19820
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         20887
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         20887
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         20887
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            FullyUnrolled
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 5 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         1068
+Args:
+  - String:          'completely unrolled loop with '
+  - UnrollCount:     '5'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            FullyUnrolled
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 5 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         19815
+Args:
+  - String:          'completely unrolled loop with '
+  - UnrollCount:     '3'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            FullyUnrolled
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 5 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         20883
+Args:
+  - String:          'completely unrolled loop with '
+  - UnrollCount:     '3'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         14176
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         14176
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 13, Column: 17 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 140, Column: 5 }
+Function:        _PyOS_ascii_strtod
+Hotness:         44563
+Args:
+  - Callee:          __errno_location
+  - String:          ' will not be inlined into '
+  - Caller:          _PyOS_ascii_strtod
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 133, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 142, Column: 5 }
+Function:        _PyOS_ascii_strtod
+Hotness:         44563
+Args:
+  - Callee:          _Py_get_387controlword
+  - String:          ' will not be inlined into '
+  - Caller:          _PyOS_ascii_strtod
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 133, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 142, Column: 5 }
+Function:        _PyOS_ascii_strtod
+Hotness:         44563
+Args:
+  - Callee:          _Py_set_387controlword
+  - String:          ' will not be inlined into '
+  - Caller:          _PyOS_ascii_strtod
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 133, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+Function:        _PyOS_ascii_strtod
+Hotness:         44563
+Args:
+  - Callee:          _Py_dg_strtod
+  - String:          ' will not be inlined into '
+  - Caller:          _PyOS_ascii_strtod
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 133, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+Function:        _PyOS_ascii_strtod
+Hotness:         44563
+Args:
+  - Callee:          _Py_set_387controlword
+  - String:          ' will not be inlined into '
+  - Caller:          _PyOS_ascii_strtod
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 133, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+Function:        _PyOS_ascii_strtod
+Hotness:         4571
+Args:
+  - Callee:          _Py_parse_inf_or_nan
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyOS_ascii_strtod
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 133, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '280'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 140, Column: 5 }
+Function:        _PyOS_ascii_strtod
+Hotness:         44563
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+Function:        _PyOS_ascii_strtod
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+Function:        _PyOS_ascii_strtod
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 345, Column: 5 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - Callee:          __errno_location
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_string_to_double
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 349, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         1
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_string_to_double
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 353, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         2
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_string_to_double
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         52
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_string_to_double
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 361, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         1
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_string_to_double
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 346, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - Callee:          _PyOS_ascii_strtod
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 133, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyOS_string_to_double
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14750'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+Function:        PyOS_string_to_double
+Hotness:         4515
+Args:
+  - Callee:          _Py_parse_inf_or_nan
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          PyOS_string_to_double
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '275'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+Function:        PyOS_string_to_double
+Hotness:         4515
+Args:
+  - Callee:          _Py_parse_inf_or_nan
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          PyOS_string_to_double
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '275'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 345, Column: 5 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 348, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 140, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 348, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 140, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 348, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 140, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 352, Column: 26 }
+Function:        PyOS_string_to_double
+Hotness:         11714
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 356, Column: 14 }
+Function:        PyOS_string_to_double
+Hotness:         44560
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 356, Column: 14 }
+Function:        PyOS_string_to_double
+Hotness:         44560
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         52
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         52
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         52
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 353, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 353, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 353, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 368, Column: 19 }
+Function:        PyOS_string_to_double
+Hotness:         32849
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 368, Column: 19 }
+Function:        PyOS_string_to_double
+Hotness:         32849
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 361, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 348, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 140, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 348, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 140, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 348, Column: 9 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 140, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 356, Column: 14 }
+Function:        PyOS_string_to_double
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 352, Column: 26 }
+Function:        PyOS_string_to_double
+Hotness:         11714
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 146, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         52
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         52
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         52
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 353, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 148, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 353, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 143, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 353, Column: 22 }
+Function:        PyOS_string_to_double
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 144, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 368, Column: 19 }
+Function:        PyOS_string_to_double
+Hotness:         32849
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 357, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 368, Column: 19 }
+Function:        PyOS_string_to_double
+Hotness:         32849
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 361, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 395, Column: 9 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         29617
+Args:
+  - Callee:          strchr
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_string_to_number_with_underscores
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 387, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 399, Column: 11 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         96
+Args:
+  - Callee:          PyMem_Malloc
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_string_to_number_with_underscores
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 387, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 401, Column: 16 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         1
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_string_to_number_with_underscores
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 387, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 432, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         45
+Args:
+  - Callee:          PyMem_Free
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_string_to_number_with_underscores
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 387, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 436, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         50
+Args:
+  - Callee:          PyMem_Free
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_string_to_number_with_underscores
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 387, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 437, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         50
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_string_to_number_with_underscores
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 387, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         497
+Args:
+  - String:          'sinking '
+  - Inst:            sext
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 399, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 416, Column: 34 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         93
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 437, Column: 18 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         50
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 436, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 420, Column: 16 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         497
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 420, Column: 16 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         497
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 399, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 420, Column: 16 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 416, Column: 34 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         93
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 437, Column: 18 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         50
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 436, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 399, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 420, Column: 16 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 416, Column: 34 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         93
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 17 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 414, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 437, Column: 18 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         50
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 436, Column: 5 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1012, Column: 5 }
+Function:        format_float_short
+Hotness:         157042
+Args:
+  - Callee:          _Py_get_387controlword
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1012, Column: 5 }
+Function:        format_float_short
+Hotness:         157041
+Args:
+  - Callee:          _Py_set_387controlword
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1013, Column: 14 }
+Function:        format_float_short
+Hotness:         157042
+Args:
+  - Callee:          _Py_dg_dtoa
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1015, Column: 5 }
+Function:        format_float_short
+Hotness:         157041
+Args:
+  - Callee:          _Py_set_387controlword
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1020, Column: 9 }
+Function:        format_float_short
+Hotness:         1
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+Function:        format_float_short
+Hotness:         3260
+Args:
+  - Callee:          PyMem_Malloc
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1039, Column: 13 }
+Function:        format_float_short
+Hotness:         1
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1051, Column: 13 }
+Function:        format_float_short
+Hotness:         1901
+Args:
+  - Callee:          strncpy
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1058, Column: 13 }
+Function:        format_float_short
+Hotness:         1358
+Args:
+  - Callee:          strncpy
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1125, Column: 9 }
+Function:        format_float_short
+Hotness:         1
+Args:
+  - Callee:          _PyErr_BadInternalCall
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1164, Column: 19 }
+Function:        format_float_short
+Hotness:         153780
+Args:
+  - Callee:          PyMem_Malloc
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1166, Column: 9 }
+Function:        format_float_short
+Hotness:         1
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1195, Column: 9 }
+Function:        format_float_short
+Hotness:         123566
+Args:
+  - Callee:          strncpy
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1198, Column: 9 }
+Function:        format_float_short
+Hotness:         123566
+Args:
+  - Callee:          strncpy
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1202, Column: 9 }
+Function:        format_float_short
+Hotness:         30213
+Args:
+  - Callee:          strncpy
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1226, Column: 19 }
+Function:        format_float_short
+Hotness:         87394
+Args:
+  - Callee:          sprintf
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1237, Column: 9 }
+Function:        format_float_short
+Hotness:         157041
+Args:
+  - Callee:          _Py_dg_freedtoa
+  - String:          ' will not be inlined into '
+  - Caller:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1017, Column: 25 }
+Function:        format_float_short
+Hotness:         157042
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1015, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1017, Column: 25 }
+Function:        format_float_short
+Hotness:         157042
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1013, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1024, Column: 18 }
+Function:        format_float_short
+Hotness:         157041
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1015, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1024, Column: 18 }
+Function:        format_float_short
+Hotness:         157041
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1013, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+Function:        format_float_short
+Hotness:         156143
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1013, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+Function:        format_float_short
+Hotness:         156143
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1015, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1044, Column: 13 }
+Function:        format_float_short
+Hotness:         3259
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1050, Column: 13 }
+Function:        format_float_short
+Hotness:         3259
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1045, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1050, Column: 13 }
+Function:        format_float_short
+Hotness:         3259
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1048, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1050, Column: 13 }
+Function:        format_float_short
+Hotness:         3259
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1051, Column: 24 }
+Function:        format_float_short
+Hotness:         1901
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1045, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1051, Column: 24 }
+Function:        format_float_short
+Hotness:         1901
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1048, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1051, Column: 24 }
+Function:        format_float_short
+Hotness:         1901
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1058, Column: 24 }
+Function:        format_float_short
+Hotness:         1358
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1045, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1058, Column: 24 }
+Function:        format_float_short
+Hotness:         1358
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1048, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1058, Column: 24 }
+Function:        format_float_short
+Hotness:         1358
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1173, Column: 9 }
+Function:        format_float_short
+Hotness:         153779
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1164, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1225, Column: 16 }
+Function:        format_float_short
+Hotness:         87394
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1211, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1225, Column: 16 }
+Function:        format_float_short
+Hotness:         87394
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1215, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1291, Column: 13 }
+Function:        PyOS_double_to_string
+Hotness:         1
+Args:
+  - Callee:          _PyErr_BadInternalCall
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_double_to_string
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1248, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1297, Column: 9 }
+Function:        PyOS_double_to_string
+Hotness:         1
+Args:
+  - Callee:          _PyErr_BadInternalCall
+  - String:          ' will not be inlined into '
+  - Caller:          PyOS_double_to_string
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1248, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1301, Column: 12 }
+Function:        PyOS_double_to_string
+Hotness:         157040
+Args:
+  - Callee:          format_float_short
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1001, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyOS_double_to_string
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1248, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-13560'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1017, Column: 25 }
+Function:        PyOS_double_to_string
+Hotness:         157040
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1013, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1017, Column: 25 }
+Function:        PyOS_double_to_string
+Hotness:         157040
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1015, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1024, Column: 18 }
+Function:        PyOS_double_to_string
+Hotness:         157039
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1013, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1024, Column: 18 }
+Function:        PyOS_double_to_string
+Hotness:         157039
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1015, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+Function:        PyOS_double_to_string
+Hotness:         156141
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1015, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+Function:        PyOS_double_to_string
+Hotness:         156141
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1013, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1044, Column: 13 }
+Function:        PyOS_double_to_string
+Hotness:         3259
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1050, Column: 13 }
+Function:        PyOS_double_to_string
+Hotness:         3259
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1045, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1050, Column: 13 }
+Function:        PyOS_double_to_string
+Hotness:         3259
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1050, Column: 13 }
+Function:        PyOS_double_to_string
+Hotness:         3259
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1026, Column: 24 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1048, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1051, Column: 24 }
+Function:        PyOS_double_to_string
+Hotness:         1901
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1045, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1051, Column: 24 }
+Function:        PyOS_double_to_string
+Hotness:         1901
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1051, Column: 24 }
+Function:        PyOS_double_to_string
+Hotness:         1901
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1048, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1058, Column: 24 }
+Function:        PyOS_double_to_string
+Hotness:         1358
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1045, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1058, Column: 24 }
+Function:        PyOS_double_to_string
+Hotness:         1358
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1037, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1058, Column: 24 }
+Function:        PyOS_double_to_string
+Hotness:         1358
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1048, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1173, Column: 9 }
+Function:        PyOS_double_to_string
+Hotness:         153777
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1164, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1225, Column: 16 }
+Function:        PyOS_double_to_string
+Hotness:         87392
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1211, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1225, Column: 16 }
+Function:        PyOS_double_to_string
+Hotness:         87392
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pystrtod.c', Line: 1215, Column: 9 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            LoopContainsSwitch
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop contains a switch statement
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 406, Column: 5 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 416, Column: 22 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         409
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 427, Column: 11 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         51
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 0, Column: 0 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         592
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        PyOS_double_to_string
+Hotness:         157036
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        PyOS_double_to_string
+Hotness:         157040
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         14712
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 30, Column: 0 }
+Function:        _Py_parse_inf_or_nan
+Hotness:         14712
+Args:
+  - NumInstructions: '65'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 341, Column: 0 }
+Function:        PyOS_string_to_double
+Hotness:         44563
+Args:
+  - NumInstructions: '94'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 387, Column: 0 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         29617
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 387, Column: 0 }
+Function:        _Py_string_to_number_with_underscores
+Hotness:         29617
+Args:
+  - NumInstructions: '95'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1248, Column: 0 }
+Function:        PyOS_double_to_string
+Hotness:         157042
+Args:
+  - NumStackBytes:   '104'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pystrtod.c', Line: 1248, Column: 0 }
+Function:        PyOS_double_to_string
+Hotness:         157042
+Args:
+  - NumInstructions: '343'
+  - String:          ' instructions in function'
+...

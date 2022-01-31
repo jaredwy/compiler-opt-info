@@ -1,0 +1,1493 @@
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 66, Column: 42 }
+Function:        _PyUnicode_ToTitlecase
+Hotness:         0
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToTitlecase
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 65, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 78, Column: 42 }
+Function:        _PyUnicode_IsTitlecase
+Hotness:         18765
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsTitlecase
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 77, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 88, Column: 42 }
+Function:        _PyUnicode_IsXidStart
+Hotness:         11451
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsXidStart
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 87, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 98, Column: 42 }
+Function:        _PyUnicode_IsXidContinue
+Hotness:         66469
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsXidContinue
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 97, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 108, Column: 42 }
+Function:        _PyUnicode_ToDecimalDigit
+Hotness:         1825963
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToDecimalDigit
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 107, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 115, Column: 9 }
+Function:        _PyUnicode_IsDecimalDigit
+Hotness:         1457644
+Args:
+  - Callee:          _PyUnicode_ToDecimalDigit
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 107, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsDecimalDigit
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 114, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '30'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 125, Column: 42 }
+Function:        _PyUnicode_ToDigit
+Hotness:         1234041
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToDigit
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 124, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 132, Column: 9 }
+Function:        _PyUnicode_IsDigit
+Hotness:         1234041
+Args:
+  - Callee:          _PyUnicode_ToDigit
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 124, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsDigit
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 131, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '40'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 142, Column: 42 }
+Function:        _PyUnicode_IsNumeric
+Hotness:         1234036
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsNumeric
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 141, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 162, Column: 42 }
+Function:        _PyUnicode_IsPrintable
+Hotness:         50032
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsPrintable
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 161, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 172, Column: 42 }
+Function:        _PyUnicode_IsLowercase
+Hotness:         18950
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsLowercase
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 171, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 182, Column: 42 }
+Function:        _PyUnicode_IsUppercase
+Hotness:         1882
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsUppercase
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 181, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 192, Column: 42 }
+Function:        _PyUnicode_ToUppercase
+Hotness:         12605
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToUppercase
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 191, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 204, Column: 42 }
+Function:        _PyUnicode_ToLowercase
+Hotness:         54724
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToLowercase
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 203, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 213, Column: 42 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         12262
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToLowerFull
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 212, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 229, Column: 42 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         63
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToTitleFull
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 228, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 13 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 13 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 22 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 22 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 13 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 22 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 22 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 245, Column: 42 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         7106
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToUpperFull
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 244, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 13 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 13 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 22 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 22 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 13 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 22 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 22 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 261, Column: 42 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         9
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToFoldedFull
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 260, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 271, Column: 12 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         6
+Args:
+  - Callee:          _PyUnicode_ToLowerFull
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 212, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_ToFoldedFull
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 260, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '100'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 13 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         5
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 13 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         5
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 22 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         5
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 22 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 13 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         8
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 22 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         8
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 268, Column: 22 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 276, Column: 42 }
+Function:        _PyUnicode_IsCased
+Hotness:         167
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsCased
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 275, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 283, Column: 42 }
+Function:        _PyUnicode_IsCaseIgnorable
+Hotness:         26
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsCaseIgnorable
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 282, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 293, Column: 42 }
+Function:        _PyUnicode_IsAlpha
+Hotness:         1680993
+Args:
+  - Callee:          gettyperecord
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 47, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyUnicode_IsAlpha
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 292, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14990'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 55, Column: 30 }
+Function:        _PyUnicode_ToDecimalDigit
+Hotness:         1825963
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 55, Column: 30 }
+Function:        _PyUnicode_ToDecimalDigit
+Hotness:         1825963
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 55, Column: 30 }
+Function:        _PyUnicode_IsDecimalDigit
+Hotness:         1457644
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 55, Column: 30 }
+Function:        _PyUnicode_IsDecimalDigit
+Hotness:         1457644
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVersionLoopWithOptForSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 219, Column: 9 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          'loop not vectorized: '
+  - String:          'runtime pointer checks needed. Enable vectorization of this loop with ''#pragma clang loop vectorize(enable)'' when compiling with -Os/-Oz'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            VectorizationNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 219, Column: 9 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          the cost-model indicates that vectorization is not beneficial
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 219, Column: 9 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            Peeled
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 219, Column: 9 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         73
+Args:
+  - String:          ' peeled loop by '
+  - PeelCount:       '1'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         19
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         19
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVersionLoopWithOptForSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 235, Column: 9 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          'loop not vectorized: '
+  - String:          'runtime pointer checks needed. Enable vectorization of this loop with ''#pragma clang loop vectorize(enable)'' when compiling with -Os/-Oz'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            VectorizationNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 235, Column: 9 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          the cost-model indicates that vectorization is not beneficial
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 235, Column: 9 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            Peeled
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 235, Column: 9 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         10
+Args:
+  - String:          ' peeled loop by '
+  - PeelCount:       '2'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 13 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         1
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 22 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         1
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 236, Column: 22 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVersionLoopWithOptForSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 251, Column: 9 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          'loop not vectorized: '
+  - String:          'runtime pointer checks needed. Enable vectorization of this loop with ''#pragma clang loop vectorize(enable)'' when compiling with -Os/-Oz'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            VectorizationNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 251, Column: 9 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          the cost-model indicates that vectorization is not beneficial
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 251, Column: 9 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            Peeled
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 251, Column: 9 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         86
+Args:
+  - String:          ' peeled loop by '
+  - PeelCount:       '2'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 13 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         7
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 22 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         7
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 252, Column: 22 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVersionLoopWithOptForSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 267, Column: 9 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         8
+Args:
+  - String:          'loop not vectorized: '
+  - String:          'runtime pointer checks needed. Enable vectorization of this loop with ''#pragma clang loop vectorize(enable)'' when compiling with -Os/-Oz'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            VectorizationNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 267, Column: 9 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         8
+Args:
+  - String:          the cost-model indicates that vectorization is not beneficial
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 267, Column: 9 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         8
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantVersionLoopWithOptForSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 219, Column: 9 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          'runtime pointer checks needed. Enable vectorization of this loop with ''#pragma clang loop vectorize(enable)'' when compiling with -Os/-Oz'
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            VectorizationNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 219, Column: 9 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          the cost-model indicates that vectorization is not beneficial
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            InterleavingNotBeneficial
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 219, Column: 9 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          the cost-model indicates that interleaving is not beneficial
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            Peeled
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 219, Column: 9 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          ' peeled loop by '
+  - PeelCount:       '1'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            FullyUnrolled
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 267, Column: 9 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         8
+Args:
+  - String:          'completely unrolled loop with '
+  - UnrollCount:     '7'
+  - String:          ' iterations'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Objects/unicodectype.c', Line: 220, Column: 22 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodetype_db.h', Line: 4188, Column: 0 }
+Function:        _PyUnicode_ToNumeric
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodetype_db.h', Line: 4188, Column: 0 }
+Function:        _PyUnicode_ToNumeric
+Hotness:         0
+Args:
+  - NumInstructions: '1006'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodetype_db.h', Line: 6209, Column: 0 }
+Function:        _PyUnicode_IsWhitespace
+Hotness:         1275
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodetype_db.h', Line: 6209, Column: 0 }
+Function:        _PyUnicode_IsWhitespace
+Hotness:         1275
+Args:
+  - NumInstructions: '25'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodetype_db.h', Line: 6250, Column: 0 }
+Function:        _PyUnicode_IsLinebreak
+Hotness:         22249
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodetype_db.h', Line: 6250, Column: 0 }
+Function:        _PyUnicode_IsLinebreak
+Hotness:         22249
+Args:
+  - NumInstructions: '15'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 65, Column: 0 }
+Function:        _PyUnicode_ToTitlecase
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 65, Column: 0 }
+Function:        _PyUnicode_ToTitlecase
+Hotness:         0
+Args:
+  - NumInstructions: '21'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 77, Column: 0 }
+Function:        _PyUnicode_IsTitlecase
+Hotness:         18765
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 77, Column: 0 }
+Function:        _PyUnicode_IsTitlecase
+Hotness:         18765
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 87, Column: 0 }
+Function:        _PyUnicode_IsXidStart
+Hotness:         11451
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 87, Column: 0 }
+Function:        _PyUnicode_IsXidStart
+Hotness:         11451
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 97, Column: 0 }
+Function:        _PyUnicode_IsXidContinue
+Hotness:         66469
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 97, Column: 0 }
+Function:        _PyUnicode_IsXidContinue
+Hotness:         66469
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 107, Column: 0 }
+Function:        _PyUnicode_ToDecimalDigit
+Hotness:         1825963
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 107, Column: 0 }
+Function:        _PyUnicode_ToDecimalDigit
+Hotness:         1825963
+Args:
+  - NumInstructions: '17'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 114, Column: 0 }
+Function:        _PyUnicode_IsDecimalDigit
+Hotness:         1457644
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 114, Column: 0 }
+Function:        _PyUnicode_IsDecimalDigit
+Hotness:         1457644
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 124, Column: 0 }
+Function:        _PyUnicode_ToDigit
+Hotness:         1234041
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 124, Column: 0 }
+Function:        _PyUnicode_ToDigit
+Hotness:         1234041
+Args:
+  - NumInstructions: '21'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 131, Column: 0 }
+Function:        _PyUnicode_IsDigit
+Hotness:         1234041
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 131, Column: 0 }
+Function:        _PyUnicode_IsDigit
+Hotness:         1234041
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 141, Column: 0 }
+Function:        _PyUnicode_IsNumeric
+Hotness:         1234036
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 141, Column: 0 }
+Function:        _PyUnicode_IsNumeric
+Hotness:         1234036
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 161, Column: 0 }
+Function:        _PyUnicode_IsPrintable
+Hotness:         50032
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 161, Column: 0 }
+Function:        _PyUnicode_IsPrintable
+Hotness:         50032
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 171, Column: 0 }
+Function:        _PyUnicode_IsLowercase
+Hotness:         18950
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 171, Column: 0 }
+Function:        _PyUnicode_IsLowercase
+Hotness:         18950
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 181, Column: 0 }
+Function:        _PyUnicode_IsUppercase
+Hotness:         1882
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 181, Column: 0 }
+Function:        _PyUnicode_IsUppercase
+Hotness:         1882
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 191, Column: 0 }
+Function:        _PyUnicode_ToUppercase
+Hotness:         12605
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 191, Column: 0 }
+Function:        _PyUnicode_ToUppercase
+Hotness:         12605
+Args:
+  - NumInstructions: '24'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 203, Column: 0 }
+Function:        _PyUnicode_ToLowercase
+Hotness:         54724
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 203, Column: 0 }
+Function:        _PyUnicode_ToLowercase
+Hotness:         54724
+Args:
+  - NumInstructions: '24'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 212, Column: 0 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         12262
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 212, Column: 0 }
+Function:        _PyUnicode_ToLowerFull
+Hotness:         12262
+Args:
+  - NumInstructions: '39'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 228, Column: 0 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         63
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 228, Column: 0 }
+Function:        _PyUnicode_ToTitleFull
+Hotness:         63
+Args:
+  - NumInstructions: '45'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 244, Column: 0 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         7106
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 244, Column: 0 }
+Function:        _PyUnicode_ToUpperFull
+Hotness:         7106
+Args:
+  - NumInstructions: '45'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 260, Column: 0 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         9
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 260, Column: 0 }
+Function:        _PyUnicode_ToFoldedFull
+Hotness:         9
+Args:
+  - NumInstructions: '90'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 275, Column: 0 }
+Function:        _PyUnicode_IsCased
+Hotness:         167
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 275, Column: 0 }
+Function:        _PyUnicode_IsCased
+Hotness:         167
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 282, Column: 0 }
+Function:        _PyUnicode_IsCaseIgnorable
+Hotness:         26
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 282, Column: 0 }
+Function:        _PyUnicode_IsCaseIgnorable
+Hotness:         26
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 292, Column: 0 }
+Function:        _PyUnicode_IsAlpha
+Hotness:         1680993
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/unicodectype.c', Line: 292, Column: 0 }
+Function:        _PyUnicode_IsAlpha
+Hotness:         1680993
+Args:
+  - NumInstructions: '18'
+  - String:          ' instructions in function'
+...

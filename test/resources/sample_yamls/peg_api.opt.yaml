@@ -1,0 +1,96 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/peg_api.c', Line: 10, Column: 9 }
+Function:        _PyParser_ASTFromString
+Hotness:         7845
+Args:
+  - Callee:          PySys_Audit
+    DebugLoc:        { File: './Include/cpython/sysmodule.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyParser_ASTFromString
+    DebugLoc:        { File: 'Parser/peg_api.c', Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/peg_api.c', Line: 14, Column: 21 }
+Function:        _PyParser_ASTFromString
+Hotness:         7845
+Args:
+  - Callee:          _PyPegen_run_parser_from_string
+  - String:          ' will not be inlined into '
+  - Caller:          _PyParser_ASTFromString
+    DebugLoc:        { File: 'Parser/peg_api.c', Line: 9, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/peg_api.c', Line: 23, Column: 9 }
+Function:        _PyParser_ASTFromFile
+Hotness:         1
+Args:
+  - Callee:          PySys_Audit
+    DebugLoc:        { File: './Include/cpython/sysmodule.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyParser_ASTFromFile
+    DebugLoc:        { File: 'Parser/peg_api.c', Line: 22, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Parser/peg_api.c', Line: 26, Column: 12 }
+Function:        _PyParser_ASTFromFile
+Hotness:         1
+Args:
+  - Callee:          _PyPegen_run_parser_from_file_pointer
+  - String:          ' will not be inlined into '
+  - Caller:          _PyParser_ASTFromFile
+    DebugLoc:        { File: 'Parser/peg_api.c', Line: 22, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Parser/peg_api.c', Line: 9, Column: 0 }
+Function:        _PyParser_ASTFromString
+Hotness:         7845
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Parser/peg_api.c', Line: 9, Column: 0 }
+Function:        _PyParser_ASTFromString
+Hotness:         7845
+Args:
+  - NumInstructions: '36'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Parser/peg_api.c', Line: 22, Column: 0 }
+Function:        _PyParser_ASTFromFile
+Hotness:         1
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Parser/peg_api.c', Line: 22, Column: 0 }
+Function:        _PyParser_ASTFromFile
+Hotness:         1
+Args:
+  - NumInstructions: '44'
+  - String:          ' instructions in function'
+...

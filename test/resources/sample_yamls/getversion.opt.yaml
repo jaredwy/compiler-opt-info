@@ -1,0 +1,62 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/getversion.c', Line: 13, Column: 31 }
+Function:        Py_GetVersion
+Hotness:         269
+Args:
+  - Callee:          Py_GetBuildInfo
+    DebugLoc:        { File: './Include/pylifecycle.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_GetVersion
+    DebugLoc:        { File: 'Python/getversion.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/getversion.c', Line: 13, Column: 50 }
+Function:        Py_GetVersion
+Hotness:         269
+Args:
+  - Callee:          Py_GetCompiler
+    DebugLoc:        { File: './Include/pylifecycle.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_GetVersion
+    DebugLoc:        { File: 'Python/getversion.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/getversion.c', Line: 12, Column: 5 }
+Function:        Py_GetVersion
+Hotness:         269
+Args:
+  - Callee:          PyOS_snprintf
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_GetVersion
+    DebugLoc:        { File: 'Python/getversion.c', Line: 10, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/getversion.c', Line: 10, Column: 0 }
+Function:        Py_GetVersion
+Hotness:         269
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/getversion.c', Line: 10, Column: 0 }
+Function:        Py_GetVersion
+Hotness:         269
+Args:
+  - NumInstructions: '15'
+  - String:          ' instructions in function'
+...

@@ -1,0 +1,93 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 45, Column: 5 }
+Function:        Py_GetBuildInfo
+Hotness:         269
+Args:
+  - Callee:          PyOS_snprintf
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_GetBuildInfo
+    DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 36, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 42, Column: 25 }
+Function:        Py_GetBuildInfo
+Hotness:         269
+Args:
+  - Callee:          _Py_gitidentifier
+    DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 59, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          Py_GetBuildInfo
+    DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 36, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 36, Column: 0 }
+Function:        Py_GetBuildInfo
+Hotness:         269
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 36, Column: 0 }
+Function:        Py_GetBuildInfo
+Hotness:         269
+Args:
+  - NumInstructions: '15'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 53, Column: 0 }
+Function:        _Py_gitversion
+Hotness:         538
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 53, Column: 0 }
+Function:        _Py_gitversion
+Hotness:         538
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 59, Column: 0 }
+Function:        _Py_gitidentifier
+Hotness:         538
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/getbuildinfo.c', Line: 59, Column: 0 }
+Function:        _Py_gitidentifier
+Hotness:         538
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...

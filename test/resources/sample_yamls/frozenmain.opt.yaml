@@ -1,0 +1,438 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 18, Column: 23 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          _PyRuntime_Initialize
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 19, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          PyStatus_Exception
+    DebugLoc:        { File: './Include/cpython/initconfig.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 20, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          Py_ExitStatusException
+    DebugLoc:        { File: './Include/cpython/pylifecycle.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 24, Column: 5 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          PyConfig_InitPythonConfig
+    DebugLoc:        { File: './Include/cpython/initconfig.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 30, Column: 14 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          PyConfig_SetBytesArgv
+    DebugLoc:        { File: './Include/cpython/initconfig.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 31, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          PyStatus_Exception
+    DebugLoc:        { File: './Include/cpython/initconfig.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 32, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          PyConfig_Clear
+    DebugLoc:        { File: './Include/cpython/initconfig.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 33, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          Py_ExitStatusException
+    DebugLoc:        { File: './Include/cpython/pylifecycle.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 38, Column: 14 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          getenv
+    DebugLoc:        { File: '/usr/include/stdlib.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 46, Column: 14 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          Py_InitializeFromConfig
+    DebugLoc:        { File: './Include/cpython/pylifecycle.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 47, Column: 5 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          PyConfig_Clear
+    DebugLoc:        { File: './Include/cpython/initconfig.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 48, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          PyStatus_Exception
+    DebugLoc:        { File: './Include/cpython/initconfig.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 49, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          Py_ExitStatusException
+    DebugLoc:        { File: './Include/cpython/pylifecycle.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 58, Column: 17 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          Py_GetVersion
+    DebugLoc:        { File: './Include/pylifecycle.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 58, Column: 34 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          Py_GetCopyright
+    DebugLoc:        { File: './Include/pylifecycle.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 57, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          fprintf
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 62, Column: 13 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          PyImport_ImportFrozenModule
+    DebugLoc:        { File: './Include/import.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 64, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          _Py_FatalErrorFunc
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 67, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          PyErr_Print
+    DebugLoc:        { File: './Include/pythonrun.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 74, Column: 32 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          fileno
+    DebugLoc:        { File: '/usr/include/stdio.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 74, Column: 20 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          isatty
+    DebugLoc:        { File: '/usr/include/unistd.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 75, Column: 15 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - Callee:          PyRun_AnyFileExFlags
+    DebugLoc:        { File: './Include/cpython/pythonrun.h', Line: 0, 
+                       Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 81, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - Callee:          Py_FinalizeEx
+    DebugLoc:        { File: './Include/pylifecycle.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          Py_FrozenMain
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 38, Column: 14 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 31, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 56, Column: 9 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 48, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 57, Column: 17 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 48, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 74, Column: 39 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 67, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 74, Column: 39 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 62, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 75, Column: 15 }
+Function:        Py_FrozenMain
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._IO_FILE*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 74, Column: 39 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/frozenmain.c', Line: 74, Column: 20 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - NumStackBytes:   '536'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/frozenmain.c', Line: 17, Column: 0 }
+Function:        Py_FrozenMain
+Hotness:         1
+Args:
+  - NumInstructions: '128'
+  - String:          ' instructions in function'
+...

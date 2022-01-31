@@ -1,0 +1,34 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Programs/python.c', Line: 15, Column: 12 }
+Function:        main
+Hotness:         2
+Args:
+  - Callee:          Py_BytesMain
+    DebugLoc:        { File: './Include/pylifecycle.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          main
+    DebugLoc:        { File: './Programs/python.c', Line: 14, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Programs/python.c', Line: 14, Column: 0 }
+Function:        main
+Hotness:         2
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Programs/python.c', Line: 14, Column: 0 }
+Function:        main
+Hotness:         2
+Args:
+  - NumInstructions: '1'
+  - String:          ' instructions in function'
+...

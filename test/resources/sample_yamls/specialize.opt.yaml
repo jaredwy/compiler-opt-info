@@ -1,0 +1,2473 @@
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 295, Column: 17 }
+Function:        oparg_from_instruction_and_update_offset
+Hotness:         388001
+Args:
+  - Callee:          oparg_from_offset_and_nexti
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 97, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          oparg_from_instruction_and_update_offset
+    DebugLoc:        { File: 'Python/specialize.c', Line: 286, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15030'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 300, Column: 25 }
+Function:        oparg_from_instruction_and_update_offset
+Hotness:         163369
+Args:
+  - Callee:          offset_from_oparg_and_nexti
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 103, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          oparg_from_instruction_and_update_offset
+    DebugLoc:        { File: 'Python/specialize.c', Line: 286, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15030'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/specialize.c', Line: 305, Column: 19 }
+Function:        oparg_from_instruction_and_update_offset
+Hotness:         388001
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+    DebugLoc:        { File: 'Python/specialize.c', Line: 305, Column: 19 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 317, Column: 13 }
+Function:        entries_needed
+Hotness:         1525340
+Args:
+  - Callee:          oparg_from_instruction_and_update_offset
+    DebugLoc:        { File: 'Python/specialize.c', Line: 286, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          entries_needed
+    DebugLoc:        { File: 'Python/specialize.c', Line: 311, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '10'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        entries_needed
+Hotness:         1554120
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        entries_needed
+Hotness:         1554120
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+Function:        entries_needed
+Hotness:         1564913
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                   Column: 25 }
+Function:        entries_needed
+Hotness:         349904
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        entries_needed
+Hotness:         1563208
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        entries_needed
+Hotness:         1563208
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+Function:        entries_needed
+Hotness:         1575326
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 244, Column: 9 }
+Function:        allocate
+Hotness:         28780
+Args:
+  - Callee:          PyMem_Malloc
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          allocate
+    DebugLoc:        { File: 'Python/specialize.c', Line: 237, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 246, Column: 9 }
+Function:        allocate
+Hotness:         1
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          allocate
+    DebugLoc:        { File: 'Python/specialize.c', Line: 237, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 249, Column: 23 }
+Function:        allocate
+Hotness:         28779
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 244, Column: 9 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 327, Column: 23 }
+Function:        first_instruction
+Hotness:         57560
+Args:
+  - Callee:          get_cache_count
+    DebugLoc:        { File: 'Python/specialize.c', Line: 255, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          first_instruction
+    DebugLoc:        { File: 'Python/specialize.c', Line: 326, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15035'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 339, Column: 34 }
+Function:        optimize
+Hotness:         28780
+Args:
+  - Callee:          first_instruction
+    DebugLoc:        { File: 'Python/specialize.c', Line: 326, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          optimize
+    DebugLoc:        { File: 'Python/specialize.c', Line: 338, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 361, Column: 21 }
+Function:        optimize
+Hotness:         194265
+Args:
+  - Callee:          _GetSpecializedCacheEntry
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 66, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          optimize
+    DebugLoc:        { File: 'Python/specialize.c', Line: 338, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15035'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 347, Column: 29 }
+Function:        optimize
+Hotness:         208655
+Args:
+  - Callee:          oparg_from_instruction_and_update_offset
+    DebugLoc:        { File: 'Python/specialize.c', Line: 286, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          optimize
+    DebugLoc:        { File: 'Python/specialize.c', Line: 338, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14990'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+Function:        optimize
+Hotness:         201460
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+Function:        optimize
+Hotness:         201460
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+Function:        optimize
+Hotness:         201460
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+Function:        optimize
+Hotness:         201460
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 356, Column: 34 }
+Function:        optimize
+Hotness:         201460
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 356, Column: 34 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 356, Column: 34 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 356, Column: 34 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+Function:        optimize
+Hotness:         1615278
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+Function:        optimize
+Hotness:         1615278
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+Function:        optimize
+Hotness:         1615278
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 343, Column: 22 }
+Function:        optimize
+Hotness:         1615278
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 343, Column: 22 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/specialize.c', Line: 356, Column: 34 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'load of type '
+  - Type:            i8
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+Function:        optimize
+Hotness:         46768
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+Function:        optimize
+Hotness:         46768
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+Function:        optimize
+Hotness:         46768
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+Function:        optimize
+Hotness:         46768
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                   Column: 25 }
+Function:        optimize
+Hotness:         46768
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        optimize
+Hotness:         219448
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+Function:        optimize
+Hotness:         1615278
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+Function:        optimize
+Hotness:         1615278
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+Function:        optimize
+Hotness:         1615278
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 343, Column: 22 }
+Function:        optimize
+Hotness:         1615278
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 343, Column: 22 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 401, Column: 23 }
+Function:        _Py_Quicken
+Hotness:         28778
+Args:
+  - Callee:          entries_needed
+    DebugLoc:        { File: 'Python/specialize.c', Line: 311, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Quicken
+    DebugLoc:        { File: 'Python/specialize.c', Line: 391, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14925'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 408, Column: 5 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - Callee:          optimize
+    DebugLoc:        { File: 'Python/specialize.c', Line: 338, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Quicken
+    DebugLoc:        { File: 'Python/specialize.c', Line: 391, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14840'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 406, Column: 38 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - Callee:          first_instruction
+    DebugLoc:        { File: 'Python/specialize.c', Line: 326, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Quicken
+    DebugLoc:        { File: 'Python/specialize.c', Line: 391, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15030'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 402, Column: 48 }
+Function:        _Py_Quicken
+Hotness:         28778
+Args:
+  - Callee:          allocate
+    DebugLoc:        { File: 'Python/specialize.c', Line: 237, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Quicken
+    DebugLoc:        { File: 'Python/specialize.c', Line: 391, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14915'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                   Column: 25 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                   Column: 25 }
+Function:        _Py_Quicken
+Hotness:         342108
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        _Py_Quicken
+Hotness:         1526059
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        _Py_Quicken
+Hotness:         1526059
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+Function:        _Py_Quicken
+Hotness:         1537883
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 249, Column: 23 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 244, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 407, Column: 36 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 250, Column: 37 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 327, Column: 23 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 250, Column: 37 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 407, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 343, Column: 22 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 407, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 249, Column: 23 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 244, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 407, Column: 36 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 250, Column: 37 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 327, Column: 23 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 250, Column: 37 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 407, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 343, Column: 22 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 407, Column: 5 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                   Column: 25 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                   Column: 25 }
+Function:        _Py_Quicken
+Hotness:         342108
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        _Py_Quicken
+Hotness:         1526059
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        _Py_Quicken
+Hotness:         1526059
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+Function:        _Py_Quicken
+Hotness:         1537883
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 434, Column: 15 }
+Function:        specialize_module_load_attr
+Hotness:         15168
+Args:
+  - Callee:          _PyUnicode_FromId
+  - String:          ' will not be inlined into '
+  - Caller:          specialize_module_load_attr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 420, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 437, Column: 9 }
+Function:        specialize_module_load_attr
+Hotness:         1
+Args:
+  - Callee:          PyErr_Clear
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          specialize_module_load_attr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 420, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 440, Column: 24 }
+Function:        specialize_module_load_attr
+Hotness:         15167
+Args:
+  - Callee:          _PyDict_GetItemHint
+  - String:          ' will not be inlined into '
+  - Caller:          specialize_module_load_attr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 420, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 446, Column: 13 }
+Function:        specialize_module_load_attr
+Hotness:         13836
+Args:
+  - Callee:          _PyDict_GetItemHint
+  - String:          ' will not be inlined into '
+  - Caller:          specialize_module_load_attr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 420, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 452, Column: 29 }
+Function:        specialize_module_load_attr
+Hotness:         13532
+Args:
+  - Callee:          _PyDictKeys_GetVersionForCurrentState
+  - String:          ' will not be inlined into '
+  - Caller:          specialize_module_load_attr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 420, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 459, Column: 14 }
+Function:        specialize_module_load_attr
+Hotness:         13531
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 458, Column: 19 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+Function:        analyze_descriptor
+Hotness:         137536
+Args:
+  - Callee:          _PyType_Lookup
+  - String:          ' will not be inlined into '
+  - Caller:          analyze_descriptor
+    DebugLoc:        { File: 'Python/specialize.c', Line: 483, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 509, Column: 13 }
+Function:        analyze_descriptor
+Hotness:         9149
+Args:
+  - Callee:          PyUnicode_CompareWithASCIIString
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          analyze_descriptor
+    DebugLoc:        { File: 'Python/specialize.c', Line: 483, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 510, Column: 31 }
+Function:        analyze_descriptor
+Hotness:         595
+Args:
+  - Callee:          _PyType_Lookup
+  - String:          ' will not be inlined into '
+  - Caller:          analyze_descriptor
+    DebugLoc:        { File: 'Python/specialize.c', Line: 483, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 493, Column: 30 }
+Function:        analyze_descriptor
+Hotness:         116485
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 489, Column: 12 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 500, Column: 48 }
+Function:        analyze_descriptor
+Hotness:         9819
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.PyMemberDef*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 489, Column: 12 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 539, Column: 13 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         1
+Args:
+  - Callee:          PyType_Ready
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 613, Column: 30 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         32586
+Args:
+  - Callee:          PyObject_Hash
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 618, Column: 32 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         32585
+Args:
+  - Callee:          _Py_dict_lookup
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 625, Column: 37 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         19380
+Args:
+  - Callee:          _PyDictKeys_GetVersionForCurrentState
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 639, Column: 17 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         2902
+Args:
+  - Callee:          _PyDict_GetItemHint
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 530, Column: 9 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         182385
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 669, Column: 5 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         151750
+Args:
+  - Callee:          cache_backoff
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 293, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 602, Column: 34 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         35489
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 544, Column: 36 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         167214
+Args:
+  - Callee:          analyze_descriptor
+    DebugLoc:        { File: 'Python/specialize.c', Line: 483, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14770'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 531, Column: 19 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         15171
+Args:
+  - Callee:          specialize_module_load_attr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 420, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_LoadAttr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14740'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 484, Column: 15 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         167214
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object* (%struct._object*, %struct._object*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 539, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 493, Column: 30 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         116472
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 576, Column: 40 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         594
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 510, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 577, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         594
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 575, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 500, Column: 48 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         9868
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.PyMemberDef*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/specialize.c', Line: 558, Column: 48 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         4934
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.PyMemberDef*'
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: 'Python/specialize.c', Line: 500, Column: 48 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 567, Column: 40 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         4930
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 568, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         4930
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 566, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 596, Column: 15 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         70984
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Python/specialize.c', Line: 607, Column: 46 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         68547
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.PyDictObject*'
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 602, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 608, Column: 20 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         68547
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 609, Column: 60 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         68014
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._dictkeysobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 631, Column: 40 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         37430
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 625, Column: 37 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 633, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         37430
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 632, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 645, Column: 40 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         1350
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 639, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 646, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         1350
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 639, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 459, Column: 14 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         13531
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 458, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 484, Column: 15 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         167214
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object* (%struct._object*, %struct._object*)*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 539, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 493, Column: 30 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         116472
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 576, Column: 40 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         594
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 510, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 577, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         594
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 575, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 500, Column: 48 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         9868
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.PyMemberDef*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 567, Column: 40 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         4930
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 568, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         4930
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 566, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 596, Column: 15 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         70984
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 608, Column: 20 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         68547
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 609, Column: 60 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         68014
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._dictkeysobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 631, Column: 40 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         37430
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 625, Column: 37 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 633, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         37430
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 632, Column: 27 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 645, Column: 40 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         1350
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 639, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 646, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         1350
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 639, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 459, Column: 14 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         13531
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 458, Column: 19 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 694, Column: 24 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         64208
+Args:
+  - Callee:          _PyDict_GetItemHint
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadGlobal
+    DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 700, Column: 33 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         38525
+Args:
+  - Callee:          _PyDictKeys_GetVersionForCurrentState
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadGlobal
+    DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 715, Column: 13 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         23115
+Args:
+  - Callee:          _PyDict_GetItemHint
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadGlobal
+    DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 720, Column: 32 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         23115
+Args:
+  - Callee:          _PyDictKeys_GetVersionForCurrentState
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadGlobal
+    DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/specialize.c', Line: 724, Column: 33 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         23115
+Args:
+  - Callee:          _PyDictKeys_GetVersionForCurrentState
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_Specialize_LoadGlobal
+    DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 687, Column: 10 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         64208
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_LoadGlobal
+    DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 736, Column: 5 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         20547
+Args:
+  - Callee:          cache_backoff
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 293, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_LoadGlobal
+    DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15030'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 709, Column: 10 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         23115
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_LoadGlobal
+    DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 706, Column: 18 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         40368
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 705, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 709, Column: 10 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         23835
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 694, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 712, Column: 37 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         23833
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._dictkeysobject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/specialize.c', Line: 694, Column: 24 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/specialize.c', Line: 731, Column: 14 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         23830
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/specialize.c', Line: 730, Column: 19 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 752, Column: 13 }
+Function:        _Py_Specialize_BinarySubscr
+Hotness:         15835
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_BinarySubscr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 749, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/specialize.c', Line: 761, Column: 13 }
+Function:        _Py_Specialize_BinarySubscr
+Hotness:         2741
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_Specialize_BinarySubscr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 749, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15030'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/specialize.c', Line: 314, Column: 5 }
+Function:        _Py_Quicken
+Hotness:         1537883
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/specialize.c', Line: 314, Column: 5 }
+Function:        _Py_Quicken
+Hotness:         1537883
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Python/specialize.c', Line: 342, Column: 5 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantIdentifyArrayBounds
+DebugLoc:        { File: 'Python/specialize.c', Line: 342, Column: 5 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'loop not vectorized: '
+  - String:          cannot identify array bounds
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Python/specialize.c', Line: 342, Column: 5 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/specialize.c', Line: 340, Column: 9 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/specialize.c', Line: 305, Column: 19 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 48 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/specialize.c', Line: 327, Column: 13 }
+Function:        _Py_Quicken
+Hotness:         28777
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _Py_Quicken
+Hotness:         1537883
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 363, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 33 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 24 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 362, Column: 50 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                   Column: 25 }
+Function:        _Py_Quicken
+Hotness:         46976
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: 'Python/specialize.c', Line: 368, Column: 31 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        _Py_Quicken
+Hotness:         209550
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 346, Column: 13 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+Function:        _Py_Quicken
+Hotness:         1537830
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 345, Column: 35 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                   Column: 25 }
+Function:        _Py_Quicken
+Hotness:         342108
+Args:
+  - String:          'sinking '
+  - Inst:            trunc
+    DebugLoc:        { File: './Include/internal/pycore_code.h', Line: 98, 
+                       Column: 25 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+Function:        _Py_Quicken
+Hotness:         1526059
+Args:
+  - String:          'sinking '
+  - Inst:            zext
+    DebugLoc:        { File: 'Python/specialize.c', Line: 291, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+Function:        _Py_Quicken
+Hotness:         1526059
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 290, Column: 20 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+Function:        _Py_Quicken
+Hotness:         1537883
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: 'Python/specialize.c', Line: 315, Column: 26 }
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/specialize.c', Line: 609, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         68014
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/specialize.c', Line: 609, Column: 22 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         68014
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/specialize.c', Line: 517, Column: 32 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         84211
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotPossible
+DebugLoc:        { File: 'Python/specialize.c', Line: 488, Column: 28 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         137513
+Args:
+  - String:          'Cannot SLP vectorize list: vectorization was impossible'
+  - String:          ' with available vectorization factors'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         64208
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/specialize.c', Line: 391, Column: 0 }
+Function:        _Py_Quicken
+Hotness:         28781
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/specialize.c', Line: 391, Column: 0 }
+Function:        _Py_Quicken
+Hotness:         28781
+Args:
+  - NumInstructions: '140'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         182385
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/specialize.c', Line: 527, Column: 0 }
+Function:        _Py_Specialize_LoadAttr
+Hotness:         182385
+Args:
+  - NumInstructions: '176'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         64208
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/specialize.c', Line: 683, Column: 0 }
+Function:        _Py_Specialize_LoadGlobal
+Hotness:         64208
+Args:
+  - NumInstructions: '77'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/specialize.c', Line: 749, Column: 0 }
+Function:        _Py_Specialize_BinarySubscr
+Hotness:         179357
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/specialize.c', Line: 749, Column: 0 }
+Function:        _Py_Specialize_BinarySubscr
+Hotness:         179357
+Args:
+  - NumInstructions: '29'
+  - String:          ' instructions in function'
+...

@@ -1,0 +1,1439 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 190, Column: 12 }
+Function:        PyInit__weakref
+Hotness:         269
+Args:
+  - Callee:          PyModuleDef_Init
+    DebugLoc:        { File: './Include/moduleobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyInit__weakref
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 189, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 35, Column: 12 }
+Function:        _weakref_getweakrefcount_impl
+Hotness:         0
+Args:
+  - Callee:          _PyWeakref_GetWeakrefCount
+  - String:          ' will not be inlined into '
+  - Caller:          _weakref_getweakrefcount_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 28, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 34, Column: 12 }
+Function:        _weakref_getweakrefcount_impl
+Hotness:         0
+Args:
+  - Callee:          _PyObject_GET_WEAKREFS_LISTPTR
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 154, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _weakref_getweakrefcount_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 28, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 24, Column: 34 }
+Function:        _weakref_getweakrefcount
+Hotness:         0
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _weakref_getweakrefcount
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 19, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 27, Column: 20 }
+Function:        _weakref_getweakrefcount
+Hotness:         0
+Args:
+  - Callee:          PyLong_FromSsize_t
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _weakref_getweakrefcount
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 19, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 23, Column: 21 }
+Function:        _weakref_getweakrefcount
+Hotness:         0
+Args:
+  - Callee:          _weakref_getweakrefcount_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 28, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _weakref_getweakrefcount
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 19, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 585, Column: 5 }
+Function:        _Py_NewRef
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 65, Column: 9 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - Callee:          _PyDict_DelItemIf
+  - String:          ' will not be inlined into '
+  - Caller:          _weakref__remove_dead_weakref_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 64, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 66, Column: 13 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _weakref__remove_dead_weakref_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 64, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 71, Column: 13 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - Callee:          PyErr_Clear
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _weakref__remove_dead_weakref_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 64, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 75, Column: 5 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _weakref__remove_dead_weakref_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 64, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 66, Column: 36 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 65, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 65, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 71, Column: 13 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 53, Column: 10 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          _PyArg_CheckPositional
+  - String:          ' will not be inlined into '
+  - Caller:          _weakref__remove_dead_weakref
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 48, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 57, Column: 9 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          _PyArg_BadArgument
+  - String:          ' will not be inlined into '
+  - Caller:          _weakref__remove_dead_weakref
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 48, 
+                       Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 56, Column: 10 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          PyType_HasFeature
+    DebugLoc:        { File: './Include/object.h', Line: 726, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _weakref__remove_dead_weakref
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 48, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 62, Column: 20 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          _weakref__remove_dead_weakref_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 64, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _weakref__remove_dead_weakref
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 48, 
+                       Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '55'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 62, Column: 20 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          _weakref__remove_dead_weakref_impl
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 64, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _weakref__remove_dead_weakref
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 48, 
+                       Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '55'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 56, Column: 10 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 53, 
+                       Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 61, Column: 11 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 53, 
+                       Column: 10 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 90, Column: 28 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - Callee:          _PyWeakref_GetWeakrefCount
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_getweakrefs
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 85, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 92, Column: 18 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - Callee:          PyList_New
+    DebugLoc:        { File: './Include/listobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_getweakrefs
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 85, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 104, Column: 18 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - Callee:          PyList_New
+    DebugLoc:        { File: './Include/listobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_getweakrefs
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 85, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 89, Column: 34 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - Callee:          _PyObject_GET_WEAKREFS_LISTPTR
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 154, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_getweakrefs
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 85, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 98, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_getweakrefs
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 85, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 99, Column: 36 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 99, Column: 36 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 9 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            bitcast
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'hoisting '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'hoisting '
+  - Inst:            bitcast
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 0, Column: 0 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._PyWeakReference*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 92, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 0, Column: 0 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._PyWeakReference*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object**'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object**'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 92, Column: 18 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 9 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 122, Column: 9 }
+Function:        weakref_proxy
+Hotness:         6562
+Args:
+  - Callee:          PyArg_UnpackTuple
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_proxy
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 117, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 123, Column: 18 }
+Function:        weakref_proxy
+Hotness:         6562
+Args:
+  - Callee:          PyWeakref_NewProxy
+    DebugLoc:        { File: './Include/weakrefobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_proxy
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 117, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 123, Column: 37 }
+Function:        weakref_proxy
+Hotness:         6562
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 122, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 123, Column: 45 }
+Function:        weakref_proxy
+Hotness:         6562
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 119, Column: 15 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 122, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 250, Column: 36 }
+Function:        _PyObject_TypeCheck
+Hotness:         0
+Args:
+  - Callee:          PyType_IsSubtype
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 250, Column: 12 }
+Function:        _PyObject_TypeCheck
+Hotness:         0
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 43, Column: 9 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          is_dead_weakref
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 41, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 42, Column: 10 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          is_dead_weakref
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 41, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 42, Column: 10 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          is_dead_weakref
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 41, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-30'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 46, Column: 12 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          _Py_REFCNT
+    DebugLoc:        { File: './Include/object.h', Line: 130, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          is_dead_weakref
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 41, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15035'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 42, Column: 10 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          is_dead_weakref
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 41, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15030'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 42, Column: 10 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._typeobject*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 42, Column: 10 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 250, Column: 36 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 43, Column: 25 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 250, Column: 36 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 46, Column: 12 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 250, Column: 36 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+Function:        _Py_DECREF
+Hotness:         0
+Args:
+  - Callee:          _Py_Dealloc
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 144, Column: 9 }
+Function:        weakref_exec
+Hotness:         269
+Args:
+  - Callee:          PyModule_AddObject
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 149, Column: 9 }
+Function:        weakref_exec
+Hotness:         268
+Args:
+  - Callee:          PyModule_AddObject
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 155, Column: 9 }
+Function:        weakref_exec
+Hotness:         267
+Args:
+  - Callee:          PyModule_AddObject
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Modules/_weakref.c', Line: 161, Column: 9 }
+Function:        weakref_exec
+Hotness:         266
+Args:
+  - Callee:          PyModule_AddObject
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 143, Column: 5 }
+Function:        weakref_exec
+Hotness:         269
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 163, Column: 9 }
+Function:        weakref_exec
+Hotness:         1
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 145, Column: 9 }
+Function:        weakref_exec
+Hotness:         1
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 148, Column: 5 }
+Function:        weakref_exec
+Hotness:         268
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 160, Column: 5 }
+Function:        weakref_exec
+Hotness:         266
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 157, Column: 9 }
+Function:        weakref_exec
+Hotness:         1
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 151, Column: 9 }
+Function:        weakref_exec
+Hotness:         1
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Modules/_weakref.c', Line: 154, Column: 5 }
+Function:        weakref_exec
+Hotness:         267
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          weakref_exec
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Modules/_weakref.c', Line: 0, Column: 0 }
+Function:        weakref_exec
+Hotness:         269
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 144, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        weakref_exec
+Hotness:         267
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 149, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        weakref_exec
+Hotness:         266
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 155, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        weakref_exec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 161, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        weakref_exec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 155, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        weakref_exec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 149, Column: 9 }
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: './Modules/_weakref.c', Line: 96, Column: 13 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CantIdentifyArrayBounds
+DebugLoc:        { File: './Modules/_weakref.c', Line: 96, Column: 13 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'loop not vectorized: '
+  - String:          cannot identify array bounds
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: './Modules/_weakref.c', Line: 96, Column: 13 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          loop not vectorized
+...
+--- !Passed
+Pass:            loop-unroll
+Name:            PartialUnrolled
+DebugLoc:        { File: './Modules/_weakref.c', Line: 96, Column: 13 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'unrolled loop by a factor of '
+  - UnrollCount:     '2'
+  - String:          ' with run-time trip count'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 9 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 99, Column: 36 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 99, Column: 36 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 9 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            licm
+Name:            LoadWithLoopInvariantAddressInvalidated
+DebugLoc:        { File: './Modules/_weakref.c', Line: 97, Column: 17 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - String:          failed to move load with loop-invariant address because the loop may invalidate its value
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: './Include/object.h', Line: 146, Column: 24 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/_weakref.c', Line: 189, Column: 0 }
+Function:        PyInit__weakref
+Hotness:         269
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/_weakref.c', Line: 189, Column: 0 }
+Function:        PyInit__weakref
+Hotness:         269
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 19, Column: 0 }
+Function:        _weakref_getweakrefcount
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 19, Column: 0 }
+Function:        _weakref_getweakrefcount
+Hotness:         0
+Args:
+  - NumInstructions: '21'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 48, Column: 0 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/clinic/_weakref.c.h', Line: 48, Column: 0 }
+Function:        _weakref__remove_dead_weakref
+Hotness:         0
+Args:
+  - NumInstructions: '27'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/_weakref.c', Line: 85, Column: 0 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/_weakref.c', Line: 85, Column: 0 }
+Function:        weakref_getweakrefs
+Hotness:         0
+Args:
+  - NumInstructions: '55'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/_weakref.c', Line: 117, Column: 0 }
+Function:        weakref_proxy
+Hotness:         6562
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/_weakref.c', Line: 117, Column: 0 }
+Function:        weakref_proxy
+Hotness:         6562
+Args:
+  - NumInstructions: '22'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/_weakref.c', Line: 64, Column: 0 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/_weakref.c', Line: 64, Column: 0 }
+Function:        _weakref__remove_dead_weakref_impl
+Hotness:         0
+Args:
+  - NumInstructions: '17'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/_weakref.c', Line: 41, Column: 0 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/_weakref.c', Line: 41, Column: 0 }
+Function:        is_dead_weakref
+Hotness:         0
+Args:
+  - NumInstructions: '33'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+Function:        weakref_exec
+Hotness:         269
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: './Modules/_weakref.c', Line: 142, Column: 0 }
+Function:        weakref_exec
+Hotness:         269
+Args:
+  - NumInstructions: '58'
+  - String:          ' instructions in function'
+...

@@ -1,24 +1,36 @@
 { 
-	"version": "0.1.0",
+	"version": "2.0.0",
 	"tasks": [
-        {
-			"taskName": "build",
-       		"command": "${workspaceRoot}/node_modules/typescript/bin/tsc",
-			"isShellCommand": true,
-    		"args": ["-w", "-p", "."],
-			"showOutput": "silent",	
-			"isBuildCommand": true,
-    		"isBackground": true,
-    		"problemMatcher": "$tsc-watch"
-        },
-        {
-			"isTestCommand": true,
-            "taskName": "test",
-            "command": "yarn",
-            "args": ["test"],
-            "isShellCommand": true
-        }
-    ]
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "${workspaceRoot}/node_modules/typescript/bin/tsc",
+			"args": [
+				"-w",
+				"-p",
+				"."
+			],
+			"isBackground": true,
+			"problemMatcher": "$tsc-watch",
+			"group": {
+				"_id": "build",
+				"isDefault": false
+			}
+		},
+		{
+			"label": "test",
+			"type": "shell",
+			"command": "yarn",
+			"args": [
+				"test"
+			],
+			"problemMatcher": [],
+			"group": {
+				"_id": "test",
+				"isDefault": false
+			}
+		}
+	]
 	// See http://go.microsoft.com/fwlink/?LinkId=733558
 	// for the documentation about the tasks.json format
 

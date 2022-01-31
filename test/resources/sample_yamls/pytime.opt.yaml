@@ -1,0 +1,3434 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 5 }
+Function:        error_time_t_overflow
+Hotness:         34
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          error_time_t_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 39, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 75, Column: 11 }
+Function:        _PyLong_AsTime_t
+Hotness:         15616
+Args:
+  - Callee:          PyLong_AsLongLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyLong_AsTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 72, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 81, Column: 22 }
+Function:        _PyLong_AsTime_t
+Hotness:         15
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyLong_AsTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 72, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 13 }
+Function:        _PyLong_AsTime_t
+Hotness:         1
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyLong_AsTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 72, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 83, Column: 13 }
+Function:        _PyLong_AsTime_t
+Hotness:         1
+Args:
+  - Callee:          error_time_t_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 39, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyLong_AsTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 72, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 36 }
+Function:        _PyLong_AsTime_t
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 81, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyLong_AsTime_t
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 13 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 94, Column: 12 }
+Function:        _PyLong_FromTime_t
+Hotness:         74510
+Args:
+  - Callee:          PyLong_FromLongLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyLong_FromTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 92, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 250, Column: 36 }
+Function:        _PyObject_TypeCheck
+Hotness:         16519
+Args:
+  - Callee:          PyType_IsSubtype
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 250, Column: 12 }
+Function:        _PyObject_TypeCheck
+Hotness:         30973
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 122, Column: 13 }
+Function:        _PyTime_Round
+Hotness:         1238
+Args:
+  - Callee:          _PyTime_RoundHalfEven
+    DebugLoc:        { File: 'Python/pytime.c', Line: 105, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_Round
+    DebugLoc:        { File: 'Python/pytime.c', Line: 116, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14995'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 204, Column: 13 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         11145
+Args:
+  - Callee:          PyFloat_AsDouble
+    DebugLoc:        { File: './Include/floatobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_ObjectToTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 206, Column: 13 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         3
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_ObjectToTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 211, Column: 15 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         11142
+Args:
+  - Callee:          modf
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_ObjectToTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 222, Column: 35 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         7
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_ObjectToTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 199, Column: 9 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         20234
+Args:
+  - Callee:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_ObjectToTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 210, Column: 13 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         11142
+Args:
+  - Callee:          _PyTime_Round
+    DebugLoc:        { File: 'Python/pytime.c', Line: 116, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_ObjectToTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '120'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 221, Column: 16 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         9089
+Args:
+  - Callee:          _PyLong_AsTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 72, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_ObjectToTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '145'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 214, Column: 13 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         24
+Args:
+  - Callee:          error_time_t_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 39, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_ObjectToTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 36 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 81, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 213, Column: 14 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         11142
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 211, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         24
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 211, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 206, Column: 29 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 204, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 36 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 81, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 213, Column: 14 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         11142
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 211, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         24
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 211, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 206, Column: 29 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 204, Column: 13 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         2356
+Args:
+  - Callee:          modf
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_DoubleToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 140, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 149, Column: 17 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         2356
+Args:
+  - Callee:          _PyTime_Round
+    DebugLoc:        { File: 'Python/pytime.c', Line: 116, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_DoubleToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 140, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '120'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 161, Column: 9 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         12
+Args:
+  - Callee:          error_time_t_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 39, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_DoubleToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 140, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 152, Column: 17 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         30
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 156, Column: 17 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         736
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 160, Column: 10 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         2356
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Python/pytime.c', Line: 160, Column: 10 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         2356
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 152, Column: 17 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         30
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 160, Column: 10 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 156, Column: 17 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         736
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyTime_DoubleToDenominator
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 177, Column: 20 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         2365
+Args:
+  - Callee:          PyFloat_AsDouble
+    DebugLoc:        { File: './Include/floatobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 180, Column: 13 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         9
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 189, Column: 35 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         9
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            IncreaseCostInOtherContexts
+DebugLoc:        { File: 'Python/pytime.c', Line: 176, Column: 9 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         8876
+Args:
+  - String:          'Not inlining. Cost of inlining '
+  - Callee:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' increases the cost of inlining '
+  - Caller:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' in other contexts'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 183, Column: 16 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         2356
+Args:
+  - Callee:          _PyTime_DoubleToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 140, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14630'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 187, Column: 16 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         6511
+Args:
+  - Callee:          _PyLong_AsTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 72, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '145'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 176, Column: 9 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         8876
+Args:
+  - Callee:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 36 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 81, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 82, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 189, Column: 13 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         4653
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/pytime.c', Line: 187, Column: 14 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Python/pytime.c', Line: 188, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 152, Column: 17 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         55
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 160, Column: 10 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         2836
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 156, Column: 17 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         1316
+Args:
+  - String:          'load of type '
+  - Type:            double
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 40, Column: 21 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         25
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 146, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 180, Column: 29 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         16
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 177, Column: 20 }
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pytime.c', Line: 233, Column: 12 }
+Function:        _PyTime_ObjectToTimespec
+Hotness:         1448
+Args:
+  - Callee:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyTime_ObjectToTimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 232, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '645'
+  - String:          ', threshold='
+  - Threshold:       '625'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pytime.c', Line: 240, Column: 12 }
+Function:        _PyTime_ObjectToTimeval
+Hotness:         7428
+Args:
+  - Callee:          _PyTime_ObjectToDenominator
+    DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyTime_ObjectToTimeval
+    DebugLoc:        { File: 'Python/pytime.c', Line: 239, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '645'
+  - String:          ', threshold='
+  - Threshold:       '625'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+Function:        _PyTime_overflow
+Hotness:         40
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 274, Column: 9 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         5
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromNanosecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 269, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 280, Column: 12 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         4683
+Args:
+  - Callee:          PyLong_AsLongLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromNanosecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 269, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 281, Column: 23 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         44
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromNanosecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 269, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 282, Column: 13 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         24
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromNanosecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 269, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 273, Column: 10 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         4688
+Args:
+  - Callee:          PyType_HasFeature
+    DebugLoc:        { File: './Include/object.h', Line: 726, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromNanosecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 269, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 283, Column: 13 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         23
+Args:
+  - Callee:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromNanosecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 269, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 282, Column: 36 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         24
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 281, Column: 23 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         23
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pytime.c', Line: 282, Column: 36 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 282, Column: 13 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 306, Column: 13 }
+Function:        pytime_fromtimespec
+Hotness:         1
+Args:
+  - Callee:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          pytime_fromtimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 297, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 320, Column: 13 }
+Function:        pytime_fromtimespec
+Hotness:         1
+Args:
+  - Callee:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          pytime_fromtimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 297, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        pytime_fromtimespec
+Hotness:         9560
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        pytime_fromtimespec
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 336, Column: 12 }
+Function:        _PyTime_FromTimespec
+Hotness:         12
+Args:
+  - Callee:          pytime_fromtimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 297, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromTimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 335, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '110'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        _PyTime_FromTimespec
+Hotness:         12
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_FromTimespec
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 352, Column: 13 }
+Function:        pytime_fromtimeval
+Hotness:         0
+Args:
+  - Callee:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          pytime_fromtimeval
+    DebugLoc:        { File: 'Python/pytime.c', Line: 343, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 366, Column: 13 }
+Function:        pytime_fromtimeval
+Hotness:         0
+Args:
+  - Callee:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          pytime_fromtimeval
+    DebugLoc:        { File: 'Python/pytime.c', Line: 343, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 361, Column: 27 }
+Function:        pytime_fromtimeval
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        pytime_fromtimeval
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pytime.c', Line: 382, Column: 12 }
+Function:        _PyTime_FromTimeval
+Hotness:         0
+Args:
+  - Callee:          pytime_fromtimeval
+    DebugLoc:        { File: 'Python/pytime.c', Line: 343, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyTime_FromTimeval
+    DebugLoc:        { File: 'Python/pytime.c', Line: 381, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 396, Column: 9 }
+Function:        _PyTime_FromDouble
+Hotness:         1224
+Args:
+  - Callee:          _PyTime_Round
+    DebugLoc:        { File: 'Python/pytime.c', Line: 116, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromDouble
+    DebugLoc:        { File: 'Python/pytime.c', Line: 389, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14880'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 399, Column: 9 }
+Function:        _PyTime_FromDouble
+Hotness:         10
+Args:
+  - Callee:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromDouble
+    DebugLoc:        { File: 'Python/pytime.c', Line: 389, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 412, Column: 13 }
+Function:        _PyTime_FromObject
+Hotness:         1228
+Args:
+  - Callee:          PyFloat_AsDouble
+    DebugLoc:        { File: './Include/floatobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 414, Column: 13 }
+Function:        _PyTime_FromObject
+Hotness:         5
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 423, Column: 15 }
+Function:        _PyTime_FromObject
+Hotness:         635
+Args:
+  - Callee:          PyLong_AsLongLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 424, Column: 26 }
+Function:        _PyTime_FromObject
+Hotness:         35
+Args:
+  - Callee:          PyErr_Occurred
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 425, Column: 17 }
+Function:        _PyTime_FromObject
+Hotness:         2
+Args:
+  - Callee:          PyErr_ExceptionMatches
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 410, Column: 9 }
+Function:        _PyTime_FromObject
+Hotness:         1863
+Args:
+  - Callee:          _PyObject_TypeCheck
+    DebugLoc:        { File: './Include/object.h', Line: 249, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 417, Column: 16 }
+Function:        _PyTime_FromObject
+Hotness:         1223
+Args:
+  - Callee:          _PyTime_FromDouble
+    DebugLoc:        { File: 'Python/pytime.c', Line: 389, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14760'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 426, Column: 17 }
+Function:        _PyTime_FromObject
+Hotness:         1
+Args:
+  - Callee:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 432, Column: 13 }
+Function:        _PyTime_FromObject
+Hotness:         14
+Args:
+  - Callee:          _PyTime_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 46, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14985'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 425, Column: 40 }
+Function:        _PyTime_FromObject
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 424, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_FromObject
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Python/pytime.c', Line: 425, Column: 40 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 425, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_FromObject
+Hotness:         14
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 423, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_FromObject
+Hotness:         14
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 424, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_FromObject
+Hotness:         10
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 412, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 414, Column: 29 }
+Function:        _PyTime_FromObject
+Hotness:         5
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 412, Column: 13 }
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pytime.c', Line: 443, Column: 12 }
+Function:        _PyTime_FromSecondsObject
+Hotness:         1853
+Args:
+  - Callee:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyTime_FromSecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 442, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '625'
+  - String:          ', threshold='
+  - Threshold:       '625'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pytime.c', Line: 449, Column: 12 }
+Function:        _PyTime_FromMillisecondsObject
+Hotness:         10
+Args:
+  - Callee:          _PyTime_FromObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyTime_FromMillisecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 448, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '625'
+  - String:          ', threshold='
+  - Threshold:       '625'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 476, Column: 12 }
+Function:        _PyTime_AsNanosecondsObject
+Hotness:         3642
+Args:
+  - Callee:          PyLong_FromLongLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_AsNanosecondsObject
+    DebugLoc:        { File: 'Python/pytime.c', Line: 474, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 529, Column: 12 }
+Function:        _PyTime_AsMilliseconds
+Hotness:         942
+Args:
+  - Callee:          _PyTime_Divide
+    DebugLoc:        { File: 'Python/pytime.c', Line: 482, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsMilliseconds
+    DebugLoc:        { File: 'Python/pytime.c', Line: 528, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '170'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 535, Column: 12 }
+Function:        _PyTime_AsMicroseconds
+Hotness:         26992
+Args:
+  - Callee:          _PyTime_Divide
+    DebugLoc:        { File: 'Python/pytime.c', Line: 482, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsMicroseconds
+    DebugLoc:        { File: 'Python/pytime.c', Line: 534, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '170'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 549, Column: 17 }
+Function:        _PyTime_AsTimeval_impl
+Hotness:         1002
+Args:
+  - Callee:          _PyTime_Divide
+    DebugLoc:        { File: 'Python/pytime.c', Line: 482, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsTimeval_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 541, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14830'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            IncreaseCostInOtherContexts
+DebugLoc:        { File: 'Python/pytime.c', Line: 584, Column: 11 }
+Function:        _PyTime_AsTimevalStruct_impl
+Hotness:         964
+Args:
+  - String:          'Not inlining. Cost of inlining '
+  - Callee:          _PyTime_AsTimeval_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 541, Column: 0 }
+  - String:          ' increases the cost of inlining '
+  - Caller:          _PyTime_AsTimevalStruct_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 579, Column: 0 }
+  - String:          ' in other contexts'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 596, Column: 13 }
+Function:        _PyTime_AsTimevalStruct_impl
+Hotness:         1
+Args:
+  - Callee:          error_time_t_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 39, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsTimevalStruct_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 579, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '15'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            IncreaseCostInOtherContexts
+DebugLoc:        { File: 'Python/pytime.c', Line: 584, Column: 11 }
+Function:        _PyTime_AsTimevalStruct_impl
+Hotness:         964
+Args:
+  - String:          'Not inlining. Cost of inlining '
+  - Callee:          _PyTime_AsTimeval_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 541, Column: 0 }
+  - String:          ' increases the cost of inlining '
+  - Caller:          _PyTime_AsTimevalStruct_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 579, Column: 0 }
+  - String:          ' in other contexts'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 589, Column: 18 }
+Function:        _PyTime_AsTimevalStruct_impl
+Hotness:         964
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 584, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 591, Column: 19 }
+Function:        _PyTime_AsTimevalStruct_impl
+Hotness:         964
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 584, Column: 11 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 606, Column: 12 }
+Function:        _PyTime_AsTimeval
+Hotness:         964
+Args:
+  - Callee:          _PyTime_AsTimevalStruct_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 579, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsTimeval
+    DebugLoc:        { File: 'Python/pytime.c', Line: 605, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '30'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 584, Column: 11 }
+Function:        _PyTime_AsTimeval
+Hotness:         964
+Args:
+  - Callee:          _PyTime_AsTimeval_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 541, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsTimeval
+    DebugLoc:        { File: 'Python/pytime.c', Line: 605, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '205'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 612, Column: 12 }
+Function:        _PyTime_AsTimeval_noraise
+Hotness:         0
+Args:
+  - Callee:          _PyTime_AsTimevalStruct_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 579, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsTimeval_noraise
+    DebugLoc:        { File: 'Python/pytime.c', Line: 611, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14970'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 584, Column: 11 }
+Function:        _PyTime_AsTimeval_noraise
+Hotness:         0
+Args:
+  - Callee:          _PyTime_AsTimeval_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 541, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsTimeval_noraise
+    DebugLoc:        { File: 'Python/pytime.c', Line: 611, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '205'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 622, Column: 11 }
+Function:        _PyTime_AsTimevalTime_t
+Hotness:         38
+Args:
+  - Callee:          _PyTime_AsTimeval_impl
+    DebugLoc:        { File: 'Python/pytime.c', Line: 541, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsTimevalTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 618, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14790'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 627, Column: 9 }
+Function:        _PyTime_AsTimevalTime_t
+Hotness:         1
+Args:
+  - Callee:          error_time_t_overflow
+    DebugLoc:        { File: 'Python/pytime.c', Line: 39, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_AsTimevalTime_t
+    DebugLoc:        { File: 'Python/pytime.c', Line: 618, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14985'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+Function:        py_get_system_clock
+Hotness:         184
+Args:
+  - Callee:          clock_gettime
+    DebugLoc:        { File: '/usr/include/time.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          py_get_system_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 660, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 711, Column: 13 }
+Function:        py_get_system_clock
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetFromErrno
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          py_get_system_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 660, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 724, Column: 13 }
+Function:        py_get_system_clock
+Hotness:         3
+Args:
+  - Callee:          clock_getres
+    DebugLoc:        { File: '/usr/include/time.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          py_get_system_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 660, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            IncreaseCostInOtherContexts
+DebugLoc:        { File: 'Python/pytime.c', Line: 715, Column: 9 }
+Function:        py_get_system_clock
+Hotness:         183
+Args:
+  - String:          'Not inlining. Cost of inlining '
+  - Callee:          pytime_fromtimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 297, Column: 0 }
+  - String:          ' increases the cost of inlining '
+  - Caller:          py_get_system_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 660, Column: 0 }
+  - String:          ' in other contexts'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 711, Column: 32 }
+Function:        py_get_system_clock
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 725, Column: 36 }
+Function:        py_get_system_clock
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 724, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 725, Column: 49 }
+Function:        py_get_system_clock
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 724, Column: 13 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 772, Column: 9 }
+Function:        _PyTime_GetSystemClock
+Hotness:         38
+Args:
+  - Callee:          py_get_system_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 660, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_GetSystemClock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 770, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '70'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 715, Column: 9 }
+Function:        _PyTime_GetSystemClock
+Hotness:         38
+Args:
+  - Callee:          pytime_fromtimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 297, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_GetSystemClock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 770, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '5'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 302, Column: 24 }
+Function:        _PyTime_GetSystemClock
+Hotness:         38
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        _PyTime_GetSystemClock
+Hotness:         38
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 783, Column: 12 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         146
+Args:
+  - Callee:          py_get_system_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 660, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_GetSystemClockWithInfo
+    DebugLoc:        { File: 'Python/pytime.c', Line: 782, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14780'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 715, Column: 9 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         145
+Args:
+  - Callee:          pytime_fromtimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 297, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_GetSystemClockWithInfo
+    DebugLoc:        { File: 'Python/pytime.c', Line: 782, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '100'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 711, Column: 32 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 302, Column: 24 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         145
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         145
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         145
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 725, Column: 36 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 724, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 725, Column: 49 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 724, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 708, Column: 11 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+Function:        py_get_monotonic_clock
+Hotness:         9364
+Args:
+  - Callee:          clock_gettime
+    DebugLoc:        { File: '/usr/include/time.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 929, Column: 13 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetFromErrno
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 940, Column: 13 }
+Function:        py_get_monotonic_clock
+Hotness:         4
+Args:
+  - Callee:          clock_getres
+    DebugLoc:        { File: '/usr/include/time.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 941, Column: 13 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetFromErrno
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 946, Column: 9 }
+Function:        py_get_monotonic_clock
+Hotness:         9362
+Args:
+  - Callee:          pytime_fromtimespec
+    DebugLoc:        { File: 'Python/pytime.c', Line: 297, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14880'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 929, Column: 32 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 941, Column: 32 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 940, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 944, Column: 32 }
+Function:        py_get_monotonic_clock
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 940, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 944, Column: 45 }
+Function:        py_get_monotonic_clock
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 940, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 302, Column: 24 }
+Function:        py_get_monotonic_clock
+Hotness:         9362
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 940, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 302, Column: 24 }
+Function:        py_get_monotonic_clock
+Hotness:         9362
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 940, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        py_get_monotonic_clock
+Hotness:         9362
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        py_get_monotonic_clock
+Hotness:         9362
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 940, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        py_get_monotonic_clock
+Hotness:         9362
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 940, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 21 }
+Function:        py_get_monotonic_clock
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 47, Column: 5 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 957, Column: 9 }
+Function:        _PyTime_GetMonotonicClock
+Hotness:         333
+Args:
+  - Callee:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_GetMonotonicClock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 955, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '75'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 302, Column: 24 }
+Function:        _PyTime_GetMonotonicClock
+Hotness:         333
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        _PyTime_GetMonotonicClock
+Hotness:         333
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pytime.c', Line: 968, Column: 12 }
+Function:        _PyTime_GetMonotonicClockWithInfo
+Hotness:         8743
+Args:
+  - Callee:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyTime_GetMonotonicClockWithInfo
+    DebugLoc:        { File: 'Python/pytime.c', Line: 967, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '375'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 1062, Column: 12 }
+Function:        _PyTime_GetPerfCounterWithInfo
+Hotness:         8155
+Args:
+  - Callee:          _PyTime_GetMonotonicClockWithInfo
+    DebugLoc:        { File: 'Python/pytime.c', Line: 967, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_GetPerfCounterWithInfo
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1058, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '5'
+  - String:          ', threshold='
+  - Threshold:       '375'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pytime.c', Line: 968, Column: 12 }
+Function:        _PyTime_GetPerfCounterWithInfo
+Hotness:         8155
+Args:
+  - Callee:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyTime_GetPerfCounterWithInfo
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1058, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '375'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Python/pytime.c', Line: 968, Column: 12 }
+Function:        _PyTime_GetPerfCounterWithInfo
+Hotness:         8155
+Args:
+  - Callee:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          _PyTime_GetPerfCounterWithInfo
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1058, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '375'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Python/pytime.c', Line: 1075, Column: 11 }
+Function:        _PyTime_GetPerfCounter
+Hotness:         288
+Args:
+  - Callee:          py_get_monotonic_clock
+    DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyTime_GetPerfCounter
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1069, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '75'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 302, Column: 24 }
+Function:        _PyTime_GetPerfCounter
+Hotness:         288
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 315, Column: 16 }
+Function:        _PyTime_GetPerfCounter
+Hotness:         288
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 927, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 1112, Column: 5 }
+Function:        _PyTime_localtime
+Hotness:         29643
+Args:
+  - Callee:          __errno_location
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_localtime
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1088, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 1113, Column: 9 }
+Function:        _PyTime_localtime
+Hotness:         29643
+Args:
+  - Callee:          localtime_r
+    DebugLoc:        { File: '/usr/include/time.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_localtime
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1088, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 1117, Column: 9 }
+Function:        _PyTime_localtime
+Hotness:         4
+Args:
+  - Callee:          PyErr_SetFromErrno
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_localtime
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1088, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/pytime.c', Line: 1112, Column: 5 }
+Function:        _PyTime_localtime
+Hotness:         29643
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 1114, Column: 13 }
+Function:        _PyTime_localtime
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i32
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1112, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1113, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 1117, Column: 28 }
+Function:        _PyTime_localtime
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1113, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 1138, Column: 9 }
+Function:        _PyTime_gmtime
+Hotness:         7897
+Args:
+  - Callee:          gmtime_r
+    DebugLoc:        { File: '/usr/include/time.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_gmtime
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1126, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 1140, Column: 13 }
+Function:        _PyTime_gmtime
+Hotness:         1
+Args:
+  - Callee:          __errno_location
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_gmtime
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1126, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Python/pytime.c', Line: 1144, Column: 9 }
+Function:        _PyTime_gmtime
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetFromErrno
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PyTime_gmtime
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1126, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            tailcallelim
+Name:            tailcall-readnone
+DebugLoc:        { File: 'Python/pytime.c', Line: 1140, Column: 13 }
+Function:        _PyTime_gmtime
+Hotness:         1
+Args:
+  - String:          'marked as tail call candidate (readnone)'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pytime.c', Line: 1144, Column: 28 }
+Function:        _PyTime_gmtime
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pytime.c', Line: 1138, Column: 9 }
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pytime.c', Line: 65, Column: 15 }
+Function:        _PyTime_MulDiv
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pytime.c', Line: 64, Column: 23 }
+Function:        _PyTime_MulDiv
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pytime.c', Line: 213, Column: 14 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         11142
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pytime.c', Line: 0, Column: 0 }
+Function:        _PyTime_AsTimeval
+Hotness:         964
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Python/pytime.c', Line: 0, Column: 0 }
+Function:        _PyTime_AsTimeval_noraise
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 54, Column: 0 }
+Function:        _PyTime_MulDiv
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 54, Column: 0 }
+Function:        _PyTime_MulDiv
+Hotness:         0
+Args:
+  - NumInstructions: '13'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 72, Column: 0 }
+Function:        _PyLong_AsTime_t
+Hotness:         15616
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 72, Column: 0 }
+Function:        _PyLong_AsTime_t
+Hotness:         15616
+Args:
+  - NumInstructions: '21'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 92, Column: 0 }
+Function:        _PyLong_FromTime_t
+Hotness:         74510
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 92, Column: 0 }
+Function:        _PyLong_FromTime_t
+Hotness:         74510
+Args:
+  - NumInstructions: '1'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         20234
+Args:
+  - NumStackBytes:   '104'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 198, Column: 0 }
+Function:        _PyTime_ObjectToTime_t
+Hotness:         20234
+Args:
+  - NumInstructions: '119'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 232, Column: 0 }
+Function:        _PyTime_ObjectToTimespec
+Hotness:         1448
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 232, Column: 0 }
+Function:        _PyTime_ObjectToTimespec
+Hotness:         1448
+Args:
+  - NumInstructions: '3'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         8876
+Args:
+  - NumStackBytes:   '120'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 173, Column: 0 }
+Function:        _PyTime_ObjectToDenominator
+Hotness:         8876
+Args:
+  - NumInstructions: '159'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 239, Column: 0 }
+Function:        _PyTime_ObjectToTimeval
+Hotness:         7428
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 239, Column: 0 }
+Function:        _PyTime_ObjectToTimeval
+Hotness:         7428
+Args:
+  - NumInstructions: '3'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 245, Column: 0 }
+Function:        _PyTime_FromSeconds
+Hotness:         25779
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 245, Column: 0 }
+Function:        _PyTime_FromSeconds
+Hotness:         25779
+Args:
+  - NumInstructions: '3'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 262, Column: 0 }
+Function:        _PyTime_FromNanoseconds
+Hotness:         45
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 262, Column: 0 }
+Function:        _PyTime_FromNanoseconds
+Hotness:         45
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 269, Column: 0 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         4688
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 269, Column: 0 }
+Function:        _PyTime_FromNanosecondsObject
+Hotness:         4688
+Args:
+  - NumInstructions: '38'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 335, Column: 0 }
+Function:        _PyTime_FromTimespec
+Hotness:         12
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 335, Column: 0 }
+Function:        _PyTime_FromTimespec
+Hotness:         12
+Args:
+  - NumInstructions: '43'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 381, Column: 0 }
+Function:        _PyTime_FromTimeval
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 381, Column: 0 }
+Function:        _PyTime_FromTimeval
+Hotness:         0
+Args:
+  - NumInstructions: '1'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 343, Column: 0 }
+Function:        pytime_fromtimeval
+Hotness:         0
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 343, Column: 0 }
+Function:        pytime_fromtimeval
+Hotness:         0
+Args:
+  - NumInstructions: '43'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 442, Column: 0 }
+Function:        _PyTime_FromSecondsObject
+Hotness:         1853
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 442, Column: 0 }
+Function:        _PyTime_FromSecondsObject
+Hotness:         1853
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+Function:        _PyTime_FromObject
+Hotness:         1863
+Args:
+  - NumStackBytes:   '104'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 409, Column: 0 }
+Function:        _PyTime_FromObject
+Hotness:         1863
+Args:
+  - NumInstructions: '131'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 448, Column: 0 }
+Function:        _PyTime_FromMillisecondsObject
+Hotness:         10
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 448, Column: 0 }
+Function:        _PyTime_FromMillisecondsObject
+Hotness:         10
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 454, Column: 0 }
+Function:        _PyTime_AsSecondsDouble
+Hotness:         10056
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 454, Column: 0 }
+Function:        _PyTime_AsSecondsDouble
+Hotness:         10056
+Args:
+  - NumInstructions: '26'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 474, Column: 0 }
+Function:        _PyTime_AsNanosecondsObject
+Hotness:         3642
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 474, Column: 0 }
+Function:        _PyTime_AsNanosecondsObject
+Hotness:         3642
+Args:
+  - NumInstructions: '1'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 528, Column: 0 }
+Function:        _PyTime_AsMilliseconds
+Hotness:         942
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 528, Column: 0 }
+Function:        _PyTime_AsMilliseconds
+Hotness:         942
+Args:
+  - NumInstructions: '59'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 534, Column: 0 }
+Function:        _PyTime_AsMicroseconds
+Hotness:         26992
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 534, Column: 0 }
+Function:        _PyTime_AsMicroseconds
+Hotness:         26992
+Args:
+  - NumInstructions: '60'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 605, Column: 0 }
+Function:        _PyTime_AsTimeval
+Hotness:         964
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 605, Column: 0 }
+Function:        _PyTime_AsTimeval
+Hotness:         964
+Args:
+  - NumInstructions: '81'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 611, Column: 0 }
+Function:        _PyTime_AsTimeval_noraise
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 611, Column: 0 }
+Function:        _PyTime_AsTimeval_noraise
+Hotness:         0
+Args:
+  - NumInstructions: '81'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 618, Column: 0 }
+Function:        _PyTime_AsTimevalTime_t
+Hotness:         38
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 618, Column: 0 }
+Function:        _PyTime_AsTimevalTime_t
+Hotness:         38
+Args:
+  - NumInstructions: '84'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 637, Column: 0 }
+Function:        _PyTime_AsTimespec
+Hotness:         935
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 637, Column: 0 }
+Function:        _PyTime_AsTimespec
+Hotness:         935
+Args:
+  - NumInstructions: '21'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 770, Column: 0 }
+Function:        _PyTime_GetSystemClock
+Hotness:         38
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 770, Column: 0 }
+Function:        _PyTime_GetSystemClock
+Hotness:         38
+Args:
+  - NumInstructions: '29'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 782, Column: 0 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         146
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 782, Column: 0 }
+Function:        _PyTime_GetSystemClockWithInfo
+Hotness:         146
+Args:
+  - NumInstructions: '74'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 955, Column: 0 }
+Function:        _PyTime_GetMonotonicClock
+Hotness:         333
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 955, Column: 0 }
+Function:        _PyTime_GetMonotonicClock
+Hotness:         333
+Args:
+  - NumInstructions: '29'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+Function:        py_get_monotonic_clock
+Hotness:         9364
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 838, Column: 0 }
+Function:        py_get_monotonic_clock
+Hotness:         9364
+Args:
+  - NumInstructions: '84'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 967, Column: 0 }
+Function:        _PyTime_GetMonotonicClockWithInfo
+Hotness:         8743
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 967, Column: 0 }
+Function:        _PyTime_GetMonotonicClockWithInfo
+Hotness:         8743
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 1058, Column: 0 }
+Function:        _PyTime_GetPerfCounterWithInfo
+Hotness:         8155
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 1058, Column: 0 }
+Function:        _PyTime_GetPerfCounterWithInfo
+Hotness:         8155
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 1069, Column: 0 }
+Function:        _PyTime_GetPerfCounter
+Hotness:         288
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 1069, Column: 0 }
+Function:        _PyTime_GetPerfCounter
+Hotness:         288
+Args:
+  - NumInstructions: '29'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 1088, Column: 0 }
+Function:        _PyTime_localtime
+Hotness:         29643
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 1088, Column: 0 }
+Function:        _PyTime_localtime
+Hotness:         29643
+Args:
+  - NumInstructions: '30'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pytime.c', Line: 1126, Column: 0 }
+Function:        _PyTime_gmtime
+Hotness:         7897
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pytime.c', Line: 1126, Column: 0 }
+Function:        _PyTime_gmtime
+Hotness:         7897
+Args:
+  - NumInstructions: '19'
+  - String:          ' instructions in function'
+...

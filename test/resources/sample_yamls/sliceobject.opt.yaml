@@ -1,0 +1,5187 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 36, Column: 12 }
+Function:        ellipsis_repr
+Hotness:         13
+Args:
+  - Callee:          PyUnicode_FromString
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          ellipsis_repr
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 35, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 26, Column: 9 }
+Function:        ellipsis_new
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          ellipsis_new
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 24, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 29, Column: 5 }
+Function:        ellipsis_new
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          ellipsis_new
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 24, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 105, Column: 9 }
+Function:        _PySlice_Fini
+Hotness:         263
+Args:
+  - Callee:          PyObject_GC_Del
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_Fini
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 101, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 81, 
+                   Column: 12 }
+Function:        _PyThreadState_GET
+Hotness:         3845637
+Args:
+  - Callee:          _PyRuntimeState_GetThreadState
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 58, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 113, 
+                   Column: 29 }
+Function:        _PyInterpreterState_GET
+Hotness:         3845637
+Args:
+  - Callee:          _PyThreadState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 88, 
+                   Column: 34 }
+Function:        _PyObject_GC_TRACK
+Hotness:         1281879
+Args:
+  - Callee:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyObject_GC_TRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 131, Column: 9 }
+Function:        PySlice_New
+Hotness:         1281575
+Args:
+  - Callee:          _Py_NewReference
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 134, Column: 15 }
+Function:        PySlice_New
+Hotness:         266
+Args:
+  - Callee:          _PyObject_GC_New
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 126, Column: 34 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - Callee:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 147, Column: 5 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - Callee:          _PyObject_GC_TRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 77, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14980'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 144, Column: 5 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 142, Column: 5 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 140, Column: 5 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 134, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 131, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+Function:        _Py_DECREF
+Hotness:         25958
+Args:
+  - Callee:          _Py_Dealloc
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 155, Column: 13 }
+Function:        _PySlice_FromIndices
+Hotness:         30
+Args:
+  - Callee:          PyLong_FromSsize_t
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_FromIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 153, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 158, Column: 11 }
+Function:        _PySlice_FromIndices
+Hotness:         29
+Args:
+  - Callee:          PyLong_FromSsize_t
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_FromIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 153, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 160, Column: 9 }
+Function:        _PySlice_FromIndices
+Hotness:         1
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_FromIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 153, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 164, Column: 13 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - Callee:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_FromIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 153, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '180'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 165, Column: 5 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_FromIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 153, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 166, Column: 5 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_FromIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 153, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 131, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 134, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 134, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_FromIndices
+Hotness:         28
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_FromIndices
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 158, Column: 11 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 180, Column: 17 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - Callee:          PyLong_AsSsize_t
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_GetIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 173, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 186, Column: 18 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - Callee:          PyLong_AsSsize_t
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_GetIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 173, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 193, Column: 17 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - Callee:          PyLong_AsSsize_t
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_GetIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 173, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 179, Column: 14 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - Callee:          PyType_HasFeature
+    DebugLoc:        { File: './Include/object.h', Line: 726, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_GetIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 173, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 192, Column: 14 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - Callee:          PyType_HasFeature
+    DebugLoc:        { File: './Include/object.h', Line: 726, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_GetIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 173, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 185, Column: 14 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - Callee:          PyType_HasFeature
+    DebugLoc:        { File: './Include/object.h', Line: 726, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_GetIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 173, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 182, Column: 12 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 180, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 189, Column: 12 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 186, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 189, Column: 12 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 180, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 17 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 183, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 17 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 187, Column: 32 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 17 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 186, Column: 16 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 196, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 196, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 197, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 197, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 194, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 197, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 193, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 198, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 198, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 194, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 198, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 193, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 182, Column: 12 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 180, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 189, Column: 12 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 186, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 189, Column: 12 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 180, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 17 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 183, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 17 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 187, Column: 32 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 17 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 186, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 197, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 197, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 193, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 197, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 194, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 198, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 190, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 198, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 194, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 198, Column: 9 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 193, Column: 15 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+Function:        PySlice_Unpack
+Hotness:         126789
+Args:
+  - Callee:          _PyEval_SliceIndex
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_Unpack
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 205, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 217, Column: 13 }
+Function:        PySlice_Unpack
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_Unpack
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 205, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 234, Column: 14 }
+Function:        PySlice_Unpack
+Hotness:         754081
+Args:
+  - Callee:          _PyEval_SliceIndex
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_Unpack
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 205, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 241, Column: 14 }
+Function:        PySlice_Unpack
+Hotness:         753438
+Args:
+  - Callee:          _PyEval_SliceIndex
+  - String:          ' will not be inlined into '
+  - Caller:          PySlice_Unpack
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 205, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 216, Column: 13 }
+Function:        PySlice_Unpack
+Hotness:         126788
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 217, Column: 29 }
+Function:        PySlice_Unpack
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 230, Column: 12 }
+Function:        PySlice_Unpack
+Hotness:         1264684
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 231, Column: 18 }
+Function:        PySlice_Unpack
+Hotness:         510603
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 237, Column: 12 }
+Function:        PySlice_Unpack
+Hotness:         1264683
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 234, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 237, Column: 12 }
+Function:        PySlice_Unpack
+Hotness:         1264683
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 238, Column: 17 }
+Function:        PySlice_Unpack
+Hotness:         511245
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 231, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 238, Column: 17 }
+Function:        PySlice_Unpack
+Hotness:         511245
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 234, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 216, Column: 13 }
+Function:        PySlice_Unpack
+Hotness:         126788
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 217, Column: 29 }
+Function:        PySlice_Unpack
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 230, Column: 12 }
+Function:        PySlice_Unpack
+Hotness:         1264684
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 237, Column: 12 }
+Function:        PySlice_Unpack
+Hotness:         1264683
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 234, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 237, Column: 12 }
+Function:        PySlice_Unpack
+Hotness:         1264683
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 238, Column: 17 }
+Function:        PySlice_Unpack
+Hotness:         511245
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 231, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 238, Column: 17 }
+Function:        PySlice_Unpack
+Hotness:         511245
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 234, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_AdjustIndices
+Hotness:         1264686
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 259, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_AdjustIndices
+Hotness:         1264686
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 257, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_AdjustIndices
+Hotness:         1264686
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 263, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 282, Column: 13 }
+Function:        PySlice_AdjustIndices
+Hotness:         1201583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 269, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 282, Column: 13 }
+Function:        PySlice_AdjustIndices
+Hotness:         1201583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 267, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 282, Column: 13 }
+Function:        PySlice_AdjustIndices
+Hotness:         1201583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 273, Column: 15 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 282, Column: 22 }
+Function:        PySlice_AdjustIndices
+Hotness:         1201583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 277, Column: 13 }
+Function:        PySlice_AdjustIndices
+Hotness:         63103
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 277, Column: 21 }
+Function:        PySlice_AdjustIndices
+Hotness:         63103
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 269, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 277, Column: 21 }
+Function:        PySlice_AdjustIndices
+Hotness:         63103
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 267, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 277, Column: 21 }
+Function:        PySlice_AdjustIndices
+Hotness:         63103
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 273, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_AdjustIndices
+Hotness:         1264686
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 259, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_AdjustIndices
+Hotness:         1264686
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 257, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_AdjustIndices
+Hotness:         1264686
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 263, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 282, Column: 13 }
+Function:        PySlice_AdjustIndices
+Hotness:         1201583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 269, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 282, Column: 13 }
+Function:        PySlice_AdjustIndices
+Hotness:         1201583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 267, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 282, Column: 13 }
+Function:        PySlice_AdjustIndices
+Hotness:         1201583
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 273, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 277, Column: 21 }
+Function:        PySlice_AdjustIndices
+Hotness:         63103
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 269, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 277, Column: 21 }
+Function:        PySlice_AdjustIndices
+Hotness:         63103
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 267, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 277, Column: 21 }
+Function:        PySlice_AdjustIndices
+Hotness:         63103
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 273, Column: 15 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 296, Column: 9 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - Callee:          PySlice_Unpack
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 205, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_GetIndicesEx
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 295, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '265'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 298, Column: 20 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - Callee:          PySlice_AdjustIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 250, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PySlice_GetIndicesEx
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 295, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '170'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 216, Column: 13 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 217, Column: 29 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 230, Column: 12 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 237, Column: 12 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 234, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 237, Column: 12 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 215, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 238, Column: 17 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 231, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 238, Column: 17 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 234, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 298, Column: 63 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 238, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 298, Column: 63 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 241, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 238, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 241, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 257, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 259, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 241, Column: 14 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 266, Column: 9 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 263, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 267, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 269, Column: 19 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 0, Column: 0 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 256, Column: 9 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 273, Column: 15 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 17, 
+                   Column: 34 }
+Function:        __PyLong_GetSmallInt_internal
+Hotness:         0
+Args:
+  - Callee:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          __PyLong_GetSmallInt_internal
+    DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 16, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 35, 
+                   Column: 10 }
+Function:        _PyLong_GetOne
+Hotness:         0
+Args:
+  - Callee:          __PyLong_GetSmallInt_internal
+    DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 16, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyLong_GetOne
+    DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 35, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 366, Column: 16 }
+Function:        evaluate_slice_index
+Hotness:         19170
+Args:
+  - Callee:          PyNumber_Index
+    DebugLoc:        { File: './Include/abstract.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          evaluate_slice_index
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 364, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 9 }
+Function:        evaluate_slice_index
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          evaluate_slice_index
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 364, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 365, Column: 9 }
+Function:        evaluate_slice_index
+Hotness:         19171
+Args:
+  - Callee:          _PyIndex_Check
+    DebugLoc:        { File: './Include/internal/pycore_abstract.h', Line: 14, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          evaluate_slice_index
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 364, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15010'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 30, 
+                   Column: 10 }
+Function:        _PyLong_GetZero
+Hotness:         0
+Args:
+  - Callee:          __PyLong_GetSmallInt_internal
+    DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 16, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PyLong_GetZero
+    DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 30, 
+                       Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 570, Column: 9 }
+Function:        _Py_XDECREF
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 400, Column: 21 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19169
+Args:
+  - Callee:          _PyLong_Sign
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 402, Column: 13 }
+Function:        _PySlice_GetLongIndices
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 411, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9585
+Args:
+  - Callee:          PyLong_FromLong
+    DebugLoc:        { File: './Include/longobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 415, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9585
+Args:
+  - Callee:          PyNumber_Add
+    DebugLoc:        { File: './Include/abstract.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 436, Column: 13 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _PyLong_Sign
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 438, Column: 29 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          PyNumber_Add
+    DebugLoc:        { File: './Include/abstract.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 444, Column: 26 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          PyObject_RichCompareBool
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 454, Column: 26 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          PyObject_RichCompareBool
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 475, Column: 13 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _PyLong_Sign
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 477, Column: 29 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          PyNumber_Add
+    DebugLoc:        { File: './Include/abstract.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 483, Column: 26 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          PyObject_RichCompareBool
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 493, Column: 26 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          PyObject_RichCompareBool
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 391, Column: 16 }
+Function:        _PySlice_GetLongIndices
+Hotness:         1
+Args:
+  - Callee:          _PyLong_GetOne
+    DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 35, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 517, Column: 5 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9587
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 392, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         1
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 516, Column: 5 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9587
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 397, Column: 16 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19170
+Args:
+  - Callee:          evaluate_slice_index
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 364, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '80'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 420, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _PyLong_GetZero
+    DebugLoc:        { File: './Include/internal/pycore_long.h', Line: 30, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 421, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 515, Column: 5 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9587
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 423, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 514, Column: 5 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9587
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 429, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9584
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 513, Column: 5 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9587
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 432, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          evaluate_slice_index
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 364, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '80'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 439, Column: 13 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 448, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 449, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 458, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 508, Column: 5 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9584
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 459, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 468, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9584
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 507, Column: 5 }
+Function:        _PySlice_GetLongIndices
+Hotness:         9584
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 471, Column: 16 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          evaluate_slice_index
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 364, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14920'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 478, Column: 13 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 487, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 488, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 497, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 498, Column: 17 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 402, Column: 29 }
+Function:        _PySlice_GetLongIndices
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 400, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_GetLongIndices
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 427, Column: 15 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19167
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 415, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 427, Column: 15 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19167
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 400, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 454, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 438, Column: 29 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 444, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 25 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 400, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 25 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 415, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 466, Column: 15 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 466, Column: 15 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 444, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 466, Column: 15 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 466, Column: 15 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 454, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 466, Column: 15 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 400, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 466, Column: 15 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 415, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 493, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 477, Column: 29 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 483, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 25 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 400, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 25 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 415, Column: 17 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 25 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 454, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 25 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 25 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 444, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 25 }
+Function:        _PySlice_GetLongIndices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 366, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 493, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 483, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 366, Column: 16 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 493, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 369, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 483, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 483, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 493, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19166
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 124, 
+                   Column: 18 }
+Function:        _PyObject_GC_UNTRACK
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 119, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 122, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 342, Column: 9 }
+Function:        slice_dealloc
+Hotness:         31
+Args:
+  - Callee:          PyObject_GC_Del
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_dealloc
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 332, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 333, Column: 34 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - Callee:          _PyInterpreterState_GET
+    DebugLoc:        { File: './Include/internal/pycore_pystate.h', Line: 112, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_dealloc
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 332, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 337, Column: 5 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_dealloc
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 332, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 334, Column: 5 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - Callee:          _PyObject_GC_UNTRACK
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 113, 
+                       Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_dealloc
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 332, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 336, Column: 5 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_dealloc
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 332, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 335, Column: 5 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_dealloc
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 332, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 124, 
+                   Column: 18 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     load
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 119, 
+                       Column: 23 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/internal/pycore_object.h', Line: 122, 
+                       Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 336, Column: 5 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 337, Column: 5 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 337, Column: 5 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 338, Column: 17 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.PySliceObject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 338, Column: 17 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.PySliceObject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 338, Column: 17 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - String:          'load of type '
+  - Type:            '%struct.PySliceObject*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 349, Column: 12 }
+Function:        slice_repr
+Hotness:         0
+Args:
+  - Callee:          PyUnicode_FromFormat
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_repr
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 348, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 626, Column: 5 }
+Function:        slice_traverse
+Hotness:         15
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 625, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 627, Column: 5 }
+Function:        slice_traverse
+Hotness:         6
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 625, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 627, Column: 5 }
+Function:        slice_traverse
+Hotness:         6
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 626, Column: 5 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 585, Column: 5 }
+Function:        _Py_NewRef
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 599, Column: 20 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          PyTuple_Pack
+    DebugLoc:        { File: './Include/tupleobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 607, Column: 20 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          PyTuple_Pack
+    DebugLoc:        { File: './Include/tupleobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 616, Column: 21 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          PyObject_RichCompare
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 577, Column: 10 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 618, Column: 5 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 577, Column: 31 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 617, Column: 5 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 578, Column: 9 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_NewRef
+    DebugLoc:        { File: './Include/object.h', Line: 584, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 612, Column: 9 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 594, Column: 9 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-20'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 594, Column: 9 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - Callee:          _Py_INCREF
+    DebugLoc:        { File: './Include/object.h', Line: 465, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_richcompare
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15020'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 608, Column: 55 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 599, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 609, Column: 55 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 599, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 610, Column: 55 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 599, Column: 20 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 616, Column: 21 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 607, Column: 20 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 309, Column: 10 }
+Function:        slice_new
+Hotness:         1
+Args:
+  - Callee:          _PyArg_NoKeywords
+  - String:          ' will not be inlined into '
+  - Caller:          slice_new
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 304, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+Function:        slice_new
+Hotness:         812
+Args:
+  - Callee:          PyArg_UnpackTuple
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_new
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 304, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 12 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - Callee:          PySlice_New
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_new
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 304, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '210'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 317, Column: 9 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 307, Column: 18 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 318, Column: 16 }
+Function:        slice_new
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 24 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 307, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadPRE
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 24 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          load eliminated by PRE
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 31 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  phi
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 31 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 37 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 307, Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 134, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 131, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 317, Column: 9 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 307, Column: 18 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 24 }
+Function:        slice_new
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 307, Column: 11 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 318, Column: 16 }
+Function:        slice_new
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 37 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' in favor of '
+  - OtherAccess:     store
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 307, Column: 25 }
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 312, Column: 10 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 134, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 131, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     store
+    DebugLoc:        { File: './Include/object.h', Line: 475, Column: 18 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 42, Column: 12 }
+Function:        ellipsis_reduce
+Hotness:         60
+Args:
+  - Callee:          PyUnicode_FromString
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          ellipsis_reduce
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 41, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 531, Column: 14 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - Callee:          PyNumber_Index
+    DebugLoc:        { File: './Include/abstract.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_indices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 535, Column: 9 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - Callee:          _PyLong_Sign
+  - String:          ' will not be inlined into '
+  - Caller:          slice_indices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 536, Column: 9 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_indices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 547, Column: 16 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - Callee:          Py_BuildValue
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_indices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 538, Column: 9 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_indices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 542, Column: 13 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - Callee:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          slice_indices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '625'
+  - String:          ', threshold='
+  - Threshold:       '625'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 543, Column: 5 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          slice_indices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14975'
+  - String:          ', threshold='
+  - Threshold:       '325'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            TooCostly
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 542, Column: 13 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - Callee:          _PySlice_GetLongIndices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          slice_indices
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+  - String:          ' because too costly to inline '
+  - String:          '(cost='
+  - Cost:            '625'
+  - String:          ', threshold='
+  - Threshold:       '625'
+  - String:          ')'
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 542, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 547, Column: 39 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 542, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 547, Column: 46 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 542, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 547, Column: 52 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 542, Column: 13 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 536, Column: 25 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 535, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 536, Column: 9 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 561, Column: 12 }
+Function:        slice_reduce
+Hotness:         0
+Args:
+  - Callee:          Py_BuildValue
+    DebugLoc:        { File: './Include/modsupport.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          slice_reduce
+    DebugLoc:        { File: 'Objects/sliceobject.c', Line: 560, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _PySlice_GetLongIndices
+Hotness:         5
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _PySlice_GetLongIndices
+Hotness:         1
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _PySlice_GetLongIndices
+Hotness:         4
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+Function:        _PySlice_GetLongIndices
+Hotness:         19167
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 321, Column: 31 }
+Function:        slice_new
+Hotness:         811
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 35, Column: 0 }
+Function:        ellipsis_repr
+Hotness:         13
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 35, Column: 0 }
+Function:        ellipsis_repr
+Hotness:         13
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 24, Column: 0 }
+Function:        ellipsis_new
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 24, Column: 0 }
+Function:        ellipsis_new
+Hotness:         0
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 101, Column: 0 }
+Function:        _PySlice_Fini
+Hotness:         263
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 101, Column: 0 }
+Function:        _PySlice_Fini
+Hotness:         263
+Args:
+  - NumInstructions: '7'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 115, Column: 0 }
+Function:        PySlice_New
+Hotness:         1281879
+Args:
+  - NumInstructions: '56'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 153, Column: 0 }
+Function:        _PySlice_FromIndices
+Hotness:         30
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 153, Column: 0 }
+Function:        _PySlice_FromIndices
+Hotness:         30
+Args:
+  - NumInstructions: '70'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 173, Column: 0 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 173, Column: 0 }
+Function:        PySlice_GetIndices
+Hotness:         0
+Args:
+  - NumInstructions: '76'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 205, Column: 0 }
+Function:        PySlice_Unpack
+Hotness:         1264686
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 205, Column: 0 }
+Function:        PySlice_Unpack
+Hotness:         1264686
+Args:
+  - NumInstructions: '73'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 250, Column: 0 }
+Function:        PySlice_AdjustIndices
+Hotness:         1264686
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 250, Column: 0 }
+Function:        PySlice_AdjustIndices
+Hotness:         1264686
+Args:
+  - NumInstructions: '54'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 295, Column: 0 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 295, Column: 0 }
+Function:        PySlice_GetIndicesEx
+Hotness:         0
+Args:
+  - NumInstructions: '129'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19171
+Args:
+  - NumStackBytes:   '104'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 384, Column: 0 }
+Function:        _PySlice_GetLongIndices
+Hotness:         19171
+Args:
+  - NumInstructions: '330'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 332, Column: 0 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 332, Column: 0 }
+Function:        slice_dealloc
+Hotness:         1281879
+Args:
+  - NumInstructions: '48'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 348, Column: 0 }
+Function:        slice_repr
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 348, Column: 0 }
+Function:        slice_repr
+Hotness:         0
+Args:
+  - NumInstructions: '6'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 624, Column: 0 }
+Function:        slice_traverse
+Hotness:         38
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 624, Column: 0 }
+Function:        slice_traverse
+Hotness:         38
+Args:
+  - NumInstructions: '36'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - NumStackBytes:   '40'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 576, Column: 0 }
+Function:        slice_richcompare
+Hotness:         0
+Args:
+  - NumInstructions: '75'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 304, Column: 0 }
+Function:        slice_new
+Hotness:         812
+Args:
+  - NumStackBytes:   '72'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 304, Column: 0 }
+Function:        slice_new
+Hotness:         812
+Args:
+  - NumInstructions: '90'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 41, Column: 0 }
+Function:        ellipsis_reduce
+Hotness:         60
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 41, Column: 0 }
+Function:        ellipsis_reduce
+Hotness:         60
+Args:
+  - NumInstructions: '2'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 525, Column: 0 }
+Function:        slice_indices
+Hotness:         0
+Args:
+  - NumInstructions: '49'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 560, Column: 0 }
+Function:        slice_reduce
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/sliceobject.c', Line: 560, Column: 0 }
+Function:        slice_reduce
+Hotness:         0
+Args:
+  - NumInstructions: '7'
+  - String:          ' instructions in function'
+...

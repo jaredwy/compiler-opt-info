@@ -1,0 +1,54 @@
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Python/pymath.c', Line: 26, Column: 12 }
+Function:        _Py_get_387controlword
+Hotness:         214485
+Args:
+  - String:          'load of type '
+  - Type:            i16
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Python/pymath.c', Line: 25, Column: 5 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pymath.c', Line: 23, Column: 0 }
+Function:        _Py_get_387controlword
+Hotness:         214485
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pymath.c', Line: 23, Column: 0 }
+Function:        _Py_get_387controlword
+Hotness:         214485
+Args:
+  - NumInstructions: '3'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Python/pymath.c', Line: 29, Column: 0 }
+Function:        _Py_set_387controlword
+Hotness:         428970
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Python/pymath.c', Line: 29, Column: 0 }
+Function:        _Py_set_387controlword
+Hotness:         428970
+Args:
+  - NumInstructions: '3'
+  - String:          ' instructions in function'
+...

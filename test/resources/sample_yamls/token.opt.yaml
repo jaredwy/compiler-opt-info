@@ -1,0 +1,120 @@
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Parser/token.c', Line: 198, Column: 9 }
+Function:        PyToken_ThreeChars
+Hotness:         4424
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Parser/token.c', Line: 207, Column: 9 }
+Function:        PyToken_ThreeChars
+Hotness:         3
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Parser/token.c', Line: 216, Column: 9 }
+Function:        PyToken_ThreeChars
+Hotness:         886
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Parser/token.c', Line: 225, Column: 9 }
+Function:        PyToken_ThreeChars
+Hotness:         1926
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Parser/token.c', Line: 234, Column: 9 }
+Function:        PyToken_ThreeChars
+Hotness:         1543
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Parser/token.c', Line: 80, Column: 0 }
+Function:        PyToken_OneChar
+Hotness:         695618
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Parser/token.c', Line: 80, Column: 0 }
+Function:        PyToken_OneChar
+Hotness:         695618
+Args:
+  - NumInstructions: '51'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Parser/token.c', Line: 111, Column: 0 }
+Function:        PyToken_TwoChars
+Hotness:         704403
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Parser/token.c', Line: 111, Column: 0 }
+Function:        PyToken_TwoChars
+Hotness:         704403
+Args:
+  - NumInstructions: '65'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Parser/token.c', Line: 195, Column: 0 }
+Function:        PyToken_ThreeChars
+Hotness:         8785
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Parser/token.c', Line: 195, Column: 0 }
+Function:        PyToken_ThreeChars
+Hotness:         8785
+Args:
+  - NumInstructions: '29'
+  - String:          ' instructions in function'
+...

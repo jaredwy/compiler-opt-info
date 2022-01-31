@@ -1,28 +1,25 @@
 {
-    // Use IntelliSense to learn about possible Node.js debug attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
     "configurations": [
-        {
-            "type": "node",
-            "request": "launch",
-            "name": "Launch Program",
-            "program": "${workspaceRoot}/index.ts",
-            "outFiles": [
-                "${workspaceRoot}/index.js",
-                "${workspaceRoot}/lib/**/*.js"
-            ],
-            "sourceMaps": true
-        },
-        {
-            "type": "node",
-            "request": "attach",
-            "name": "Attach to Port",
-            "address": "localhost",
-            "port": 5858,
-            "outFiles": [],
-            "sourceMaps": true
-        }
+    {
+        "name": "Launch Program",
+        "program": "${workspaceFolder}/app.js",
+        "request": "launch",
+        "skipFiles": [
+            "<node_internals>/**"
+        ],
+        "type": "pwa-node"
+    },
+    {
+        "type": "node",
+        "request": "launch",
+        "name": "Debug AVA test file",
+        "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ava",
+        "runtimeArgs": ["${file}"],
+    
+        "args": ["${relativeFile}"],
+        "outputCapture": "std",
+        "skipFiles": ["<node_internals>/**/*.js"]
+    }
+    
     ]
 }

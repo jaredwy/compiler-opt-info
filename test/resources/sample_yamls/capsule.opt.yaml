@@ -1,0 +1,1840 @@
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 49, Column: 9 }
+Function:        PyCapsule_New
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_New
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 53, Column: 15 }
+Function:        PyCapsule_New
+Hotness:         23612
+Args:
+  - Callee:          _PyObject_New
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_New
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 45, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 38, Column: 13 }
+Function:        name_matches
+Hotness:         40758
+Args:
+  - Callee:          strcmp
+  - String:          ' will not be inlined into '
+  - Caller:          name_matches
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 32, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 73, Column: 13 }
+Function:        PyCapsule_IsValid
+Hotness:         45
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_IsValid
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 69, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-25'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 75, Column: 13 }
+Function:        PyCapsule_IsValid
+Hotness:         45
+Args:
+  - Callee:          name_matches
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 32, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_IsValid
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 69, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 20, Column: 9 }
+Function:        _is_legal_capsule
+Hotness:         3
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 19, Column: 22 }
+Function:        _is_legal_capsule
+Hotness:         40714
+Args:
+  - Callee:          _Py_IS_TYPE
+    DebugLoc:        { File: './Include/object.h', Line: 143, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-15025'
+  - String:          ', threshold='
+  - Threshold:       '487'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 89, Column: 9 }
+Function:        PyCapsule_GetPointer
+Hotness:         1
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_GetPointer
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 81, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 84, Column: 10 }
+Function:        PyCapsule_GetPointer
+Hotness:         40715
+Args:
+  - Callee:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_GetPointer
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 81, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 88, Column: 10 }
+Function:        PyCapsule_GetPointer
+Hotness:         40714
+Args:
+  - Callee:          name_matches
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 32, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_GetPointer
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 81, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14965'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/capsule.c', Line: 93, Column: 21 }
+Function:        PyCapsule_GetPointer
+Hotness:         40711
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 19, Column: 64 }
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 102, Column: 10 }
+Function:        PyCapsule_GetName
+Hotness:         0
+Args:
+  - Callee:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_GetName
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 99, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 114, Column: 10 }
+Function:        PyCapsule_GetDestructor
+Hotness:         0
+Args:
+  - Callee:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_GetDestructor
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 111, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 126, Column: 10 }
+Function:        PyCapsule_GetContext
+Hotness:         0
+Args:
+  - Callee:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_GetContext
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 123, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 139, Column: 9 }
+Function:        PyCapsule_SetPointer
+Hotness:         0
+Args:
+  - Callee:          PyErr_SetString
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_SetPointer
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 135, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 143, Column: 10 }
+Function:        PyCapsule_SetPointer
+Hotness:         0
+Args:
+  - Callee:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_SetPointer
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 135, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 157, Column: 10 }
+Function:        PyCapsule_SetName
+Hotness:         0
+Args:
+  - Callee:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_SetName
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 154, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 171, Column: 10 }
+Function:        PyCapsule_SetDestructor
+Hotness:         0
+Args:
+  - Callee:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_SetDestructor
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 168, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '45'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 185, Column: 10 }
+Function:        PyCapsule_SetContext
+Hotness:         0
+Args:
+  - Callee:          _is_legal_capsule
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 18, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_SetContext
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 182, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '-14955'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+Function:        _Py_DECREF
+Hotness:         1
+Args:
+  - Callee:          _Py_Dealloc
+  - String:          ' will not be inlined into '
+  - Caller:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: './Include/object.h', Line: 570, Column: 9 }
+Function:        _Py_XDECREF
+Hotness:         4
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 200, Column: 27 }
+Function:        PyCapsule_Import
+Hotness:         5
+Args:
+  - Callee:          strlen
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 201, Column: 30 }
+Function:        PyCapsule_Import
+Hotness:         5
+Args:
+  - Callee:          PyMem_Malloc
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 204, Column: 16 }
+Function:        PyCapsule_Import
+Hotness:         1
+Args:
+  - Callee:          PyErr_NoMemory
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 211, Column: 21 }
+Function:        PyCapsule_Import
+Hotness:         7
+Args:
+  - Callee:          strchr
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 218, Column: 26 }
+Function:        PyCapsule_Import
+Hotness:         2
+Args:
+  - Callee:          PyImport_ImportModuleNoBlock
+    DebugLoc:        { File: './Include/import.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+Function:        PyCapsule_Import
+Hotness:         2
+Args:
+  - Callee:          PyImport_ImportModule
+    DebugLoc:        { File: './Include/import.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 222, Column: 21 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - Callee:          PyObject_GetAttrString
+    DebugLoc:        { File: './Include/object.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         1
+Args:
+  - Callee:          PyErr_Format
+    DebugLoc:        { File: './Include/pyerrors.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 250, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - Callee:          PyMem_Free
+    DebugLoc:        { File: './Include/pymem.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 227, Column: 13 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - Callee:          _Py_DECREF
+    DebugLoc:        { File: './Include/object.h', Line: 485, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '25'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 238, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - Callee:          PyCapsule_IsValid
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 69, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '80'
+  - String:          ', threshold='
+  - Threshold:       '250'
+  - String:          ')'
+...
+--- !Passed
+Pass:            inline
+Name:            Inlined
+DebugLoc:        { File: 'Objects/capsule.c', Line: 248, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - Callee:          _Py_XDECREF
+    DebugLoc:        { File: './Include/object.h', Line: 568, Column: 0 }
+  - String:          ' inlined into '
+  - Caller:          PyCapsule_Import
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+  - String:          ' with '
+  - String:          '(cost='
+  - Cost:            '35'
+  - String:          ', threshold='
+  - Threshold:       '45'
+  - String:          ')'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        PyCapsule_Import
+Hotness:         3
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Passed
+Pass:            licm
+Name:            Hoisted
+DebugLoc:        { File: 'Objects/capsule.c', Line: 217, Column: 17 }
+Function:        PyCapsule_Import
+Hotness:         3
+Args:
+  - String:          'hoisting '
+  - Inst:            icmp
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 217, Column: 17 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        PyCapsule_Import
+Hotness:         1
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 222, Column: 34 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 207, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 218, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Passed
+Pass:            gvn
+Name:            LoadElim
+DebugLoc:        { File: 'Objects/capsule.c', Line: 240, Column: 33 }
+Function:        PyCapsule_Import
+Hotness:         3
+Args:
+  - String:          'load of type '
+  - Type:            'i8*'
+  - String:          ' eliminated'
+  - String:          ' in favor of '
+  - InfavorOfValue:  load
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 74, Column: 22 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 207, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 218, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 201, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 207, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 218, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         2
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         1
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 222, Column: 34 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 207, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 218, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 207, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 218, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'load of type '
+  - Type:            i64
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 201, Column: 30 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 220, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 207, Column: 5 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 218, Column: 26 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 226, Column: 33 }
+...
+--- !Missed
+Pass:            gvn
+Name:            LoadClobbered
+DebugLoc:        { File: 'Objects/capsule.c', Line: 242, Column: 22 }
+Function:        PyCapsule_Import
+Hotness:         0
+Args:
+  - String:          'load of type '
+  - Type:            '%struct._object*'
+  - String:          ' not eliminated'
+  - String:          ' because it is clobbered by '
+  - ClobberedBy:     call
+    DebugLoc:        { File: './Include/object.h', Line: 503, Column: 9 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        PyCapsule_Import
+Hotness:         1
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        PyCapsule_Import
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 263, Column: 5 }
+Function:        capsule_dealloc
+Hotness:         23612
+Args:
+  - Callee:          PyObject_Free
+    DebugLoc:        { File: './Include/objimpl.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          capsule_dealloc
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 258, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            inline
+Name:            NoDefinition
+DebugLoc:        { File: 'Objects/capsule.c', Line: 282, Column: 12 }
+Function:        capsule_repr
+Hotness:         0
+Args:
+  - Callee:          PyUnicode_FromFormat
+    DebugLoc:        { File: './Include/unicodeobject.h', Line: 0, Column: 0 }
+  - String:          ' will not be inlined into '
+  - Caller:          capsule_repr
+    DebugLoc:        { File: 'Objects/capsule.c', Line: 269, Column: 0 }
+  - String:          ' because its definition is unavailable'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/capsule.c', Line: 34, Column: 20 }
+Function:        PyCapsule_IsValid
+Hotness:         42
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/capsule.c', Line: 34, Column: 10 }
+Function:        PyCapsule_GetPointer
+Hotness:         40712
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Objects/capsule.c', Line: 210, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         7
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Objects/capsule.c', Line: 210, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         7
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         2
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Objects/capsule.c', Line: 0, Column: 0 }
+Function:        PyCapsule_Import
+Hotness:         7
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Objects/capsule.c', Line: 210, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         7
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Objects/capsule.c', Line: 210, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         7
+Args:
+  - String:          loop not vectorized
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Objects/capsule.c', Line: 210, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Objects/capsule.c', Line: 210, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by vectorizer
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NoCFGForSelect
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 9 }
+Function:        PyCapsule_Import
+Hotness:         1
+Args:
+  - String:          'loop not vectorized: '
+  - String:          control flow cannot be substituted for a select
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            NonReductionValueUsedOutsideLoop
+DebugLoc:        { File: 'Objects/capsule.c', Line: 0, Column: 0 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'loop not vectorized: '
+  - String:          value that could not be identified as reduction is used outside the loop
+...
+--- !Analysis
+Pass:            loop-vectorize
+Name:            CFGNotUnderstood
+DebugLoc:        { File: 'Objects/capsule.c', Line: 210, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'loop not vectorized: '
+  - String:          loop control flow is not understood by analyzer
+...
+--- !Missed
+Pass:            loop-vectorize
+Name:            MissedDetails
+DebugLoc:        { File: 'Objects/capsule.c', Line: 210, Column: 5 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          loop not vectorized
+...
+--- !Missed
+Pass:            slp-vectorizer
+Name:            NotBeneficial
+DebugLoc:        { File: 'Objects/capsule.c', Line: 34, Column: 20 }
+Function:        PyCapsule_Import
+Hotness:         4
+Args:
+  - String:          'List vectorization was possible but not beneficial with cost '
+  - Cost:            '0'
+  - String:          ' >= '
+  - Treshold:        '0'
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        PyCapsule_Import
+Hotness:         1
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Passed
+Pass:            licm
+Name:            InstSunk
+DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+Function:        PyCapsule_Import
+Hotness:         2
+Args:
+  - String:          'sinking '
+  - Inst:            getelementptr
+    DebugLoc:        { File: './Include/object.h', Line: 495, Column: 15 }
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 45, Column: 0 }
+Function:        PyCapsule_New
+Hotness:         23613
+Args:
+  - NumStackBytes:   '24'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 45, Column: 0 }
+Function:        PyCapsule_New
+Hotness:         23613
+Args:
+  - NumInstructions: '28'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 69, Column: 0 }
+Function:        PyCapsule_IsValid
+Hotness:         45
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 69, Column: 0 }
+Function:        PyCapsule_IsValid
+Hotness:         45
+Args:
+  - NumInstructions: '22'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 81, Column: 0 }
+Function:        PyCapsule_GetPointer
+Hotness:         40715
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 81, Column: 0 }
+Function:        PyCapsule_GetPointer
+Hotness:         40715
+Args:
+  - NumInstructions: '34'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 99, Column: 0 }
+Function:        PyCapsule_GetName
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 99, Column: 0 }
+Function:        PyCapsule_GetName
+Hotness:         0
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 111, Column: 0 }
+Function:        PyCapsule_GetDestructor
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 111, Column: 0 }
+Function:        PyCapsule_GetDestructor
+Hotness:         0
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 123, Column: 0 }
+Function:        PyCapsule_GetContext
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 123, Column: 0 }
+Function:        PyCapsule_GetContext
+Hotness:         0
+Args:
+  - NumInstructions: '16'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 135, Column: 0 }
+Function:        PyCapsule_SetPointer
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 135, Column: 0 }
+Function:        PyCapsule_SetPointer
+Hotness:         0
+Args:
+  - NumInstructions: '22'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 154, Column: 0 }
+Function:        PyCapsule_SetName
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 154, Column: 0 }
+Function:        PyCapsule_SetName
+Hotness:         0
+Args:
+  - NumInstructions: '17'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 168, Column: 0 }
+Function:        PyCapsule_SetDestructor
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 168, Column: 0 }
+Function:        PyCapsule_SetDestructor
+Hotness:         0
+Args:
+  - NumInstructions: '17'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 182, Column: 0 }
+Function:        PyCapsule_SetContext
+Hotness:         0
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 182, Column: 0 }
+Function:        PyCapsule_SetContext
+Hotness:         0
+Args:
+  - NumInstructions: '17'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+Function:        PyCapsule_Import
+Hotness:         5
+Args:
+  - NumStackBytes:   '56'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 196, Column: 0 }
+Function:        PyCapsule_Import
+Hotness:         5
+Args:
+  - NumInstructions: '157'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 258, Column: 0 }
+Function:        capsule_dealloc
+Hotness:         23612
+Args:
+  - NumStackBytes:   '8'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 258, Column: 0 }
+Function:        capsule_dealloc
+Hotness:         23612
+Args:
+  - NumInstructions: '13'
+  - String:          ' instructions in function'
+...
+--- !Analysis
+Pass:            prologepilog
+Name:            StackSize
+DebugLoc:        { File: 'Objects/capsule.c', Line: 269, Column: 0 }
+Function:        capsule_repr
+Hotness:         0
+Args:
+  - NumStackBytes:   '0'
+  - String:          ' stack bytes in function'
+...
+--- !Analysis
+Pass:            asm-printer
+Name:            InstructionCount
+DebugLoc:        { File: 'Objects/capsule.c', Line: 269, Column: 0 }
+Function:        capsule_repr
+Hotness:         0
+Args:
+  - NumInstructions: '12'
+  - String:          ' instructions in function'
+...
