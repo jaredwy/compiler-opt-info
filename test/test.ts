@@ -81,22 +81,18 @@ test("the system dosn't crush with a lot of yaml files", async (t) => {
     }
 });
 
+
+
 const crashTest = async (files: any, path: string) => {
     //iterate through all the yaml files in the test directory
 
     for (let i = 0; i < files.length; i++) {
         if (files[i].endsWith(".opt.yaml")) {
-            console.log(files[i]);
-            await setTimeout(() => {
-                createReadStream(path + files[i], {
-                    encoding: "utf-8",
-                })
-                    .pipe(new LLVMOptTransformer({}))
-                    .on("data", (x: LLVMOptInfo) => {
-                        console.log(DisplayOptInfo(x));
-                    });
-            }, 1000 * i);
+            console.log(`${i+1}/${files.length}-${files[i]}`);
+            createReadStream(path + files[i], {
+                encoding: "utf-8",
+            })
+            .pipe(new LLVMOptTransformer({}))
         }
-        console.log(i);
     }
 };

@@ -6,11 +6,11 @@ import { DisplayOptInfo } from "../src/OptInformation";
 const R = require("ramda");
 const optTypeMatcher = /---\s(.*)\r?\n/;
 const docStart = "---";
-const docEndMatcher = /\n\.\.\./;
+const docEnd = "\n...";
 const IsDocumentStart = (x: string) => x.substring(0, 3) === docStart;
 const FindDocumentEnd = (x: string) => {
-    const index = x.search(docEndMatcher);
-    return { found: index > -1, endpos: index + 4 }; //4 is the length of the docEndMatcher
+    const index = x.indexOf(docEnd);
+    return { found: index > -1, endpos: index + docEnd.length };
 };
 
 export class LLVMOptTransformer extends Transform {
