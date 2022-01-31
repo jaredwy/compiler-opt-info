@@ -69,7 +69,6 @@ import { count } from "console";
 //         });
 // });
 
-
 test("the system dosn't crush with a lot of yaml files", async (t) => {
     //for some reason the test is still pass even though the crush is happening,
     // but in this case the error is still thrown
@@ -82,15 +81,22 @@ test("the system dosn't crush with a lot of yaml files", async (t) => {
     }
 });
 
-const crashTest = (files: any, path: string): void => {
+const crashTest = async (files: any, path: string) => {
     //iterate through all the yaml files in the test directory
-    
+
     for (let i = 0; i < files.length; i++) {
         if (files[i].endsWith(".opt.yaml")) {
             console.log(files[i]);
-            createReadStream(path + files[i], {
-                encoding: "utf-8",
-            }).pipe(new LLVMOptTransformer({}));
+            await setTimeout(() => {
+                createReadStream(path + files[i], {
+                    encoding: "utf-8",
+                })
+                    .pipe(new LLVMOptTransformer({}))
+                    .on("data", (x: LLVMOptInfo) => {
+                        console.log(DisplayOptInfo(x));
+                    });
+            }, 1000 * i);
         }
+        console.log(i);
     }
 };

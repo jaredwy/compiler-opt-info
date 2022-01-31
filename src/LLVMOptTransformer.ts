@@ -1,3 +1,4 @@
+
 const YAML = require("yamljs");
 import { Transform } from "stream";
 import { DisplayOptInfo } from "../src/OptInformation";
@@ -8,8 +9,8 @@ const docStart = "---";
 const docEndMatcher = /\n\.\.\./;
 const IsDocumentStart = (x: string) => x.substring(0, 3) === docStart;
 const FindDocumentEnd = (x: string) => {
-    let index = x.search(docEndMatcher);
-    return { found: index > -1, endpos: index + 4 };//4 is the length of the docEndMatcher
+    const index = x.search(docEndMatcher);
+    return { found: index > -1, endpos: index + 4 }; //4 is the length of the docEndMatcher
 };
 
 export class LLVMOptTransformer extends Transform {
