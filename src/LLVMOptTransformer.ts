@@ -5,8 +5,8 @@ import { DisplayOptInfo } from "../src/OptInformation";
 
 const R = require("ramda");
 const optTypeMatcher = /---\s(.*)\r?\n/;
-const docStart = "\n---";
-const docEnd = "...";
+const docStart = "---";
+const docEnd = "\n...";
 const IsDocumentStart = (x: string) => x.substring(0, 3) === docStart;
 const FindDocumentEnd = (x: string) => {
     const index = x.indexOf(docEnd);
